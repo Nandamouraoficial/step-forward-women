@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users } from "lucide-react";
 
-const CTA_URL = "#checkout";
+const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 
 const Index = () => {
   return (
