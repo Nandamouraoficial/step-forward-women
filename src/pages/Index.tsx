@@ -287,7 +287,7 @@ const Index = () => {
       </section>
 
       {/* BLOCO FINAL */}
-      <section className="relative overflow-hidden py-20 md:py-28">
+      <section className="relative overflow-hidden pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
           alt="Fernanda Moura com equipe"
@@ -295,7 +295,7 @@ const Index = () => {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-foreground/70" />
-        <div className="relative container mx-auto px-6 max-w-3xl text-center text-primary-foreground">
+        <div className="relative container mx-auto px-6 max-w-3xl text-center text-primary-foreground flex flex-col justify-end min-h-[400px]">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Se você já decidiu internamente,
           </h2>
