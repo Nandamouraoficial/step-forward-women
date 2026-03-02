@@ -268,8 +268,8 @@ const Index = () => {
           </p>
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-10 inline-block">
             <p className="font-display text-primary tracking-tight">
-              <span className="text-xl md:text-2xl font-semibold align-baseline">R$</span>
-              <span className="text-3xl md:text-4xl font-bold ml-2">1.497</span>
+              <span className="text-xl md:text-2xl font-bold">R$</span>
+              <span className="text-xl md:text-2xl font-bold ml-1">1.497</span>
             </p>
             <p className="text-muted-foreground mt-2 text-lg">ou 3x sem juros</p>
           </div>
