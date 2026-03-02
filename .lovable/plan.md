@@ -1,67 +1,22 @@
 
 
-# IMERSÃO O PRÓXIMO PASSO — Landing Page
+# Alteracoes na Landing Page
 
-## Visão Geral
-Landing page premium para uma imersão exclusiva para mulheres executivas, conduzida por Fernanda Moura. Design elegante, sofisticado e direto — sem excessos visuais.
+## Mudancas
 
----
+### 1. Alterar 30 vagas para 15 vagas
+- Hero section (linha 50): "30 vagas" -> "15 vagas"
+- Bloco Formato (linha 229): "30 mulheres" -> "15 mulheres"
 
-## Estrutura da Página
+### 2. Mover frase + botao para abaixo da foto no Hero
+Atualmente a frase "Se voce ja decidiu internamente..." e o botao "OCUPAR MEU PROXIMO LUGAR" estao no bloco final (com foto de equipe). A ideia e adicionar essa mesma frase e botao logo abaixo da imagem hero (abaixo do queixo da Fernanda), dentro da hero section, posicionados sob a foto.
 
-### 1. Hero Section
-- Degradê suave (teal → azul → roxo) como fundo
-- Layout split: texto à esquerda, foto do terno branco à direita
-- Título "IMERSÃO O PRÓXIMO PASSO" em tipografia forte
-- Subtítulo "Edição Exclusiva para Mulheres"
-- Copy principal sobre decisão e próximo movimento
-- Botão CTA roxo profundo "CONFIRMAR MINHA PARTICIPAÇÃO"
-- Detalhes: data, horário, formato, vagas
+- Adicionar abaixo da `<img>` do hero (apos linha 61) um bloco com:
+  - Frase: "Se voce ja decidiu internamente, essa e a sala onde isso ganha estrutura."
+  - Botao CTA: "OCUPAR MEU LUGAR"
+- O bloco final com a foto de equipe permanece como esta (com a mesma frase e botao duplicados la)
 
-### 2. Bloco Realidade
-- Fundo branco, texto centralizado
-- Copy sobre desalinhamento entre cargo e propósito
-- Tipografia limpa, espaçamento generoso
-
-### 3. Bloco Para Quem É
-- Lista de critérios com ícones ou bullets estilizados
-- Nota de filtro: "Se você ainda está avaliando... esta não é a hora certa"
-
-### 4. Bloco Resultado (6 horas)
-- 4 itens do que a participante vai conquistar
-- Destaque visual: "VOCÊ SAI COM A DECISÃO FORMALIZADA"
-- Segundo botão CTA
-
-### 5. Bloco Sobre Fernanda
-- Fundo branco, layout split com foto na poltrona
-- Bio profissional com destaques em negrito (Cargill, Kimberly-Clark, etc.)
-- Tom de autoridade e experiência real
-
-### 6. Bloco Formato
-- Faixa com degradê suave
-- Data, horário, formato online, 30 vagas
-- Ênfase em confidencialidade e profundidade
-
-### 7. Bloco Investimento
-- R$ 1.497 ou 3x sem juros em destaque
-- Copy sobre custo de permanecer vs. investir
-- Botão CTA
-
-### 8. Bloco Final
-- Foto com equipe ao fundo
-- Frase de fechamento impactante
-- Último botão CTA
-
-### 9. Rodapé
-- Nome, título, copyright
-- Degradê suave opcional
-
----
-
-## Direção Visual
-- **Cores**: fundo branco, botões roxo profundo, degradê teal→azul→roxo apenas no hero e rodapé
-- **Tipografia**: headings em fonte limpa e forte (sans-serif bold), corpo em fonte leve (Inter/Lato)
-- **Fotos**: as 3 imagens enviadas serão usadas no hero, seção sobre, e bloco final
-- **Tom**: sofisticado, direto, executivo — sem autoajuda ou excesso decorativo
-- **Responsivo**: mobile-first com adaptações para desktop (layouts split → empilhados)
+### Detalhes tecnicos
+- Arquivo: `src/pages/Index.tsx`
+- 3 edicoes pontuais no mesmo arquivo
 
