@@ -1,24 +1,21 @@
 
 
-# Reduzir mais o tamanho do valor R$ 1.497
-
-## Contexto
-O valor ainda esta grande. Vamos reduzir bastante para ficar mais discreto e elegante.
+# Igualar tamanho do "R$" e "1.497"
 
 ## Mudanca
 - Arquivo: `src/pages/Index.tsx`, linhas 270-271
-- Reduzir "R$" de `text-3xl md:text-4xl` para `text-xl md:text-2xl`
-- Reduzir "1.497" de `text-5xl md:text-6xl` para `text-3xl md:text-4xl`
+- Colocar "R$" e "1.497" no mesmo tamanho: `text-xl md:text-2xl font-bold`
+- Remover a separacao de tamanhos entre simbolo e valor
 
 ## Detalhe tecnico
-Substituir:
-```jsx
-<span className="text-3xl md:text-4xl font-semibold align-baseline">R$</span>
-<span className="text-5xl md:text-6xl font-bold ml-2">1.497</span>
-```
-Por:
+Substituir os dois spans por um unico estilo uniforme:
 ```jsx
 <span className="text-xl md:text-2xl font-semibold align-baseline">R$</span>
 <span className="text-3xl md:text-4xl font-bold ml-2">1.497</span>
+```
+Por:
+```jsx
+<span className="text-xl md:text-2xl font-bold">R$</span>
+<span className="text-xl md:text-2xl font-bold ml-1">1.497</span>
 ```
 
