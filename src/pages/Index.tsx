@@ -47,7 +47,7 @@ const Index = () => {
                 <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 de abril</span>
                 <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
                 <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
-                <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 30 vagas</span>
+                <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
               </div>
             </div>
 
@@ -59,6 +59,21 @@ const Index = () => {
                 className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover"
                 loading="eager"
               />
+              <div className="text-center mt-6">
+                <p className="font-display text-xl md:text-2xl font-bold text-primary-foreground mb-4">
+                  Se você já decidiu internamente,
+                  <br />
+                  essa é a sala onde isso ganha estrutura.
+                </p>
+                <a href={CTA_URL}>
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                  >
+                    OCUPAR MEU LUGAR
+                  </Button>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -226,7 +241,7 @@ const Index = () => {
               { icon: Calendar, label: "12 de abril" },
               { icon: Clock, label: "9h às 15h" },
               { icon: Monitor, label: "Online e ao vivo" },
-              { icon: Users, label: "30 mulheres" },
+              { icon: Users, label: "15 mulheres" },
             ].map(({ icon: Icon, label }) => (
               <div key={label} className="flex flex-col items-center gap-3">
                 <Icon className="w-8 h-8 opacity-80" />
