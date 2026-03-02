@@ -1,22 +1,14 @@
 
 
-# Alteracoes na Landing Page
+# Configurar Link de Checkout nos Botoes CTA
 
-## Mudancas
+## Mudanca
+Alterar a constante `CTA_URL` no arquivo `src/pages/Index.tsx` de `"#checkout"` para `"https://chk.eduzz.com/acxa2eu4"`.
 
-### 1. Alterar 30 vagas para 15 vagas
-- Hero section (linha 50): "30 vagas" -> "15 vagas"
-- Bloco Formato (linha 229): "30 mulheres" -> "15 mulheres"
+Como todos os botoes CTA ja usam essa constante, a mudanca sera automaticamente aplicada em todos os 5 botoes da pagina.
 
-### 2. Mover frase + botao para abaixo da foto no Hero
-Atualmente a frase "Se voce ja decidiu internamente..." e o botao "OCUPAR MEU PROXIMO LUGAR" estao no bloco final (com foto de equipe). A ideia e adicionar essa mesma frase e botao logo abaixo da imagem hero (abaixo do queixo da Fernanda), dentro da hero section, posicionados sob a foto.
-
-- Adicionar abaixo da `<img>` do hero (apos linha 61) um bloco com:
-  - Frase: "Se voce ja decidiu internamente, essa e a sala onde isso ganha estrutura."
-  - Botao CTA: "OCUPAR MEU LUGAR"
-- O bloco final com a foto de equipe permanece como esta (com a mesma frase e botao duplicados la)
-
-### Detalhes tecnicos
-- Arquivo: `src/pages/Index.tsx`
-- 3 edicoes pontuais no mesmo arquivo
+## Detalhe tecnico
+- Arquivo: `src/pages/Index.tsx`, linha 4
+- De: `const CTA_URL = "#checkout";`
+- Para: `const CTA_URL = "https://chk.eduzz.com/acxa2eu4";`
 
