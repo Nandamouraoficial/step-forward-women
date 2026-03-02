@@ -52,14 +52,14 @@ const Index = () => {
             </div>
 
             {/* Photo */}
-            <div className="flex-1 flex justify-center lg:justify-end">
+            <div className="flex-1 flex flex-col items-center lg:items-end">
               <img
                 src="/images/hero-terno-branco.png"
                 alt="Fernanda Moura — Estrategista Executiva de Carreira"
                 className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover"
                 loading="eager"
               />
-              <div className="text-center mt-6">
+              <div className="text-center mt-8">
                 <p className="font-display text-xl md:text-2xl font-bold text-primary-foreground mb-4">
                   Se você já decidiu internamente,
                   <br />
