@@ -1,16 +1,31 @@
 
 
-# Reposicionar texto do bloco final na altura dos ombros
+# Melhorar tipografia do valor R$ 1.497
 
 ## Contexto
-Na secao final (com a foto `final-equipe.png` de fundo), o texto e botao estao centralizados verticalmente. O objetivo e descer o conteudo para ficar na altura dos ombros da modelo na foto.
+O preco "R$ 1.497" na secao de investimento precisa de uma apresentacao tipografica mais elegante e harmonica com a identidade visual premium da pagina.
 
 ## Mudanca
-- Arquivo: `src/pages/Index.tsx`, bloco final (aproximadamente linhas 241-262)
-- Alterar o container relativo para usar `flex items-end` em vez de centralizar verticalmente, e adicionar padding inferior para posicionar o texto na altura dos ombros
-- Trocar `text-center` por um layout que empurre o conteudo para a parte inferior da secao, usando `pt-40 md:pt-56 pb-10` em vez de `py-20 md:py-28` para criar mais espaco acima e menos abaixo
+- Arquivo: `src/pages/Index.tsx`, secao de investimento (linha ~275)
+- Trocar `font-black` por `font-bold` para um peso mais refinado
+- Adicionar `tracking-tight` para um espacamento entre letras mais coeso
+- Separar "R$" do valor numerico com tamanhos diferentes para criar hierarquia visual (R$ menor, 1.497 maior)
+- Usar `text-primary/90` para suavizar levemente a cor
 
 ## Detalhe tecnico
-- Na `<section>` do bloco final: ajustar o padding para `pt-48 md:pt-64 pb-12` para empurrar o conteudo para baixo
-- No `<div>` relativo interno: adicionar `flex flex-col justify-end min-h-[400px]` para garantir que o conteudo fique na parte inferior da secao, alinhado com os ombros da modelo
+Substituir:
+```jsx
+<p className="font-display text-5xl md:text-6xl font-black text-primary">
+  R$ 1.497
+</p>
+```
+Por:
+```jsx
+<p className="font-display text-primary tracking-tight">
+  <span className="text-3xl md:text-4xl font-semibold align-baseline">R$</span>
+  <span className="text-6xl md:text-7xl font-bold ml-2">1.497</span>
+</p>
+```
+
+Isso cria uma hierarquia visual onde o simbolo monetario fica menor e o valor numerico ganha destaque, resultando em uma composicao mais sofisticada e alinhada com a estetica executiva premium da pagina.
 
