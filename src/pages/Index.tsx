@@ -14,7 +14,7 @@ const Index = () => {
         <div className="container mx-auto px-6 py-16 md:py-24 lg:py-32">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text */}
-            <div className="flex-1 text-primary-foreground text-center lg:text-left">
+            <div className="flex-1 text-foreground text-center lg:text-left">
               <p className="uppercase tracking-[0.3em] text-sm font-body mb-4 opacity-80">
                 Edição Exclusiva para Mulheres
               </p>
@@ -60,7 +60,7 @@ const Index = () => {
                 loading="eager"
               />
               <div className="text-center mt-8">
-                <p className="font-display text-xl md:text-2xl font-bold text-primary-foreground mb-4">
+                <p className="font-display text-xl md:text-2xl font-bold text-foreground mb-4">
                   Se você já decidiu internamente,
                   <br />
                   essa é a sala onde isso ganha estrutura.
@@ -235,7 +235,7 @@ const Index = () => {
         style={{ background: "var(--hero-gradient)", opacity: 0.95 }}
       >
         <div className="container mx-auto px-6 max-w-3xl text-center text-primary-foreground">
-          <h2 className="font-display text-3xl md:text-4xl font-bold mb-12">Formato</h2>
+          <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-foreground">Formato</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             {[
               { icon: Calendar, label: "12 de abril" },
@@ -294,8 +294,8 @@ const Index = () => {
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
         />
-        <div className="absolute inset-0 bg-foreground/70" />
-        <div className="relative container mx-auto px-6 max-w-3xl text-center text-primary-foreground flex flex-col justify-end min-h-[400px]">
+        <div className="absolute inset-0 bg-background/80" />
+        <div className="relative container mx-auto px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[400px]">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Se você já decidiu internamente,
           </h2>
@@ -318,7 +318,7 @@ const Index = () => {
         className="py-10"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="container mx-auto px-6 text-center text-primary-foreground">
+        <div className="container mx-auto px-6 text-center text-foreground">
           <p className="font-display text-lg font-bold">Fernanda Moura</p>
           <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
           <p className="text-xs opacity-50 mt-4">© 2025</p>
