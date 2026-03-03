@@ -1,14 +1,19 @@
 
 
-## Ajustar tamanho do contador regressivo
+## Harmonizar tipografia do preco e contador
 
-### Alteracao
+### Alteracoes
 
-**Arquivo:** `src/components/CountdownTimer.tsx`
+**1. Preco "R$ 1.497" — `src/pages/Index.tsx`**
 
-- Numeros (linha 58): trocar `text-2xl md:text-4xl` por `text-lg md:text-2xl`
-- Labels (linha 63): trocar `text-xs md:text-sm` por `text-lg md:text-2xl` (mesmo tamanho dos numeros)
-- Remover `font-bold` dos numeros para igualar o peso visual com os labels
+- Trocar `font-display` (Playfair Display) por `font-body` (Lato) para usar a mesma fonte da frase acima
+- Manter tamanho `text-2xl md:text-3xl` e cor `text-primary`
+- Remover `font-bold`, usar `font-semibold` para harmonizar com o texto ao redor
 
-Resultado: numeros e labels ficam do mesmo tamanho, mais discretos e equilibrados.
+**2. Contador regressivo — `src/components/CountdownTimer.tsx`**
+
+- Reduzir numeros e labels para `text-base md:text-lg` (um passo menor que o atual `text-lg md:text-2xl`)
+- Reduzir padding dos blocos de `px-4 py-3 md:px-6 md:py-4` para `px-3 py-2 md:px-5 md:py-3`
+- Reduzir `min-w` de `4rem/5rem` para `3.5rem/4.5rem`
+- Resultado: blocos mais compactos e proporcionais ao preco
 
