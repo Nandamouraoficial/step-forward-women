@@ -50,15 +50,15 @@ const CountdownTimer = () => {
       {blocks.map(({ value, label }) => (
         <div
           key={label}
-          className="bg-primary/10 border border-primary/20 rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[4rem] md:min-w-[5rem] text-center"
+          className="bg-primary/10 border border-primary/20 rounded-xl px-3 py-2 md:px-5 md:py-3 min-w-[3.5rem] md:min-w-[4.5rem] text-center"
         >
           <span
-            className="font-display text-lg md:text-2xl text-primary block transition-all duration-300"
+            className="font-display text-base md:text-lg text-primary block transition-all duration-300"
             key={value}
           >
             {pad(value)}
           </span>
-          <span className="text-muted-foreground text-lg md:text-2xl mt-1 block">
+          <span className="text-muted-foreground text-base md:text-lg mt-1 block">
             {label}
           </span>
         </div>
