@@ -16,9 +16,11 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <p className="uppercase tracking-[0.3em] text-sm font-body mb-4 opacity-80">
-                Edição Exclusiva para Mulheres
-              </p>
+              <div className="inline-block border-2 border-accent/50 rounded-md px-4 py-1.5 -rotate-3 opacity-90 mb-6">
+                <p className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm font-bold font-body">
+                  Edição Exclusiva para Mulheres
+                </p>
+              </div>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
                 <br />
