@@ -1,19 +1,33 @@
 
 
-## Harmonizar tipografia do preco e contador
+## Transformar "Edicao Exclusiva para Mulheres" em carimbo/stamp
 
-### Alteracoes
+### O que sera feito
+Transformar o texto "Edicao Exclusiva para Mulheres" no hero em um visual de carimbo (stamp), com borda arredondada, rotacao leve e efeito de tinta/textura.
 
-**1. Preco "R$ 1.497" — `src/pages/Index.tsx`**
+### Alteracao
 
-- Trocar `font-display` (Playfair Display) por `font-body` (Lato) para usar a mesma fonte da frase acima
-- Manter tamanho `text-2xl md:text-3xl` e cor `text-primary`
-- Remover `font-bold`, usar `font-semibold` para harmonizar com o texto ao redor
+**Arquivo:** `src/pages/Index.tsx`
 
-**2. Contador regressivo — `src/components/CountdownTimer.tsx`**
+- Substituir o `<p>` atual (linha 24-26) por um elemento estilizado como carimbo
+- Estilos:
+  - Borda dupla (`border-2` ou `border-double`) em cor accent/primary
+  - Cantos arredondados (`rounded-md`)
+  - Rotacao sutil negativa (`-rotate-3` ou `-rotate-6`) para parecer carimbo real
+  - Padding interno (`px-4 py-1`)
+  - Texto uppercase com tracking largo (ja existente)
+  - Cor accent para borda e texto
+  - `inline-block` e `w-auto` para o carimbo envolver apenas o texto
+  - Opacidade leve (`opacity-90`) para simular tinta de carimbo
 
-- Reduzir numeros e labels para `text-base md:text-lg` (um passo menor que o atual `text-lg md:text-2xl`)
-- Reduzir padding dos blocos de `px-4 py-3 md:px-6 md:py-4` para `px-3 py-2 md:px-5 md:py-3`
-- Reduzir `min-w` de `4rem/5rem` para `3.5rem/4.5rem`
-- Resultado: blocos mais compactos e proporcionais ao preco
+### Resultado visual
+
+```text
+  ╔══════════════════════════════════╗
+  ║  EDICAO EXCLUSIVA PARA MULHERES ║
+  ╚══════════════════════════════════╝
+        (levemente inclinado)
+```
+
+O efeito e puramente CSS, sem imagens externas.
 
