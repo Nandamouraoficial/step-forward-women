@@ -53,12 +53,12 @@ const CountdownTimer = () => {
           className="bg-primary/10 border border-primary/20 rounded-xl px-4 py-3 md:px-6 md:py-4 min-w-[4rem] md:min-w-[5rem] text-center"
         >
           <span
-            className="font-display text-2xl md:text-4xl font-bold text-primary block transition-all duration-300"
+            className="font-display text-lg md:text-2xl text-primary block transition-all duration-300"
             key={value}
           >
             {pad(value)}
           </span>
-          <span className="text-muted-foreground text-xs md:text-sm mt-1 block">
+          <span className="text-muted-foreground text-lg md:text-2xl mt-1 block">
             {label}
           </span>
         </div>
