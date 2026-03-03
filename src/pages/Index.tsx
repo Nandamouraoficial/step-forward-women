@@ -12,15 +12,17 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="container mx-auto px-6 py-16 md:py-24 lg:py-32">
+        <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
+          {/* Carimbo redondo */}
+          <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 w-28 h-28 md:w-36 md:h-36 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
+            <p className="text-accent uppercase text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-3">
+              Edição<br />Exclusiva<br />para<br />Mulheres
+            </p>
+          </div>
+
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <div className="inline-block border-2 border-accent/50 rounded-md px-4 py-1.5 -rotate-3 opacity-90 mb-6">
-                <p className="text-accent uppercase tracking-[0.3em] text-xs md:text-sm font-bold font-body">
-                  Edição Exclusiva para Mulheres
-                </p>
-              </div>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
                 <br />
