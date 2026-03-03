@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users } from "lucide-react";
+import CountdownTimer from "@/components/CountdownTimer";
 
 const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 
@@ -271,6 +272,7 @@ const Index = () => {
               R$ 1.497
             </p>
           </div>
+          <CountdownTimer />
           <p className="text-muted-foreground mb-10">
             Não é um evento. É uma formalização de posicionamento.
           </p>
