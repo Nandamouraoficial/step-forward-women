@@ -270,7 +270,6 @@ const Index = () => {
             <p className="font-display text-primary text-2xl md:text-3xl font-bold">
               R$ 1.497
             </p>
-            <p className="text-muted-foreground mt-2 text-lg">ou 3x sem juros</p>
           </div>
           <p className="text-muted-foreground mb-10">
             Não é um evento. É uma formalização de posicionamento.
