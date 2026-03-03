@@ -268,7 +268,7 @@ const Index = () => {
             é maior do que qualquer investimento nesta página.
           </p>
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-10 inline-block">
-            <p className="font-display text-primary text-2xl md:text-3xl font-bold">
+            <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               R$ 1.497
             </p>
           </div>
