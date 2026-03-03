@@ -1,33 +1,37 @@
 
 
-## Transformar "Edicao Exclusiva para Mulheres" em carimbo/stamp
-
-### O que sera feito
-Transformar o texto "Edicao Exclusiva para Mulheres" no hero em um visual de carimbo (stamp), com borda arredondada, rotacao leve e efeito de tinta/textura.
+## Carimbo redondo com destaque no canto superior esquerdo
 
 ### Alteracao
 
 **Arquivo:** `src/pages/Index.tsx`
 
-- Substituir o `<p>` atual (linha 24-26) por um elemento estilizado como carimbo
-- Estilos:
-  - Borda dupla (`border-2` ou `border-double`) em cor accent/primary
-  - Cantos arredondados (`rounded-md`)
-  - Rotacao sutil negativa (`-rotate-3` ou `-rotate-6`) para parecer carimbo real
-  - Padding interno (`px-4 py-1`)
-  - Texto uppercase com tracking largo (ja existente)
-  - Cor accent para borda e texto
-  - `inline-block` e `w-auto` para o carimbo envolver apenas o texto
-  - Opacidade leve (`opacity-90`) para simular tinta de carimbo
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
 ### Resultado visual
 
 ```text
-  ╔══════════════════════════════════╗
-  ║  EDICAO EXCLUSIVA PARA MULHERES ║
-  ╚══════════════════════════════════╝
-        (levemente inclinado)
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
 ```
 
-O efeito e puramente CSS, sem imagens externas.
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
 
