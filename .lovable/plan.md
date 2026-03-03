@@ -1,22 +1,34 @@
 
 
-## Corrigir texto escuro na secao Formato
+## Adicionar contador regressivo na secao de investimento
 
-### Problema
-A div container da secao "Formato" (linha 237) ainda usa `text-primary-foreground` (azul marinho escuro), que e herdado pelos icones, labels e paragrafo. Apenas o h2 foi corrigido com `text-foreground` explicito, mas o resto do conteudo continua escuro e ilegivel.
+### O que sera feito
+Um contador regressivo animado mostrando dias, horas, minutos e segundos ate 12 de abril de 2026, posicionado entre o preco e o texto "Nao e um evento...".
 
-### Solucao
-Alterar `text-primary-foreground` para `text-foreground` na div container (linha 237). Isso faz todos os elementos filhos (icones, labels, paragrafo) herdarem a cor dourada clara.
+### Implementacao
 
-### Alteracao
+**1. Criar componente `src/components/CountdownTimer.tsx`**
 
-**Arquivo:** `src/pages/Index.tsx`, linha 237
+- Hook `useState` + `useEffect` com `setInterval` de 1 segundo
+- Calcula diferenca entre `now` e `new Date('2026-04-12T09:00:00-03:00')` (inicio do evento, horario de Brasilia)
+- Exibe 4 blocos: Dias, Horas, Minutos, Segundos
+- Se a data ja passou, exibe mensagem "O evento ja comecou!"
+- Estilo: blocos com fundo `bg-primary/10`, borda `border-primary/20`, numeros grandes em `text-primary`, labels pequenos em `text-muted-foreground`
+- Animacao sutil de pulso nos segundos usando CSS transition
 
-- De: `text-center text-primary-foreground`
-- Para: `text-center text-foreground`
+**2. Integrar no `src/pages/Index.tsx`**
 
-Com isso, o `text-foreground` explicito no h2 tambem se torna redundante, mas nao causa problema manter.
+- Importar `CountdownTimer`
+- Inserir entre o bloco do preco (linha 273) e o paragrafo "Nao e um evento..." (linha 274)
+- Layout responsivo: 4 colunas lado a lado em todas as telas
 
-### Resultado
-Todos os textos e icones da secao Formato ficam em dourado claro, legiveis sobre o fundo azul marinho.
+### Detalhes visuais
+```text
++--------+  +--------+  +--------+  +--------+
+|   42   |  |   07   |  |   23   |  |   15   |
+|  dias  |  | horas  |  |  min   |  |  seg   |
++--------+  +--------+  +--------+  +--------+
+```
+
+Cada bloco tera cantos arredondados, padding generoso e os numeros com a fonte display (font-display) para manter a identidade visual da pagina.
 
