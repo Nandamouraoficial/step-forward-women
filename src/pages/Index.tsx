@@ -67,7 +67,7 @@ const Index = () => {
               <img
                 src="/images/foto_terno.jpeg"
                 alt="Fernanda Moura — Estrategista Executiva de Carreira"
-                className="w-full max-w-md lg:max-w-lg max-h-[500px] rounded-2xl shadow-2xl object-cover object-top"
+                className="w-full max-w-md lg:max-w-lg max-h-[440px] rounded-2xl shadow-2xl object-cover object-[center_20%]"
                 loading="eager"
               />
               <div className="text-center mt-8">
