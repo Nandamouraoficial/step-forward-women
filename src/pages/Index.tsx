@@ -59,7 +59,7 @@ const Index = () => {
             {/* Photo */}
             <div className="flex-1 flex flex-col items-center lg:items-end">
               <img
-                src="/images/hero-terno-branco.png"
+                src="/images/foto_terno.jpeg"
                 alt="Fernanda Moura — Estrategista Executiva de Carreira"
                 className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover"
                 loading="eager"
