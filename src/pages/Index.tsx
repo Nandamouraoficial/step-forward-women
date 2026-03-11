@@ -12,9 +12,9 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-6 py-16 md:py-24 lg:py-32">
+        <div className="relative container mx-auto px-6 pt-36 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           {/* Carimbo redondo */}
-          <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 w-28 h-28 md:w-36 md:h-36 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
+          <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 w-24 h-24 md:w-36 md:h-36 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
             <p className="text-accent uppercase text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-3">
               Edição<br />Exclusiva<br />para<br />Mulheres
             </p>
