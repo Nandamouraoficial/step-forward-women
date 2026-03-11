@@ -312,7 +312,7 @@ const Index = () => {
             o que não acontece em eventos abertos ou superficiais.
           </p>
           <p className="text-base font-semibold opacity-90 max-w-xl mx-auto">
-            Grupo reduzido para permitir discussão estratégica real entre executivas.
+            Grupo reduzido para permitir discussão estratégica real entre executivas — com profundidade e confidencialidade.
           </p>
         </div>
       </section>
