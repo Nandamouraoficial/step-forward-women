@@ -202,7 +202,7 @@ const Index = () => {
               "Analisar seu momento com profundidade",
               "Identifica o desalinhamento real",
               "Define o próximo movimento",
-              "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA.",
+              "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA aplicada.",
             ].map((item, i) => (
               <div
                 key={item}
