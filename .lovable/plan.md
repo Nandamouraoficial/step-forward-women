@@ -1,37 +1,19 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Correção do layout mobile — Carimbo sobrepondo o título
 
-### Alteracao
+### Problema identificado
+No mobile (375px), o carimbo redondo posicionado com `absolute top-6 left-6` sobrepõe o título "IMERSÃO O PRÓXIMO PASSO", prejudicando a leitura.
+
+O restante da página (seções de conteúdo, investimento, bloco final e footer) está bem posicionado e responsivo.
+
+### Solução
 
 **Arquivo:** `src/pages/Index.tsx`
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+- Adicionar `pt-36` (padding-top) no container interno do hero para mobile, empurrando o conteúdo para baixo do carimbo
+- Em desktop (`lg:pt-0`) manter o padding original pois o layout side-by-side tem espaço suficiente
+- Reduzir levemente o carimbo no mobile: `w-24 h-24` em vez de `w-28 h-28`
 
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
-
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+Isso garante que o carimbo fique visível sem sobrepor o texto.
 
