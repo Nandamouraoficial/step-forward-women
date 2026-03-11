@@ -354,7 +354,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center text-foreground">
           <p className="font-display text-lg font-bold">Fernanda Moura</p>
           <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
-          <p className="text-xs opacity-50 mt-4">© 2025</p>
+          <p className="text-xs opacity-50 mt-4">© 2026</p>
         </div>
       </footer>
     </main>
