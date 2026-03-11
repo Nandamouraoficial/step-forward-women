@@ -206,8 +206,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
               "Analisar seu momento com profundidade",
-              "Identifica o desalinhamento real",
-              "Define o próximo movimento",
+              "Identificar o desalinhamento real",
+              "Definir o próximo movimento",
               "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA aplicada.",
             ].map((item, i) => (
               <div
