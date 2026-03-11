@@ -188,10 +188,13 @@ const Index = () => {
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl py-8 px-6 mb-10">
             <p className="font-display text-2xl md:text-3xl font-bold text-primary">
-              ✦ VOCÊ SAI COM A DECISÃO FORMALIZADA. ✦
+              ✦ VOCÊ SAI COM A DECISÃO CLARA — E O PRÓXIMO PASSO ESTRUTURADO. ✦
             </p>
             <p className="text-muted-foreground mt-4">
               Sem dramatização. Sem autoajuda. Sem discurso motivacional.
+            </p>
+            <p className="text-foreground font-bold mt-2">
+              Apenas decisão estratégica estruturada.
             </p>
           </div>
 
