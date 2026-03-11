@@ -145,7 +145,7 @@ const Index = () => {
             {[
               "Ocupam posições de liderança ou influência",
               "Possuem trajetória consolidada",
-              "Sabem que precisam se reposicionar",
+              "Sabem que precisam redefinir o próximo movimento",
               "Não querem mais crescer por impulso",
               "Querem estruturar o próximo passo com inteligência",
             ].map((item) => (
