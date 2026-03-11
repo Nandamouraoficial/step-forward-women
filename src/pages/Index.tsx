@@ -319,7 +319,7 @@ const Index = () => {
       </section>
 
       {/* BLOCO FINAL */}
-      <section className="relative overflow-hidden pt-48 md:pt-64 pb-12">
+      <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
           alt="Fernanda Moura com equipe"
