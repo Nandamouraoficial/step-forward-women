@@ -1,37 +1,17 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Ajustar enquadramento da foto hero
 
-### Alteracao
+**Arquivo:** `src/pages/Index.tsx` (linha 70)
 
-**Arquivo:** `src/pages/Index.tsx`
+Atualizar as classes CSS da imagem para recortar mesa, reduzir espaço acima da cabeça e focar no enquadramento waist-up:
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+- Trocar `object-top` por `object-[center_20%]` para deslocar o ponto focal ligeiramente acima do centro, reduzindo espaço vazio acima da cabeça enquanto mantém braços na cintura visíveis
+- Reduzir `max-h-[500px]` para `max-h-[440px]` para cortar mais da parte inferior (mesa)
+- Manter `object-cover` para preencher o container com crop automático
 
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
+Classe final:
 ```
-
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+w-full max-w-md lg:max-w-lg max-h-[440px] rounded-2xl shadow-2xl object-cover object-[center_20%]
+```
 
