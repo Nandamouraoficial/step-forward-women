@@ -172,7 +172,7 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
-              "Analisa seu momento com profundidade",
+              "Analisar seu momento com profundidade",
               "Identifica o desalinhamento real",
               "Define o próximo movimento",
               "Estrutura um plano inicial de 30 dias",
