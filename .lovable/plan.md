@@ -1,29 +1,37 @@
 
 
-## Atualização da Landing Page — 7 Ajustes
+## Carimbo redondo com destaque no canto superior esquerdo
+
+### Alteracao
 
 **Arquivo:** `src/pages/Index.tsx`
 
-### 1. Hero — Novos textos
-Adicionar dois parágrafos após o texto existente ("Existe um momento na carreira..."):
-- "Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado."
-- "Grupo limitado para permitir discussão estratégica aprofundada entre executivas." (em itálico/opacity reduzida)
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
-### 2. Imagem hero — Enquadramento waist-up
-Adicionar `object-top` e `max-h-[500px]` na tag `<img>` para cortar a parte inferior (mesa), mantendo rosto e postura.
+### Resultado visual
 
-### 3. Bloco "A realidade que você já percebeu"
-Quebrar frases longas com `<br />` para uma afirmação por linha, aumentando impacto visual.
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
+```
 
-### 4. Bloco "Para quem é"
-Atualizar terceiro item: "Já decidiram que precisam se reposicionar" → "Sabem que precisam se reposicionar".
-
-### 5. Bloco formato
-Adicionar parágrafo após o existente: "Grupo pequeno para permitir discussão estratégica real entre executivas."
-
-### 6. CTA final (bloco investimento)
-Alterar "Não é um evento. É uma formalização de posicionamento." → "Não é um evento. É uma formalização de posicionamento profissional."
-
-### 7. Botões CTA
-Aumentar padding de `px-10 py-6` para `px-12 py-7` em todos os botões CTA.
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
 
