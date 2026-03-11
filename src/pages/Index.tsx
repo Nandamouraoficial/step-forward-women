@@ -327,7 +327,7 @@ const Index = () => {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-background/80" />
-        <div className="relative container mx-auto px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[400px]">
+        <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Se você já decidiu internamente,
           </h2>
