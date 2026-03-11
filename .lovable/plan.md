@@ -1,37 +1,26 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Ajustes finais pendentes
 
-### Alteracao
+A maioria dos 16 itens já foi aplicada em edições anteriores. Restam 5 alterações:
 
-**Arquivo:** `src/pages/Index.tsx`
+### 1. Hero — Ajuste de imagem (item 3)
+**Arquivo:** `src/pages/Index.tsx` (linha 76)
+Alterar `object-[center_20%]` para `object-[center_15%]` e reduzir `max-h-[440px]` para `max-h-[400px]` para cortar mais da mesa e focar no enquadramento waist-up.
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+### 2. Novo bloco abaixo do Hero (item 4)
+**Arquivo:** `src/pages/Index.tsx` (entre linhas 97-98)
+Inserir nova seção com título "Esta imersão é para você se:" e 4 bullets com ícone Check, estilo `bg-secondary`, mesmo padrão visual das listas existentes.
 
-### Resultado visual
+### 3. "Para quem é" — frase de fechamento (item 8)
+**Arquivo:** `src/pages/Index.tsx` (após linha 163)
+Adicionar frase em destaque: "Executivas que sabem que já chegou a hora de decidir — mas não querem fazer isso sozinhas."
 
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
+### 4. Bloco de autoridade — copy (item 10)
+**Arquivo:** `src/pages/Index.tsx` (linha 246)
+Substituir "Quem conduz essa imersão não é uma consultora de carreira." por "Quem conduz essa imersão não fala de carreira de fora."
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+### 5. Botões CTA — aumento de padding (item 15)
+**Arquivo:** `src/pages/Index.tsx` (todas as instâncias de Button)
+Aumentar padding de `px-8 sm:px-12 py-6 sm:py-7` para `px-10 sm:px-14 py-7 sm:py-8` em todos os botões CTA.
 
