@@ -37,7 +37,7 @@ const Index = () => {
                 <br />
                 O que falta não é competência.
                 <br />
-                <strong className="font-bold">É formalizar o próximo movimento.</strong>
+                <strong className="font-bold">É estruturar o próximo movimento.</strong>
               </p>
               <p className="text-base font-semibold mb-2 max-w-lg mx-auto lg:mx-0">
                 Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado.
