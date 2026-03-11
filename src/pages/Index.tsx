@@ -318,8 +318,7 @@ const Index = () => {
             Investimento
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            O custo de permanecer onde já não faz sentido
-            costuma ser maior do que qualquer decisão de mudança.
+            O custo de permanecer onde já não faz sentido costuma ser maior do que decidir o próximo movimento com clareza.
           </p>
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-10 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
