@@ -284,8 +284,30 @@ const Index = () => {
             o que não acontece em eventos abertos ou superficiais.
           </p>
           <p className="text-base font-semibold opacity-90 max-w-xl mx-auto">
-            Grupo pequeno para permitir discussão estratégica real entre executivas.
+            Grupo reduzido para permitir discussão estratégica real entre executivas.
           </p>
+        </div>
+      </section>
+
+      {/* BLOCO O QUE VOCÊ LEVA */}
+      <section className="bg-background py-20 md:py-28">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+            O que você leva ao final da imersão
+          </h2>
+          <ul className="space-y-4 max-w-xl mx-auto">
+            {[
+              "Clareza sobre o desalinhamento que está limitando seu avanço",
+              "Definição do próximo movimento profissional",
+              "Estrutura estratégica para executar a decisão",
+              "Plano inicial de 30 dias para iniciar a transição",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
