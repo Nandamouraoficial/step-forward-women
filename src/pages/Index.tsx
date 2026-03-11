@@ -96,6 +96,28 @@ const Index = () => {
         </div>
       </section>
 
+      {/* BLOCO ESTA IMERSÃO É PARA VOCÊ SE */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+            Esta imersão é para você se:
+          </h2>
+          <ul className="space-y-4 max-w-xl mx-auto">
+            {[
+              "Ocupa uma posição de liderança ou influência no mundo corporativo",
+              "Sente que sua carreira chegou a um ponto de desalinhamento",
+              "Percebe que continuar crescendo não resolve mais a questão central",
+              "Sabe que precisa estruturar o próximo movimento com clareza",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
       {/* BLOCO REALIDADE */}
       <section className="bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
