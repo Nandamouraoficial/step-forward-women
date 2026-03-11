@@ -205,10 +205,10 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
-              "Analisar seu momento com profundidade",
-              "Identificar o desalinhamento real",
-              "Definir o próximo movimento",
-              "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA aplicada.",
+              "Analisa seu momento com profundidade",
+              "Identifica o desalinhamento real",
+              "Define o próximo movimento",
+              "Estrutura um plano inicial de 30 dias — apoiado por análise estratégica e IA aplicada.",
             ].map((item, i) => (
               <div
                 key={item}
