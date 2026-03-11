@@ -187,7 +187,7 @@ const Index = () => {
           </div>
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl py-8 px-6 mb-10">
-            <p className="font-display text-2xl md:text-3xl font-bold text-primary">
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">
               ✦ VOCÊ SAI COM A DECISÃO CLARA — E O PRÓXIMO PASSO ESTRUTURADO. ✦
             </p>
             <p className="text-muted-foreground mt-4">
