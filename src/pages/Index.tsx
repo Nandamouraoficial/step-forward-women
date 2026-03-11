@@ -53,7 +53,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     CONFIRMAR MINHA VAGA
                   </Button>
@@ -73,7 +73,7 @@ const Index = () => {
               <img
                 src="/images/foto_terno.jpeg"
                 alt="Fernanda Moura — Estrategista Executiva de Carreira"
-                className="w-full max-w-md lg:max-w-lg max-h-[440px] rounded-2xl shadow-2xl object-cover object-[center_20%]"
+                className="w-full max-w-md lg:max-w-lg max-h-[400px] rounded-2xl shadow-2xl object-cover object-[center_15%]"
                 loading="eager"
               />
               <div className="text-center mt-8">
@@ -85,7 +85,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     GARANTIR MINHA VAGA
                   </Button>
@@ -93,6 +93,28 @@ const Index = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* BLOCO ESTA IMERSÃO É PARA VOCÊ SE */}
+      <section className="bg-secondary py-20 md:py-28">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+            Esta imersão é para você se:
+          </h2>
+          <ul className="space-y-4 max-w-xl mx-auto">
+            {[
+              "Ocupa uma posição de liderança ou influência no mundo corporativo",
+              "Sente que sua carreira chegou a um ponto de desalinhamento",
+              "Percebe que continuar crescendo não resolve mais a questão central",
+              "Sabe que precisa estruturar o próximo movimento com clareza",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
@@ -161,6 +183,9 @@ const Index = () => {
             <br />
             esta não é a hora certa — e tudo bem.
           </p>
+          <p className="text-center text-foreground font-bold text-lg mt-8">
+            Executivas que sabem que já chegou a hora de decidir — mas não querem fazer isso sozinhas.
+          </p>
         </div>
       </section>
 
@@ -202,7 +227,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -243,7 +268,7 @@ const Index = () => {
                   onde atuou como Diretora Executiva para a América Latina e America Central.
                 </p>
                 <p>
-                  Quem conduz essa imersão não é uma consultora de carreira.
+                  Quem conduz essa imersão não fala de carreira de fora.
                   <br />
                   <strong className="text-foreground">
                     É alguém que tomou essas decisões de dentro — e aprendeu a estruturá-las.
@@ -332,7 +357,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               CONFIRMAR MINHA VAGA
             </Button>
@@ -359,7 +384,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
