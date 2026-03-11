@@ -231,7 +231,7 @@ const Index = () => {
                 <p>
                   Experiência construída em organizações como{" "}
                   <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, MBRF e Kimberly-Clark</strong>,
-                  onde atuou como Diretora para a América Latina.
+                  onde atuou como Diretora Executiva para a América Latina.
                 </p>
                 <p>
                   Quem conduz essa imersão não é uma consultora de carreira.
