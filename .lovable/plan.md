@@ -1,37 +1,19 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Correção de consistência verbal — bloco "O que acontece em 6 horas"
 
-### Alteracao
+Os quatro itens estão com conjugação inconsistente. Itens 01 e 04 usam infinitivo (Analisar, Estruturar), mas itens 02 e 03 usam presente do indicativo (Identifica, Define).
 
-**Arquivo:** `src/pages/Index.tsx`
+### Alteração
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+**Arquivo:** `src/pages/Index.tsx` (linhas 208-211)
 
-### Resultado visual
+Padronizar todos no infinitivo:
 
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
+| Item | Atual | Corrigido |
+|------|-------|-----------|
+| 02 | "Identifica o desalinhamento real" | "Identificar o desalinhamento real" |
+| 03 | "Define o próximo movimento" | "Definir o próximo movimento" |
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+Itens 01 ("Analisar...") e 04 ("Estruturar...") já estão corretos.
 
