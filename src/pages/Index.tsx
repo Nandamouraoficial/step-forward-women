@@ -35,14 +35,20 @@ const Index = () => {
                 <br />
                 <strong className="font-bold">É formalizar o próximo movimento.</strong>
               </p>
-              <p className="text-base opacity-80 mb-8 max-w-lg mx-auto lg:mx-0">
+              <p className="text-base opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
                 Existe um momento na carreira em que a próxima promoção já não resolve o que você sente.
+              </p>
+              <p className="text-base font-semibold mb-2 max-w-lg mx-auto lg:mx-0">
+                Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado.
+              </p>
+              <p className="text-sm italic opacity-70 mb-8 max-w-lg mx-auto lg:mx-0">
+                Grupo limitado para permitir discussão estratégica aprofundada entre executivas.
               </p>
 
               <a href={CTA_URL}>
                 <Button
                   size="lg"
-                  className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                  className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
                 >
                   CONFIRMAR MINHA PARTICIPAÇÃO
                 </Button>
@@ -61,7 +67,7 @@ const Index = () => {
               <img
                 src="/images/foto_terno.jpeg"
                 alt="Fernanda Moura — Estrategista Executiva de Carreira"
-                className="w-full max-w-md lg:max-w-lg rounded-2xl shadow-2xl object-cover"
+                className="w-full max-w-md lg:max-w-lg max-h-[500px] rounded-2xl shadow-2xl object-cover object-top"
                 loading="eager"
               />
               <div className="text-center mt-8">
@@ -73,7 +79,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
                   >
                     OCUPAR MEU LUGAR
                   </Button>
@@ -92,13 +98,23 @@ const Index = () => {
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6">
             <p>
-              Você já provou resultado. Já liderou. Já sustentou pressão. Já ocupou espaço.
+              Você já provou resultado.
+              <br />
+              Já liderou.
+              <br />
+              Já sustentou pressão.
+              <br />
+              Já ocupou espaço.
             </p>
             <p className="font-bold text-foreground">
-              O que começa a limitar o avanço não é preparo. É desalinhamento.
+              O que começa a limitar o avanço não é preparo.
+              <br />
+              É desalinhamento.
             </p>
             <p>
-              O cargo mudou. A remuneração mudou.
+              O cargo mudou.
+              <br />
+              A remuneração mudou.
               <br />
               Mas a sensação de estar no lugar certo — essa não veio.
             </p>
@@ -124,7 +140,7 @@ const Index = () => {
             {[
               "Ocupam posições de liderança ou influência",
               "Possuem trajetória consolidada",
-              "Já decidiram que precisam se reposicionar",
+              "Sabem que precisam se reposicionar",
               "Não querem mais crescer por impulso",
               "Querem estruturar o próximo passo com inteligência",
             ].map((item) => (
@@ -177,7 +193,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
             >
               QUERO OCUPAR MEU PRÓXIMO PASSO
             </Button>
@@ -254,9 +270,12 @@ const Index = () => {
               </div>
             ))}
           </div>
-          <p className="text-lg opacity-80 max-w-xl mx-auto">
+          <p className="text-lg opacity-80 max-w-xl mx-auto mb-4">
             O grupo reduzido permite profundidade e confidencialidade —
             o que não acontece em eventos abertos ou superficiais.
+          </p>
+          <p className="text-base font-semibold opacity-90 max-w-xl mx-auto">
+            Grupo pequeno para permitir discussão estratégica real entre executivas.
           </p>
         </div>
       </section>
@@ -278,12 +297,12 @@ const Index = () => {
           </div>
           <CountdownTimer />
           <p className="text-muted-foreground mb-10">
-            Não é um evento. É uma formalização de posicionamento.
+            Não é um evento. É uma formalização de posicionamento profissional.
           </p>
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
             >
               CONFIRMAR MINHA PARTICIPAÇÃO
             </Button>
@@ -310,7 +329,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-10 py-6 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
             >
               OCUPAR MEU PRÓXIMO LUGAR
             </Button>
