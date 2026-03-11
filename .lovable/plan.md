@@ -1,37 +1,13 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Correção de sobreposição no tablet (768px)
 
-### Alteracao
+**Problema identificado:** Em 768px, o selo circular "Edição Exclusiva para Mulheres" (com `md:w-36 md:h-36`) sobrepõe o texto inicial do hero.
 
 **Arquivo:** `src/pages/Index.tsx`
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+**Solução:** Reduzir o tamanho do selo no breakpoint `md` e ajustar o padding-top da hero para garantir espaço suficiente. Alterações:
 
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
-
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+1. Reduzir o selo de `md:w-36 md:h-36` para `md:w-28 md:h-28`
+2. Ajustar o `pt` da hero para `md:pt-28` garantindo que o texto não fique atrás do selo
 
