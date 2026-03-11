@@ -1,37 +1,35 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
-
-### Alteracao
+## Ajustes finais de copy, microestrutura e divisores visuais
 
 **Arquivo:** `src/pages/Index.tsx`
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
-
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
+### 1. Hero — quebra de leitura (linha 28)
+Quebrar a frase em três linhas com `<br />`:
+```
+Existe um momento na carreira<br />
+em que continuar crescendo<br />
+já não resolve o desalinhamento que você sente.
 ```
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+### 2. Bloco "Esta imersão é para você se" (linha 109)
+"não resolve mais" → "já não resolve"
+
+### 3. Bloco "6 horas" — item 04 (linha 203)
+Adicionar "aplicada" ao final: "...e IA aplicada."
+
+### 4. Bloco "Sobre a condução" (linha 262)
+Substituir "30 anos de carreira corporativa. 23 transições profissionais." por "23 anos de carreira corporativa." + quebra + "23 transições profissionais."
+
+### 5. Bloco "Formato" (linha 312)
+Adicionar " — com profundidade e confidencialidade." ao final da frase.
+
+### 6. Botões CTA — sombra reforçada
+Em todas as instâncias de Button, trocar `shadow-lg` por `shadow-xl shadow-primary/20` para maior destaque sem alterar cor.
+
+### 7. Divisores visuais decorativos
+Criar um componente inline `SectionDivider` com uma linha horizontal centralizada e um caractere `✦` no centro, com opacidade baixa. Inserir em três pontos:
+- Após "Esta imersão é para você se" (após linha 119)
+- Após "O que acontece em 6 horas" (após linha 236)
+- Antes de "Investimento" (antes da linha 340)
 
