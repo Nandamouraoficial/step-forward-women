@@ -1,14 +1,37 @@
 
 
-## Ajuste Hero — Frase de identificação acima do título
+## Carimbo redondo com destaque no canto superior esquerdo
+
+### Alteracao
 
 **Arquivo:** `src/pages/Index.tsx`
 
-### Alterações
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
-1. **Adicionar frase antes do `<h1>`** (linha 26): Inserir um `<p>` com o texto "Existe um momento na carreira em que continuar crescendo já não resolve o que você sente." com estilo sutil (opacity, font-light, texto médio) para funcionar como lead-in.
+### Resultado visual
 
-2. **Remover a frase da posição atual** (linha 38-40): Remover o parágrafo "Existe um momento na carreira em que a próxima promoção já não resolve o que você sente." que ficava abaixo do subtítulo.
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
+```
 
-Nota: o texto será ligeiramente atualizado conforme pedido — de "a próxima promoção já não resolve" para "continuar crescendo já não resolve".
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
 

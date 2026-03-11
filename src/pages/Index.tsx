@@ -23,6 +23,9 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
+              <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
+                Existe um momento na carreira em que continuar crescendo já não resolve o que você sente.
+              </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
                 <br />
@@ -34,9 +37,6 @@ const Index = () => {
                 O que falta não é competência.
                 <br />
                 <strong className="font-bold">É formalizar o próximo movimento.</strong>
-              </p>
-              <p className="text-base opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
-                Existe um momento na carreira em que a próxima promoção já não resolve o que você sente.
               </p>
               <p className="text-base font-semibold mb-2 max-w-lg mx-auto lg:mx-0">
                 Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado.
