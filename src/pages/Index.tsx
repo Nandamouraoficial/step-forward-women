@@ -268,7 +268,7 @@ const Index = () => {
                   onde atuou como Diretora Executiva para a América Latina e America Central.
                 </p>
                 <p>
-                  Quem conduz essa imersão não é uma consultora de carreira.
+                  Quem conduz essa imersão não fala de carreira de fora.
                   <br />
                   <strong className="text-foreground">
                     É alguém que tomou essas decisões de dentro — e aprendeu a estruturá-las.
