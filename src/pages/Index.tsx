@@ -25,7 +25,9 @@ const Index = () => {
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
               <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
-                Existe um momento na carreira em que continuar crescendo já não resolve o desalinhamento que você sente.
+                Existe um momento na carreira<br />
+                em que continuar crescendo<br />
+                já não resolve o desalinhamento que você sente.
               </p>
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
@@ -53,7 +55,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     CONFIRMAR MINHA VAGA
                   </Button>
@@ -85,7 +87,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     GARANTIR MINHA VAGA
                   </Button>
@@ -106,7 +108,7 @@ const Index = () => {
             {[
               "Ocupa uma posição de liderança ou influência no mundo corporativo",
               "Sente que sua carreira chegou a um ponto de desalinhamento",
-              "Percebe que continuar crescendo não resolve mais a questão central",
+              "Percebe que continuar crescendo já não resolve a questão central",
               "Sabe que precisa estruturar o próximo movimento com clareza",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-lg text-foreground">
@@ -118,7 +120,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* BLOCO REALIDADE */}
+      {/* Divisor visual */}
+      <div className="flex items-center justify-center py-6 bg-secondary">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
       <section className="bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
@@ -200,7 +208,7 @@ const Index = () => {
               "Analisar seu momento com profundidade",
               "Identifica o desalinhamento real",
               "Define o próximo movimento",
-              "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA.",
+              "Estruturar um plano inicial de 30 dias — apoiado por análise estratégica e IA aplicada.",
             ].map((item, i) => (
               <div
                 key={item}
@@ -227,7 +235,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -235,7 +243,13 @@ const Index = () => {
         </div>
       </section>
 
-      {/* BLOCO SOBRE FERNANDA */}
+      {/* Divisor visual */}
+      <div className="flex items-center justify-center py-6 bg-background">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
       <section className="bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
@@ -259,8 +273,9 @@ const Index = () => {
               </p>
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  30 anos de carreira corporativa. 23 transições profissionais.
-                  Atuação em 10 empresas, sendo 5 multinacionais.
+                  23 anos de carreira corporativa.
+                  <br />23 transições profissionais.
+                  <br />Atuação em 10 empresas, sendo 5 multinacionais.
                 </p>
                 <p>
                   Experiência construída em organizações como{" "}
@@ -309,7 +324,7 @@ const Index = () => {
             o que não acontece em eventos abertos ou superficiais.
           </p>
           <p className="text-base font-semibold opacity-90 max-w-xl mx-auto">
-            Grupo reduzido para permitir discussão estratégica real entre executivas.
+            Grupo reduzido para permitir discussão estratégica real entre executivas — com profundidade e confidencialidade.
           </p>
         </div>
       </section>
@@ -336,6 +351,13 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divisor visual */}
+      <div className="flex items-center justify-center py-6 bg-background">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
       {/* BLOCO INVESTIMENTO */}
       <section className="bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
@@ -357,7 +379,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               CONFIRMAR MINHA VAGA
             </Button>
@@ -384,7 +406,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
