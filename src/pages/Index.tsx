@@ -332,7 +332,7 @@ const Index = () => {
             Se você já decidiu internamente,
           </h2>
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-10 opacity-90">
-            essa é a sala onde isso ganha estrutura.
+            esta é a sala onde essa decisão ganha estrutura.
           </h3>
           <a href={CTA_URL}>
             <Button
