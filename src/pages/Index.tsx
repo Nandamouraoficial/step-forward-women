@@ -12,10 +12,10 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-6 pt-36 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
+        <div className="relative container mx-auto px-4 sm:px-6 pt-32 sm:pt-36 md:pt-24 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           {/* Carimbo redondo */}
-          <div className="absolute top-6 left-6 md:top-10 md:left-10 z-10 w-24 h-24 md:w-36 md:h-36 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
-            <p className="text-accent uppercase text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-3">
+          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-10 md:left-10 z-10 w-20 h-20 sm:w-24 sm:h-24 md:w-36 md:h-36 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
+            <p className="text-accent uppercase text-[8px] sm:text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-2 sm:px-3">
               Edição<br />Exclusiva<br />para<br />Mulheres
             </p>
           </div>
@@ -26,7 +26,7 @@ const Index = () => {
               <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
                 Existe um momento na carreira em que continuar crescendo já não resolve o desalinhamento que você sente.
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
                 <br />
                 O PRÓXIMO PASSO
@@ -52,7 +52,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     CONFIRMAR MINHA PARTICIPAÇÃO
                   </Button>
@@ -84,7 +84,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     GARANTIR MINHA VAGA
                   </Button>
@@ -97,7 +97,7 @@ const Index = () => {
 
       {/* BLOCO REALIDADE */}
       <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
             A realidade que você já percebeu
           </h2>
@@ -134,7 +134,7 @@ const Index = () => {
 
       {/* BLOCO PARA QUEM É */}
       <section className="bg-secondary py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-3xl">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
             Para quem é
           </h2>
@@ -165,7 +165,7 @@ const Index = () => {
 
       {/* BLOCO RESULTADO */}
       <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
             O que acontece em 6 horas
           </h2>
@@ -187,7 +187,7 @@ const Index = () => {
           </div>
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl py-8 px-6 mb-10">
-            <p className="font-display text-2xl md:text-3xl font-bold text-primary">
+            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">
               ✦ VOCÊ SAI COM A DECISÃO CLARA — E O PRÓXIMO PASSO ESTRUTURADO. ✦
             </p>
             <p className="text-muted-foreground mt-4">
@@ -201,7 +201,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -211,7 +211,7 @@ const Index = () => {
 
       {/* BLOCO SOBRE FERNANDA */}
       <section className="bg-secondary py-20 md:py-28">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
             Sobre a condução
           </h2>
@@ -263,7 +263,7 @@ const Index = () => {
         className="py-20 md:py-28"
         style={{ background: "var(--hero-gradient)", opacity: 0.95 }}
       >
-        <div className="container mx-auto px-6 max-w-3xl text-center text-foreground">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-foreground">Formato</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             {[
@@ -290,7 +290,7 @@ const Index = () => {
 
       {/* BLOCO INVESTIMENTO */}
       <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-6 max-w-3xl text-center">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
             Investimento
           </h2>
@@ -310,7 +310,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               CONFIRMAR MINHA PARTICIPAÇÃO
             </Button>
@@ -319,7 +319,7 @@ const Index = () => {
       </section>
 
       {/* BLOCO FINAL */}
-      <section className="relative overflow-hidden pt-48 md:pt-64 pb-12">
+      <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
           alt="Fernanda Moura com equipe"
@@ -327,7 +327,7 @@ const Index = () => {
           loading="lazy"
         />
         <div className="absolute inset-0 bg-background/80" />
-        <div className="relative container mx-auto px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[400px]">
+        <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
             Se você já decidiu internamente,
           </h2>
@@ -337,7 +337,7 @@ const Index = () => {
           <a href={CTA_URL}>
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -350,7 +350,7 @@ const Index = () => {
         className="py-10"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="container mx-auto px-6 text-center text-foreground">
+        <div className="container mx-auto px-4 sm:px-6 text-center text-foreground">
           <p className="font-display text-lg font-bold">Fernanda Moura</p>
           <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
           <p className="text-xs opacity-50 mt-4">© 2025</p>
