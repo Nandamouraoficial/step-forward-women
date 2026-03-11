@@ -1,37 +1,31 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
-
-### Alteracao
+## Ajustes de copy e microestrutura
 
 **Arquivo:** `src/pages/Index.tsx`
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+### Alterações pontuais de texto
 
-### Resultado visual
+1. **Linha 40** — "É formalizar" → "É estruturar"
+2. **Linha 175** — "Analisa seu momento" → "Analisar seu momento"
+3. **Linha 178** — Adicionar " — apoiado por análise estratégica e IA." ao item 04
+4. **Linha 287** — "Grupo pequeno" → "Grupo reduzido"
+5. **Linhas 298-300** — Substituir frase do investimento por: "O custo de permanecer onde já não faz sentido costuma ser maior do que decidir o próximo movimento com clareza."
+6. **Linha 58** — "CONFIRMAR MINHA PARTICIPAÇÃO" → "CONFIRMAR MINHA VAGA"
+7. **Linha 316** — "CONFIRMAR MINHA PARTICIPAÇÃO" → "CONFIRMAR MINHA VAGA"
 
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
+### Novo bloco: "O que você leva ao final da imersão"
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+Inserir uma nova seção entre o bloco "Formato" e o bloco "Investimento" (entre linhas 290 e 292), com estilo `bg-background`, usando bullets com ícone Check (mesmo padrão do bloco "Para quem é"):
+
+- Clareza sobre o desalinhamento que está limitando seu avanço
+- Definição do próximo movimento profissional
+- Estrutura estratégica para executar a decisão
+- Plano inicial de 30 dias para iniciar a transição
+
+### Preservados sem alteração
+
+- Bloco de resultado: "VOCÊ SAI COM A DECISÃO CLARA — E O PRÓXIMO PASSO ESTRUTURADO."
+- Selo de escassez: "Grupo fechado para até 15 executivas"
+- Botões intermediários "GARANTIR MINHA VAGA"
 
