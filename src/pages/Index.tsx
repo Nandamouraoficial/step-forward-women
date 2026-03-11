@@ -230,7 +230,7 @@ const Index = () => {
                 </p>
                 <p>
                   Experiência construída em organizações como{" "}
-                  <strong className="text-foreground">Cargill, Kimberly-Clark, Coca-Cola, Kraft Heinz e MBRF</strong>,
+                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, MBRF e Kimberly-Clark</strong>,
                   onde atuou como Diretora para a América Latina.
                 </p>
                 <p>
