@@ -108,7 +108,7 @@ const Index = () => {
             {[
               "Ocupa uma posição de liderança ou influência no mundo corporativo",
               "Sente que sua carreira chegou a um ponto de desalinhamento",
-              "Percebe que continuar crescendo não resolve mais a questão central",
+              "Percebe que continuar crescendo já não resolve a questão central",
               "Sabe que precisa estruturar o próximo movimento com clareza",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-lg text-foreground">
