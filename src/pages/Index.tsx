@@ -7,18 +7,19 @@ const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
+      {/* Selo fixo lateral */}
+      <div className="fixed top-6 left-4 sm:top-8 sm:left-6 md:top-10 md:left-10 z-50 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-background/90 backdrop-blur-sm">
+        <p className="text-accent uppercase text-[8px] sm:text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-2 sm:px-3">
+          Edição<br />Exclusiva<br />para<br />Mulheres
+        </p>
+      </div>
+
       {/* HERO */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
         <div className="relative container mx-auto px-4 sm:px-6 pt-32 sm:pt-36 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
-          {/* Carimbo redondo */}
-          <div className="absolute top-4 left-4 sm:top-6 sm:left-6 md:top-10 md:left-10 z-10 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-accent/5">
-            <p className="text-accent uppercase text-[8px] sm:text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-2 sm:px-3">
-              Edição<br />Exclusiva<br />para<br />Mulheres
-            </p>
-          </div>
 
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             {/* Text */}
