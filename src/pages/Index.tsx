@@ -24,7 +24,7 @@ const Index = () => {
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
               <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
-                Existe um momento na carreira em que continuar crescendo já não resolve o que você sente.
+                Existe um momento na carreira em que continuar crescendo já não resolve o desalinhamento que você sente.
               </p>
               <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
@@ -45,14 +45,19 @@ const Index = () => {
                 Grupo limitado para permitir discussão estratégica aprofundada entre executivas.
               </p>
 
-              <a href={CTA_URL}>
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
-                >
-                  CONFIRMAR MINHA PARTICIPAÇÃO
-                </Button>
-              </a>
+              <div className="flex flex-col items-center lg:items-start gap-3">
+                <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
+                  Grupo fechado para até 15 executivas
+                </span>
+                <a href={CTA_URL}>
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                  >
+                    CONFIRMAR MINHA PARTICIPAÇÃO
+                  </Button>
+                </a>
+              </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm opacity-80">
                 <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 de abril</span>
@@ -74,14 +79,14 @@ const Index = () => {
                 <p className="font-display text-xl md:text-2xl font-bold text-foreground mb-4">
                   Se você já decidiu internamente,
                   <br />
-                  essa é a sala onde isso ganha estrutura.
+                  esta é a sala onde essa decisão ganha estrutura.
                 </p>
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
                   >
-                    OCUPAR MEU LUGAR
+                    GARANTIR MINHA VAGA
                   </Button>
                 </a>
               </div>
@@ -140,7 +145,7 @@ const Index = () => {
             {[
               "Ocupam posições de liderança ou influência",
               "Possuem trajetória consolidada",
-              "Sabem que precisam se reposicionar",
+              "Sabem que precisam redefinir o próximo movimento",
               "Não querem mais crescer por impulso",
               "Querem estruturar o próximo passo com inteligência",
             ].map((item) => (
@@ -183,10 +188,13 @@ const Index = () => {
 
           <div className="bg-primary/5 border border-primary/20 rounded-xl py-8 px-6 mb-10">
             <p className="font-display text-2xl md:text-3xl font-bold text-primary">
-              ✦ VOCÊ SAI COM A DECISÃO FORMALIZADA. ✦
+              ✦ VOCÊ SAI COM A DECISÃO CLARA — E O PRÓXIMO PASSO ESTRUTURADO. ✦
             </p>
             <p className="text-muted-foreground mt-4">
               Sem dramatização. Sem autoajuda. Sem discurso motivacional.
+            </p>
+            <p className="text-foreground font-bold mt-2">
+              Apenas decisão estratégica estruturada.
             </p>
           </div>
 
@@ -195,7 +203,7 @@ const Index = () => {
               size="lg"
               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
             >
-              QUERO OCUPAR MEU PRÓXIMO PASSO
+              GARANTIR MINHA VAGA
             </Button>
           </a>
         </div>
@@ -287,8 +295,8 @@ const Index = () => {
             Investimento
           </h2>
           <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            O custo de permanecer onde não faz mais sentido
-            é maior do que qualquer investimento nesta página.
+            O custo de permanecer onde já não faz sentido
+            costuma ser maior do que qualquer decisão de mudança.
           </p>
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-10 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
@@ -324,14 +332,14 @@ const Index = () => {
             Se você já decidiu internamente,
           </h2>
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-10 opacity-90">
-            essa é a sala onde isso ganha estrutura.
+            esta é a sala onde essa decisão ganha estrutura.
           </h3>
           <a href={CTA_URL}>
             <Button
               size="lg"
               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
             >
-              OCUPAR MEU PRÓXIMO LUGAR
+              GARANTIR MINHA VAGA
             </Button>
           </a>
         </div>
