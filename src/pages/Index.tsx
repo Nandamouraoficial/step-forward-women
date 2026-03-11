@@ -8,7 +8,7 @@ const Index = () => {
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
       {/* Selo fixo lateral */}
-      <div className="fixed top-6 right-4 sm:top-8 sm:right-6 md:top-10 md:right-10 z-50 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-background/90 backdrop-blur-sm">
+      <div className="fixed top-6 left-4 sm:top-8 sm:left-6 md:top-10 md:left-10 z-50 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-background/90 backdrop-blur-sm">
         <p className="text-accent uppercase text-[8px] sm:text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-2 sm:px-3">
           Edição<br />Exclusiva<br />para<br />Mulheres
         </p>
