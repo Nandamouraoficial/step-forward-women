@@ -38,9 +38,6 @@ const Index = () => {
                 <br />
                 <strong className="font-bold">É formalizar o próximo movimento.</strong>
               </p>
-              <p className="text-base opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
-                Existe um momento na carreira em que a próxima promoção já não resolve o que você sente.
-              </p>
               <p className="text-base font-semibold mb-2 max-w-lg mx-auto lg:mx-0">
                 Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado.
               </p>
