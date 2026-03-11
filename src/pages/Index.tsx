@@ -327,7 +327,7 @@ const Index = () => {
           </div>
           <CountdownTimer />
           <p className="text-muted-foreground mb-10">
-            Não é um evento. É uma formalização de posicionamento profissional.
+            Não é um evento. É uma decisão estratégica sobre o seu próximo movimento.
           </p>
           <a href={CTA_URL}>
             <Button
