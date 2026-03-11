@@ -26,7 +26,7 @@ const Index = () => {
               <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
                 Existe um momento na carreira em que continuar crescendo já não resolve o desalinhamento que você sente.
               </p>
-              <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
                 <br />
                 O PRÓXIMO PASSO
