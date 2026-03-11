@@ -183,6 +183,9 @@ const Index = () => {
             <br />
             esta não é a hora certa — e tudo bem.
           </p>
+          <p className="text-center text-foreground font-bold text-lg mt-8">
+            Executivas que sabem que já chegou a hora de decidir — mas não querem fazer isso sozinhas.
+          </p>
         </div>
       </section>
 
