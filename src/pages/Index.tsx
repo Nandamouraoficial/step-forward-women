@@ -45,14 +45,19 @@ const Index = () => {
                 Grupo limitado para permitir discussão estratégica aprofundada entre executivas.
               </p>
 
-              <a href={CTA_URL}>
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
-                >
-                  CONFIRMAR MINHA PARTICIPAÇÃO
-                </Button>
-              </a>
+              <div className="flex flex-col items-center lg:items-start gap-3">
+                <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
+                  Grupo fechado para até 15 executivas
+                </span>
+                <a href={CTA_URL}>
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                  >
+                    CONFIRMAR MINHA PARTICIPAÇÃO
+                  </Button>
+                </a>
+              </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm opacity-80">
                 <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 de abril</span>
