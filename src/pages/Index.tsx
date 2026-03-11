@@ -273,7 +273,7 @@ const Index = () => {
               </p>
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  23 anos de carreira corporativa.
+                  30 anos de trabalho. 26 anos de carreira.
                   <br />23 transições profissionais.
                   <br />Atuação em 10 empresas, sendo 5 multinacionais.
                 </p>
