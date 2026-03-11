@@ -84,7 +84,7 @@ const Index = () => {
                 <a href={CTA_URL}>
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base px-12 py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105"
+                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-8 sm:px-12 py-6 sm:py-7 rounded-lg shadow-lg tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     GARANTIR MINHA VAGA
                   </Button>
