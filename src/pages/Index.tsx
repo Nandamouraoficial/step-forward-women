@@ -79,7 +79,7 @@ const Index = () => {
                 <p className="font-display text-xl md:text-2xl font-bold text-foreground mb-4">
                   Se você já decidiu internamente,
                   <br />
-                  essa é a sala onde isso ganha estrutura.
+                  esta é a sala onde essa decisão ganha estrutura.
                 </p>
                 <a href={CTA_URL}>
                   <Button
