@@ -5,6 +5,13 @@ import CountdownTimer from "@/components/CountdownTimer";
 const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 
 const Index = () => {
+  const handleCTAClick = () => {
+    if (typeof window !== 'undefined' && (window as any).lintrk) {
+      (window as any).lintrk('track', { conversion_id: 26913521 });
+    }
+    window.open(CTA_URL, '_blank');
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
       {/* Selo fixo lateral */}
