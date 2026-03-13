@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Calendar, Clock, Monitor, Users } from "lucide-react";
+import { Check, Calendar, Clock, Monitor, Users, Shield } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 
 const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
@@ -32,9 +32,9 @@ const Index = () => {
             {/* Text */}
             <div className="flex-1 text-foreground text-center lg:text-left">
               <p className="text-lg md:text-xl font-light opacity-80 mb-4 max-w-lg mx-auto lg:mx-0">
-                Existe um momento na carreira<br />
-                em que continuar crescendo<br />
-                já não resolve o desalinhamento que você sente.
+                Você já tem o histórico.
+                <br />
+                O que falta é a decisão sobre o próximo movimento.
               </p>
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
                 IMERSÃO
@@ -42,11 +42,9 @@ const Index = () => {
                 O PRÓXIMO PASSO
               </h1>
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
-                Você já sabe que precisa decidir.
+                Um dia de trabalho estratégico para executivas que chegaram longe
                 <br />
-                O que falta não é competência.
-                <br />
-                <strong className="font-bold">É estruturar o próximo movimento.</strong>
+                — e precisam definir, com clareza, para onde vão agora.
               </p>
               <p className="text-base font-semibold mb-2 max-w-lg mx-auto lg:mx-0">
                 Para executivas que já chegaram longe na carreira — mas sabem que o próximo passo não pode ser improvisado.
@@ -257,7 +255,41 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
+      {/* BLOCO O QUE VOCÊ LEVA — REESCRITO */}
       <section className="bg-secondary py-20 md:py-28">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
+            O que você leva ao final da imersão
+          </h2>
+          <p className="text-center text-muted-foreground mb-12 text-lg">
+            Resultados concretos — não teoria, não inspiração.
+          </p>
+          <ul className="space-y-5 max-w-xl mx-auto">
+            {[
+              { title: "Uma decisão tomada", desc: "promoção, reposicionamento ou transição — com critérios claros, não por impulso" },
+              { title: "Diagnóstico escrito", desc: "do que está travando seu avanço hoje, com linguagem estratégica, não emocional" },
+              { title: "Mapa dos caminhos possíveis", desc: "com prós e contras analisados para o seu contexto específico" },
+              { title: "Plano de 30 dias", desc: "com as primeiras ações concretas para você começar a executar na segunda-feira seguinte" },
+              { title: "Clareza sobre o que parar de fazer", desc: "às vezes tão importante quanto o que começar — e mais difícil de enxergar sozinha" },
+            ].map((item) => (
+              <li key={item.title} className="flex items-start gap-3 text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span className="text-lg"><strong>{item.title}</strong> — {item.desc}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Divisor visual */}
+      <div className="flex items-center justify-center py-6 bg-secondary">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
+      {/* BLOCO SOBRE FERNANDA — REESCRITO */}
+      <section className="bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
             Sobre a condução
@@ -280,25 +312,24 @@ const Index = () => {
               </p>
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  30 anos de trabalho. 26 anos de carreira.
-                  <br />23 transições profissionais.
-                  <br />Atuação em 10 empresas, sendo 5 multinacionais.
+                  Fernanda passou 26 anos dentro do sistema corporativo —{" "}
+                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e BRF</strong>{" "}
+                  — chegando a Diretora Executiva para América Latina e América Central.
                 </p>
                 <p>
-                  Experiência construída em organizações como{" "}
-                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, MBRF e Kimberly-Clark</strong>,
-                  onde atuou como Diretora Executiva para a América Latina e America Central.
+                  Em dezembro de 2021, fez o que muitas executivas pensam mas não executam:{" "}
+                  <strong className="text-foreground">parou. Intencionalmente.</strong>{" "}
+                  Para decidir o próximo passo com método — não com impulso.
+                </p>
+                <p>
+                  Esse processo — estruturado, estratégico e sem autoajuda — é o que ela traz para cada executiva que passa pela imersão.
                 </p>
                 <p>
                   Quem conduz essa imersão não fala de carreira de fora.
                   <br />
                   <strong className="text-foreground">
-                    É alguém que tomou essas decisões de dentro — e aprendeu a estruturá-las.
+                    Ela tomou essas decisões de dentro. E sobreviveu a 23 transições profissionais para contar o que funciona.
                   </strong>
-                </p>
-                <p>
-                  Hoje atua como estrategista de movimentação executiva para líderes
-                  que precisam tomar decisões de alto impacto.
                 </p>
               </div>
             </div>
@@ -336,28 +367,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* BLOCO O QUE VOCÊ LEVA */}
-      <section className="bg-background py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
-            O que você leva ao final da imersão
-          </h2>
-          <ul className="space-y-4 max-w-xl mx-auto">
-            {[
-              "Clareza sobre o desalinhamento que está limitando seu avanço",
-              "Definição do próximo movimento profissional",
-              "Estrutura estratégica para executar a decisão",
-              "Plano inicial de 30 dias para iniciar a transição",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
-                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
       {/* Divisor visual */}
       <div className="flex items-center justify-center py-6 bg-background">
         <span className="block w-16 h-px bg-accent/30" />
@@ -365,21 +374,43 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* BLOCO INVESTIMENTO */}
+      {/* BLOCO INVESTIMENTO — COM ANCORAGEM E GARANTIA */}
       <section className="bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
             Investimento
           </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-xl mx-auto">
-            O custo de permanecer onde já não faz sentido costuma ser maior do que decidir o próximo movimento com clareza.
-          </p>
-          <div className="bg-secondary rounded-2xl py-10 px-8 mb-10 inline-block">
+
+          {/* Ancoragem de preço */}
+          <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
+            <p className="text-muted-foreground text-base leading-relaxed">
+              Uma sessão individual de estratégia de carreira com uma ex-Diretora para América Latina de Coca-Cola, Kraft Heinz e Kimberly-Clark custa entre{" "}
+              <strong className="text-foreground">R$3.000 e R$5.000</strong>.
+              <br /><br />
+              Esta imersão reúne o trabalho de um dia inteiro — com profundidade individual dentro de um grupo de no máximo 15 executivas — por:
+            </p>
+          </div>
+
+          <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               R$ 1.497
             </p>
+            <p className="text-muted-foreground text-sm mt-2">ou 12x de R$ 139,90</p>
           </div>
+
           <CountdownTimer />
+
+          {/* Garantia */}
+          <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 mb-8 max-w-xl mx-auto flex items-start gap-4 text-left">
+            <Shield className="w-8 h-8 text-accent shrink-0 mt-1" />
+            <div>
+              <p className="font-bold text-foreground text-lg mb-2">Garantia de resultado</p>
+              <p className="text-muted-foreground text-base leading-relaxed">
+                Se ao final das 6 horas você não sair com uma decisão clara sobre o seu próximo movimento e um plano estruturado para os próximos 30 dias, eu devolvo 100% do seu investimento. Sem burocracia, sem perguntas.
+              </p>
+            </div>
+          </div>
+
           <p className="text-muted-foreground mb-10">
             Não é um evento. É uma decisão estratégica sobre o seu próximo movimento.
           </p>
@@ -391,6 +422,9 @@ const Index = () => {
               CONFIRMAR MINHA VAGA
             </Button>
           </a>
+          <p className="text-sm text-muted-foreground mt-4 italic">
+            Vagas limitadas a 15 participantes — o grupo fecha quando completar.
+          </p>
         </div>
       </section>
 
@@ -429,7 +463,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center text-foreground">
           <p className="font-display text-lg font-bold">Fernanda Moura</p>
           <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
-          <p className="text-xs opacity-50 mt-4">© 2026</p>
+          <p className="text-xs opacity-50 mt-4">© 2026O Próximo Passo</p>
         </div>
       </footer>
     </main>
