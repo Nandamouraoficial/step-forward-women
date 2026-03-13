@@ -1,37 +1,34 @@
 
+Objetivo
+- Encerrar o erro do LinkedIn Post Inspector sem novas alterações de código (o problema atual é de URL usada no navegador).
 
-## Carimbo redondo com destaque no canto superior esquerdo
+Diagnóstico confirmado
+- A captura mostra: `linkedin.com/post-inspectorhttps://step-forward-women.lovable.app`.
+- Isso gera requisição inválida `GET /post-inspectorhttps://...` (não é o fluxo do Inspector).
+- Código atual já está endurecido: `og:url`, `og:title`, `og:description`, `og:image`, `canonical`, `og:site_name`, `robots.txt` com `LinkedInBot Allow: /`.
 
-### Alteracao
+Plano de execução
+1) Teste correto (fim a fim)
+- Abrir exatamente:
+  `https://www.linkedin.com/post-inspector/inspect/https%3A%2F%2Fstep-forward-women.lovable.app%2F`
+- Não editar essa URL na barra; apenas abrir e clicar em **Inspect**.
 
-**Arquivo:** `src/pages/Index.tsx`
+2) Fluxo alternativo seguro
+- Abrir: `https://www.linkedin.com/post-inspector/`
+- Colar no campo: `https://step-forward-women.lovable.app/`
+- Clicar em **Inspect**.
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+3) Validação de resultado
+- Confirmar no Inspector: título, descrição e imagem OG.
+- Conferir se a URL final mostrada pelo LinkedIn termina com `/`.
 
-### Resultado visual
+4) Contingência (se ainda falhar usando o fluxo correto)
+- Repetir inspeção com variação de URL:
+  - `https://step-forward-women.lovable.app/`
+  - `https://step-forward-women.lovable.app`
+- Aguardar alguns minutos e re-inspecionar (cache do crawler).
+- Se persistir, eu preparo um plano de ajuste fino específico para o fallback de cache do LinkedIn (sem alterar conteúdo visual da página).
 
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
-
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
-
+Detalhes técnicos
+- O erro “Pedido ruim… GET /post-inspectorhttps://...” não indica falha de OG da sua página; indica URL de acesso ao Inspector malformada.
+- Como o opengraph.xyz já resolveu corretamente, a origem dos metadados está funcional; o ponto crítico é o endpoint/formato da inspeção no LinkedIn.
