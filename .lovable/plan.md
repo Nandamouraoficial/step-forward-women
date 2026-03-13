@@ -1,37 +1,30 @@
+Diagnóstico confirmado
+- O erro do print não vem do seu site nem das tags OG.
+- A resposta “cabeçalho HTTP > 8192 bytes” acontece no próprio endpoint do LinkedIn (`/post-inspector/inspect/...`), normalmente por excesso de cookies/sessão no navegador.
 
+Plano de ação (sem código primeiro)
+1) Teste em sessão limpa
+- Abrir janela anônima (sem login no LinkedIn).
+- Acessar `https://www.linkedin.com/post-inspector/` (sem URL codificada na barra).
+- Colar no campo: `https://step-forward-women.lovable.app/`
+- Clicar em Inspect.
 
-## Carimbo redondo com destaque no canto superior esquerdo
+2) Teste em navegador/perfil alternativo
+- Se ainda der 400, repetir em outro navegador (ou outro perfil de navegador).
+- Desativar extensões temporariamente só para esse teste.
+- Opcional: limpar cookies apenas de `linkedin.com` e repetir.
 
-### Alteracao
+3) Validar no fluxo real de compartilhamento
+- Abrir o composer do LinkedIn, colar a URL e verificar se card (título, descrição e imagem) aparece.
+- Se o card aparecer no composer, o problema está restrito ao Inspector na sua sessão, não no site.
 
-**Arquivo:** `src/pages/Index.tsx`
+4) Contingência técnica (só se o composer também falhar)
+- Fazer um hard refresh de cache de OG via nova imagem sem querystring:
+  - criar arquivo novo (ex.: `og-preview-20260313.jpg`)
+  - atualizar `og:image`, `og:image:url`, `og:image:secure_url`, `twitter:image` para esse novo caminho
+- Publicar novamente e retestar.
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
-
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
-
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
-
+Detalhes técnicos
+- Seu `index.html` e `robots.txt` já estão corretos para LinkedInBot.
+- O erro mostrado é de request do LinkedIn (camada de entrada deles), não de parsing de metadados OG da sua página.
+- Por isso, o próximo passo mais eficaz é validar em sessão limpa e no composer real antes de qualquer nova mudança de código.
