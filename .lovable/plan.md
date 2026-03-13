@@ -1,30 +1,29 @@
-Diagnóstico confirmado
-- O erro do print não vem do seu site nem das tags OG.
-- A resposta “cabeçalho HTTP > 8192 bytes” acontece no próprio endpoint do LinkedIn (`/post-inspector/inspect/...`), normalmente por excesso de cookies/sessão no navegador.
 
-Plano de ação (sem código primeiro)
-1) Teste em sessão limpa
-- Abrir janela anônima (sem login no LinkedIn).
-- Acessar `https://www.linkedin.com/post-inspector/` (sem URL codificada na barra).
-- Colar no campo: `https://step-forward-women.lovable.app/`
-- Clicar em Inspect.
+# Hard Refresh da imagem OG para LinkedIn
 
-2) Teste em navegador/perfil alternativo
-- Se ainda der 400, repetir em outro navegador (ou outro perfil de navegador).
-- Desativar extensões temporariamente só para esse teste.
-- Opcional: limpar cookies apenas de `linkedin.com` e repetir.
+## Problema
+O LinkedIn está cacheando/rejeitando a imagem OG atual (`og-preview.png?v=20260313`). Mesmo em janela anônima, o preview não gera corretamente.
 
-3) Validar no fluxo real de compartilhamento
-- Abrir o composer do LinkedIn, colar a URL e verificar se card (título, descrição e imagem) aparece.
-- Se o card aparecer no composer, o problema está restrito ao Inspector na sua sessão, não no site.
+## Plano
 
-4) Contingência técnica (só se o composer também falhar)
-- Fazer um hard refresh de cache de OG via nova imagem sem querystring:
-  - criar arquivo novo (ex.: `og-preview-20260313.jpg`)
-  - atualizar `og:image`, `og:image:url`, `og:image:secure_url`, `twitter:image` para esse novo caminho
-- Publicar novamente e retestar.
+### 1. Copiar a imagem com novo nome
+- Criar uma cópia de `public/images/og-preview.png` como `public/images/og-preview-v2.png` (novo caminho = cache zerado no LinkedIn).
 
-Detalhes técnicos
-- Seu `index.html` e `robots.txt` já estão corretos para LinkedInBot.
-- O erro mostrado é de request do LinkedIn (camada de entrada deles), não de parsing de metadados OG da sua página.
-- Por isso, o próximo passo mais eficaz é validar em sessão limpa e no composer real antes de qualquer nova mudança de código.
+### 2. Atualizar todas as referências em `index.html`
+- Trocar todas as 4 ocorrências de `og-preview.png?v=20260313` por `og-preview-v2.png` (sem querystring).
+- Atualizar `og:image:type` para `image/png` (já está).
+- Atualizar `og:updated_time` para timestamp atual.
+
+### 3. Adicionar dimensões explícitas
+- Incluir `og:image:width` = `1200` e `og:image:height` = `630` (LinkedIn recomenda explicitamente essas tags).
+
+### Detalhes técnicos
+As tags afetadas no `index.html`:
+- `og:image` → novo path
+- `og:image:url` → novo path
+- `og:image:secure_url` → novo path
+- `twitter:image` → novo path
+- `og:updated_time` → novo timestamp
+- Adicionar `og:image:width` e `og:image:height`
+
+Após publicar, o LinkedIn vai buscar a URL completamente nova, sem cache anterior.
