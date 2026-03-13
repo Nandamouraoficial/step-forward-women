@@ -1,23 +1,37 @@
 
 
-## Implementar alterações do plano: Carimbo redondo com posicionamento absoluto no hero
+## Carimbo redondo com destaque no canto superior esquerdo
 
-### Alteração única em `src/pages/Index.tsx`
+### Alteracao
 
-**O que muda:**
-- Mover o selo circular de `fixed` (flutuando na tela toda) para `absolute` dentro da seção hero
-- Remover o `<div>` do selo da posição atual (linha 18-22, fora de qualquer seção)
-- Inserir o selo dentro do `<section>` do hero, como filho direto, com posicionamento `absolute`
-- A seção hero já tem `relative`, então basta inserir o selo lá dentro
-- Ajustar classes: trocar `fixed` por `absolute`, remover `z-50`, remover `backdrop-blur-sm`, manter o resto dos estilos circulares
-- Remover o `pt-32 sm:pt-36` extra do container interno do hero (que existia para compensar o selo fixo) e voltar para padding normal
+**Arquivo:** `src/pages/Index.tsx`
 
-**Classes do selo (dentro do hero):**
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
+
+### Resultado visual
+
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
 ```
-absolute top-6 left-4 sm:top-8 sm:left-6 md:top-10 md:left-10 z-10
-w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28
-rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent
-flex items-center justify-center text-center -rotate-12
-shadow-lg shadow-accent/20 bg-background/90
-```
+
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
 
