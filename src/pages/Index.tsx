@@ -91,7 +91,7 @@ const Index = () => {
                   <br />
                   esta é a sala onde essa decisão ganha estrutura.
                 </p>
-                <a href={CTA_URL}>
+                <a onClick={handleCTAClick} className="cursor-pointer">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
