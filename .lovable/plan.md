@@ -1,29 +1,37 @@
 
-Diagnóstico rápido
-- Revisei `index.html` e `public/robots.txt`: as tags OG essenciais estão corretas e públicas.
-- A captura mostra o problema principal: URL inválida no navegador (`linkedin.com/post-inspectorhttps://...`), sem o trecho `/inspect/`.
-- Do I know what the issue is? Sim. O erro atual é de formato/uso da URL do Post Inspector, não de falta de metadados OG.
 
-Plano
-1) Validar o fluxo correto sem código (primeiro)
-   - Abrir exatamente: `https://www.linkedin.com/post-inspector/inspect/https%3A%2F%2Fstep-forward-women.lovable.app%2F`
-   - Alternativa: abrir `https://www.linkedin.com/post-inspector/`, colar apenas `https://step-forward-women.lovable.app/` no campo e clicar **Inspect**.
-   - Confirmar no resultado: título, descrição e imagem.
+## Carimbo redondo com destaque no canto superior esquerdo
 
-2) Se ainda falhar mesmo com URL correta, aplicar hardening de metadados (implementação)
-   - Padronizar URL canônica com barra final.
-   - Adicionar: `link rel="canonical"`, `og:site_name`, `og:locale`, `og:image:width`, `og:image:height`, `og:image:alt`, `og:image:type`, `twitter:url`.
+### Alteracao
 
-3) Hardening de crawler/imagem
-   - Garantir imagem OG dedicada 1200x627 (JPG/PNG) em `public/images/...` com URL HTTPS pública.
-   - Adicionar bloco explícito no `robots.txt` para `User-agent: LinkedInBot` com `Allow: /`.
+**Arquivo:** `src/pages/Index.tsx`
 
-4) Publicar e retestar fim a fim
-   - Publicar frontend (Update).
-   - Rodar Post Inspector novamente com a URL codificada.
-   - Validar também no composer do LinkedIn para confirmar o card real ao compartilhar.
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
-Arquivos envolvidos (se a etapa 2/3 for necessária)
-- `index.html`
-- `public/robots.txt`
-- `public/images/*` (imagem OG dedicada)
+### Resultado visual
+
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
+```
+
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+
