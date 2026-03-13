@@ -390,7 +390,7 @@ const Index = () => {
           {/* Ancoragem de preço */}
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base leading-relaxed">
-              Uma sessão individual de estratégia de carreira com uma ex-Diretora para América Latina de Coca-Cola, Kraft Heinz e Kimberly-Clark custa entre{" "}
+              Uma sessão individual de estratégia de carreira com uma ex-Diretora Executiva C-Level para América Latina da Coca-Cola, Kraft Heinz, BRF, Cargill e Kimberly-Clark custa entre{" "}
               <strong className="text-foreground">R$3.000 e R$5.000</strong>.
               <br /><br />
               Esta imersão reúne o trabalho de um dia inteiro — com profundidade individual dentro de um grupo de no máximo 15 executivas — por:
