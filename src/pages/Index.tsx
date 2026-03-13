@@ -21,11 +21,16 @@ const Index = () => {
         style={{ background: "var(--hero-gradient)" }}
       >
         {/* Selo circular no canto superior esquerdo do hero */}
-        <div className="absolute top-6 left-4 sm:top-8 sm:left-6 md:top-10 md:left-10 z-10 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center -rotate-12 shadow-lg shadow-accent/20 bg-background/90">
+        <motion.div
+          initial={{ scale: 0, rotate: 0, opacity: 0 }}
+          animate={{ scale: 1, rotate: -12, opacity: 1 }}
+          transition={{ type: "spring", stiffness: 200, damping: 15, delay: 0.3 }}
+          className="absolute top-6 left-4 sm:top-8 sm:left-6 md:top-10 md:left-10 z-10 w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 rounded-full border-[3px] border-accent ring-2 ring-accent/40 ring-offset-2 ring-offset-transparent flex items-center justify-center text-center shadow-lg shadow-accent/20 bg-background/90"
+        >
           <p className="text-accent uppercase text-[8px] sm:text-[10px] md:text-xs font-bold font-body tracking-wider leading-tight px-2 sm:px-3">
             Edição<br />Exclusiva<br />para<br />Mulheres
           </p>
-        </div>
+        </motion.div>
 
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
 
