@@ -1,29 +1,37 @@
 
-# Hard Refresh da imagem OG para LinkedIn
 
-## Problema
-O LinkedIn está cacheando/rejeitando a imagem OG atual (`og-preview.png?v=20260313`). Mesmo em janela anônima, o preview não gera corretamente.
+## Carimbo redondo com destaque no canto superior esquerdo
 
-## Plano
+### Alteracao
 
-### 1. Copiar a imagem com novo nome
-- Criar uma cópia de `public/images/og-preview.png` como `public/images/og-preview-v2.png` (novo caminho = cache zerado no LinkedIn).
+**Arquivo:** `src/pages/Index.tsx`
 
-### 2. Atualizar todas as referências em `index.html`
-- Trocar todas as 4 ocorrências de `og-preview.png?v=20260313` por `og-preview-v2.png` (sem querystring).
-- Atualizar `og:image:type` para `image/png` (já está).
-- Atualizar `og:updated_time` para timestamp atual.
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
-### 3. Adicionar dimensões explícitas
-- Incluir `og:image:width` = `1200` e `og:image:height` = `630` (LinkedIn recomenda explicitamente essas tags).
+### Resultado visual
 
-### Detalhes técnicos
-As tags afetadas no `index.html`:
-- `og:image` → novo path
-- `og:image:url` → novo path
-- `og:image:secure_url` → novo path
-- `twitter:image` → novo path
-- `og:updated_time` → novo timestamp
-- Adicionar `og:image:width` e `og:image:height`
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
+```
 
-Após publicar, o LinkedIn vai buscar a URL completamente nova, sem cache anterior.
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+
