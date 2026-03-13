@@ -1,37 +1,21 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+# Corrigir preview do LinkedIn
 
-### Alteracao
+## Problema
+O LinkedIn Post Inspector não está conseguindo gerar o cartão de preview da página. A screenshot mostra a tela de "página não encontrada" do LinkedIn.
 
-**Arquivo:** `src/pages/Index.tsx`
+## Causa provável
+Falta a meta tag `og:url` no `index.html`, que é obrigatória para o LinkedIn interpretar corretamente as tags Open Graph.
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+## Solução
+Adicionar a tag `og:url` no `index.html` apontando para a URL publicada:
 
-### Resultado visual
-
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
+```html
+<meta property="og:url" content="https://step-forward-women.lovable.app" />
 ```
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+Edição de uma única linha no arquivo `index.html`.
+
+Após publicar, será necessário acessar o [LinkedIn Post Inspector](https://www.linkedin.com/post-inspector/) novamente e colar a URL para forçar o LinkedIn a recarregar os dados.
 
