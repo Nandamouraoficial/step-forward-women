@@ -59,7 +59,7 @@ const Index = () => {
                 <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
                   Grupo fechado para até 15 executivas
                 </span>
-                <a href={CTA_URL}>
+                <a onClick={handleCTAClick} className="cursor-pointer">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
