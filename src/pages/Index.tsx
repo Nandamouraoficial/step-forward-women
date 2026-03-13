@@ -5,6 +5,13 @@ import CountdownTimer from "@/components/CountdownTimer";
 const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 
 const Index = () => {
+  const handleCTAClick = () => {
+    if (typeof window !== 'undefined' && (window as any).lintrk) {
+      (window as any).lintrk('track', { conversion_id: 26913521 });
+    }
+    window.open(CTA_URL, '_blank');
+  };
+
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
       {/* Selo fixo lateral */}
@@ -52,7 +59,7 @@ const Index = () => {
                 <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
                   Grupo fechado para até 15 executivas
                 </span>
-                <a href={CTA_URL}>
+                <a onClick={handleCTAClick} className="cursor-pointer">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -84,7 +91,7 @@ const Index = () => {
                   <br />
                   esta é a sala onde essa decisão ganha estrutura.
                 </p>
-                <a href={CTA_URL}>
+                <a onClick={handleCTAClick} className="cursor-pointer">
                   <Button
                     size="lg"
                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -232,7 +239,7 @@ const Index = () => {
             </p>
           </div>
 
-          <a href={CTA_URL}>
+          <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -376,7 +383,7 @@ const Index = () => {
           <p className="text-muted-foreground mb-10">
             Não é um evento. É uma decisão estratégica sobre o seu próximo movimento.
           </p>
-          <a href={CTA_URL}>
+          <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -403,7 +410,7 @@ const Index = () => {
           <h3 className="font-display text-2xl md:text-3xl font-bold mb-10 opacity-90">
             esta é a sala onde essa decisão ganha estrutura.
           </h3>
-          <a href={CTA_URL}>
+          <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"

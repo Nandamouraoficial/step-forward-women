@@ -1,34 +1,37 @@
 
 
-## Evento de conversão LinkedIn em todos os CTAs
+## Carimbo redondo com destaque no canto superior esquerdo
 
-### Abordagem
-
-Criar uma função handler que dispara o pixel do LinkedIn antes de redirecionar, e substituir todos os `<a href={CTA_URL}>` por `<a>` com `onClick` que:
-
-1. Chama `window.lintrk('track', { conversion_id: 26913521 })`
-2. Redireciona com `window.open(CTA_URL, '_blank')` (ou `window.location.href`)
-
-### Alterações
+### Alteracao
 
 **Arquivo:** `src/pages/Index.tsx`
 
-1. Adicionar declaração de tipo para `lintrk` no topo e criar handler:
+- Transformar o carimbo retangular atual em um carimbo circular
+- Posicionar no canto superior esquerdo da secao hero com `absolute`
+- Estilos do carimbo redondo:
+  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
+  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
+  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
+  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
+  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
+  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
+- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
+- Adicionar `relative` ao container pai se necessario
 
-```tsx
-const handleCTAClick = () => {
-  if (typeof window !== 'undefined' && (window as any).lintrk) {
-    (window as any).lintrk('track', { conversion_id: 26913521 });
-  }
-  window.open(CTA_URL, '_blank');
-};
+### Resultado visual
+
+```text
+  ┌──────────────────────────
+  │  ╭───────────╮
+  │  │  EDICAO   │
+  │  │ EXCLUSIVA │
+  │  │   PARA    │
+  │  │ MULHERES  │
+  │  ╰───────────╯
+  │        (circular, inclinado, dourado)
+  │
+  │    IMERSAO O PROXIMO PASSO...
 ```
 
-2. Substituir as 5 instâncias de `<a href={CTA_URL}>` por:
-
-```tsx
-<a onClick={handleCTAClick} className="cursor-pointer">
-```
-
-Removendo o `href` para evitar redirecionamento antes do tracking.
+O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
 
