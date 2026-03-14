@@ -313,8 +313,11 @@ const Index = () => {
               <h3 className="font-display text-2xl font-bold text-foreground mb-1">
                 Fernanda Moura
               </h3>
-              <p className="text-accent font-bold mb-6">
+              <p className="text-accent font-bold mb-1">
                 Estrategista Executiva de Carreira
+              </p>
+              <p className="text-muted-foreground text-base italic mb-6">
+                Coautora do livro Mulheres que Transformam
               </p>
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
