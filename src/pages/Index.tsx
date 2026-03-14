@@ -345,9 +345,10 @@ const Index = () => {
 
       {/* BLOCO FORMATO */}
       <section
-        className="py-20 md:py-28"
+        className="relative py-20 md:py-28"
         style={{ background: "var(--hero-gradient)", opacity: 0.95 }}
       >
+        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-foreground">Formato</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
