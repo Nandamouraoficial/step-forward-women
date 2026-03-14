@@ -314,7 +314,7 @@ const Index = () => {
                 Estrategista Executiva de Carreira
               </p>
               <p className="text-muted-foreground text-base italic mb-6">
-                Coautora do livro Mulheres que Transformam
+                Coautora de "Mulheres que Transformam" e mais 4 publicações sobre liderança executiva
               </p>
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
