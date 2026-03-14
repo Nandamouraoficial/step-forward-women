@@ -291,7 +291,8 @@ const Index = () => {
       </div>
 
       {/* BLOCO SOBRE FERNANDA — REESCRITO */}
-      <section className="bg-background py-20 md:py-28">
+      <section className="relative bg-background py-20 md:py-28">
+        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
             Sobre a condução
