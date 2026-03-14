@@ -130,7 +130,8 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      <section className="bg-background py-20 md:py-28">
+      <section className="relative bg-background py-20 md:py-28">
+        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
             A realidade que você já percebeu
