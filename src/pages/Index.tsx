@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users, Shield } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
-import { motion } from "framer-motion";
+import SealBadge from "@/components/SealBadge";
 
 const CTA_URL = "https://chk.eduzz.com/acxa2eu4";
 
