@@ -65,7 +65,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm opacity-80">
-                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 de abril</span>
+                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
                 <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
                 <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
                 <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
@@ -356,7 +356,7 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-foreground">Formato</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
             {[
-              { icon: Calendar, label: "12 de abril" },
+              { icon: Calendar, label: "11 de abril" },
               { icon: Clock, label: "9h às 15h" },
               { icon: Monitor, label: "Online e ao vivo" },
               { icon: Users, label: "15 mulheres" },
