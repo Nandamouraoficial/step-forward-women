@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const TARGET_DATE = new Date("2026-04-12T09:00:00-03:00").getTime();
+const TARGET_DATE = new Date("2026-04-11T09:00:00-03:00").getTime();
 
 interface TimeLeft {
   days: number;
