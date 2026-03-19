@@ -65,7 +65,7 @@ const Index = () => {
               </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm opacity-80">
-                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 12 de abril</span>
+                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
                 <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
                 <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
                 <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
