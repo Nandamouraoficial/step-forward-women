@@ -1,24 +1,23 @@
 
 
-## Corrigir conflito nas tags OG para LinkedIn
+## Remover tags Twitter e manter apenas OG (LinkedIn/Instagram)
 
-### Problema
-O `index.html` tem tags OG conflitantes — a tag principal `og:image` (linha 17) e `twitter:image` (linha 35) apontam para uma URL do Google Storage (`.webp`), enquanto `og:image:url` e `og:image:secure_url` apontam para `og-preview-v2.png`. O LinkedIn usa a primeira `og:image` encontrada, ignorando as demais.
+### Contexto
+O site tem tags `twitter:*` apontando para `@Lovable`, que não é relevante. Como você só usa Instagram e LinkedIn, as tags Twitter podem ser removidas. As tags Open Graph (`og:*`) já são usadas pelo LinkedIn, Instagram e WhatsApp.
 
-### Plano
+### Alteração em `index.html`
 
-**Alteração única em `index.html`:**
+**Remover linhas 32-39** — todas as tags `twitter:*`:
+```html
+<!-- REMOVER tudo isso -->
+<meta name="twitter:card" ...>
+<meta name="twitter:site" ...>
+<meta name="twitter:url" ...>
+<meta name="twitter:image" ...>
+<meta name="twitter:image:alt" ...>
+```
 
-1. **Linha 17** — Trocar o `og:image` do Google Storage para:
-   `https://step-forward-women.lovable.app/images/og-preview-v2.png`
+**Remover linhas 62-65** (no final do arquivo) — as tags duplicadas `twitter:title` e `twitter:description`.
 
-2. **Linha 35** — Trocar o `twitter:image` do Google Storage para:
-   `https://step-forward-women.lovable.app/images/og-preview-v2.png`
-
-3. **Linha 30** — Atualizar `og:updated_time` para `2026-03-21T12:00:00Z` (data atual, força refresh de cache).
-
-Todas as 4 referências de imagem (og:image, og:image:url, og:image:secure_url, twitter:image) passarão a apontar para o mesmo arquivo `og-preview-v2.png`.
-
-### Após publicar
-Testar manualmente no LinkedIn Post Inspector em janela anônima para confirmar que o card aparece com a imagem correta.
+As tags `og:*` já existentes cobrem perfeitamente LinkedIn, Instagram e WhatsApp. Nenhuma tag adicional é necessária.
 
