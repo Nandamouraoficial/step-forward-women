@@ -1,37 +1,24 @@
 
 
-## Carimbo redondo com destaque no canto superior esquerdo
+## Corrigir conflito nas tags OG para LinkedIn
 
-### Alteracao
+### Problema
+O `index.html` tem tags OG conflitantes — a tag principal `og:image` (linha 17) e `twitter:image` (linha 35) apontam para uma URL do Google Storage (`.webp`), enquanto `og:image:url` e `og:image:secure_url` apontam para `og-preview-v2.png`. O LinkedIn usa a primeira `og:image` encontrada, ignorando as demais.
 
-**Arquivo:** `src/pages/Index.tsx`
+### Plano
 
-- Transformar o carimbo retangular atual em um carimbo circular
-- Posicionar no canto superior esquerdo da secao hero com `absolute`
-- Estilos do carimbo redondo:
-  - Formato circular: `w-32 h-32 md:w-40 md:h-40 rounded-full`
-  - Borda dupla: `border-[3px] border-accent` com um `ring` interno para efeito de borda dupla de carimbo
-  - Rotacao: `-rotate-12` para parecer carimbo carimbado de verdade
-  - Texto centralizado em circunferencia usando CSS (`flex items-center justify-center text-center`)
-  - Texto em uppercase, bold, cor accent, tamanho pequeno (`text-xs font-bold tracking-wider`)
-  - Sombra sutil ou glow dourado para destaque (`shadow-lg shadow-accent/20`)
-- Remover o carimbo do fluxo do texto (tirar do `div` atual) e posicionar com `absolute top-6 left-6 md:top-10 md:left-10`
-- Adicionar `relative` ao container pai se necessario
+**Alteração única em `index.html`:**
 
-### Resultado visual
+1. **Linha 17** — Trocar o `og:image` do Google Storage para:
+   `https://step-forward-women.lovable.app/images/og-preview-v2.png`
 
-```text
-  ┌──────────────────────────
-  │  ╭───────────╮
-  │  │  EDICAO   │
-  │  │ EXCLUSIVA │
-  │  │   PARA    │
-  │  │ MULHERES  │
-  │  ╰───────────╯
-  │        (circular, inclinado, dourado)
-  │
-  │    IMERSAO O PROXIMO PASSO...
-```
+2. **Linha 35** — Trocar o `twitter:image` do Google Storage para:
+   `https://step-forward-women.lovable.app/images/og-preview-v2.png`
 
-O carimbo fica flutuando no canto superior esquerdo do hero, com destaque visual forte.
+3. **Linha 30** — Atualizar `og:updated_time` para `2026-03-21T12:00:00Z` (data atual, força refresh de cache).
+
+Todas as 4 referências de imagem (og:image, og:image:url, og:image:secure_url, twitter:image) passarão a apontar para o mesmo arquivo `og-preview-v2.png`.
+
+### Após publicar
+Testar manualmente no LinkedIn Post Inspector em janela anônima para confirmar que o card aparece com a imagem correta.
 
