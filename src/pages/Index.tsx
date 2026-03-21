@@ -337,9 +337,6 @@ const Index = () => {
                     Ela tomou essas decisões de dentro. E sobreviveu a 23 transições profissionais para contar o que funciona.
                   </strong>
                 </p>
-                <p className="text-sm text-muted-foreground border-t border-border pt-4 mt-2">
-                  Coautora de <em>"Mulheres que Transformam"</em> e mais 4 publicações sobre liderança executiva.
-                </p>
               </div>
             </div>
           </div>
@@ -508,7 +505,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 text-center text-foreground">
           <p className="font-display text-lg font-bold">Fernanda Moura</p>
           <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
-          <p className="text-xs opacity-50 mt-4">© 2026O Próximo Passo</p>
+          <p className="text-xs opacity-50 mt-4">© 2026 O Próximo Passo</p>
         </div>
       </footer>
     </main>
