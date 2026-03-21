@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Check, Calendar, Clock, Monitor, Users, Shield } from "lucide-react";
+import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
 import SealBadge from "@/components/SealBadge";
 
@@ -345,6 +345,39 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* DEPOIMENTO */}
+      <section className="relative bg-secondary py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Quem já passou pela consultoria estratégica
+            </h2>
+          </div>
+          <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
+            <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
+            <div className="pt-8 space-y-4">
+              <p className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug">
+                "Eu achava que sabia me apresentar. Precisei rever minha entrega e reorganizar tudo para o público certo."
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                "A Fernanda faz a diferença porque entende qual momento você está e como será sua jornada. Ela busca suas habilidades através da sua história — e o mais interessante é que somos nós que montamos, com a nossa verdade, o que entregamos. Isso me deixou segura e sustento com autonomia."
+              </p>
+            </div>
+            <div className="mt-6 pt-6 border-t border-border">
+              <p className="font-bold text-foreground">Carla Cristina</p>
+              <p className="text-muted-foreground text-sm">Diretora de Marketing</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divisor visual */}
+      <div className="flex items-center justify-center py-6 bg-secondary">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
 
       {/* BLOCO FORMATO */}
       <section
