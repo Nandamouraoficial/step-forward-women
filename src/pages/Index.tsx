@@ -337,9 +337,6 @@ const Index = () => {
                     Ela tomou essas decisões de dentro. E sobreviveu a 23 transições profissionais para contar o que funciona.
                   </strong>
                 </p>
-                <p className="text-sm text-muted-foreground border-t border-border pt-4 mt-2">
-                  Coautora de <em>"Mulheres que Transformam"</em> e mais 4 publicações sobre liderança executiva.
-                </p>
               </div>
             </div>
           </div>
