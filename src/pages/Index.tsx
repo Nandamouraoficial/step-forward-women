@@ -113,17 +113,16 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
             O erro não é só decidir errado.
             <br />
-            É deixar a decisão em aberto por tempo demais.
+            É saber que precisa mudar e continuar sem um plano concreto.
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 text-left max-w-2xl mx-auto">
             <p>
-              Em carreiras seniores, o custo da indecisão raramente aparece de uma vez.
+              Em carreiras seniores, o custo de agir sem direção raramente aparece de uma vez.
             </p>
             <p>
               Ele aparece em forma de desgaste.
                <br />De oportunidades que passam.
                <br />De adoecimento silencioso.
-              <br />De crescimento no lugar errado.
               <br />De investimento em cursos e movimentos que não mudam o que realmente importa.
             </p>
             <p>
