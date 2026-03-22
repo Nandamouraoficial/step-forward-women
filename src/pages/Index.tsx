@@ -376,6 +376,23 @@ const Index = () => {
             </p>
           </div>
 
+          <a
+            href="https://www.amigosdobem.org"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 bg-accent/5 border border-accent/20 rounded-xl p-5 max-w-xl mx-auto mb-8 hover:bg-accent/10 transition-colors"
+          >
+            <img
+              src="/images/amigos-do-bem.png"
+              alt="ONG Amigos do Bem"
+              className="w-14 h-14 object-contain shrink-0"
+            />
+            <p className="text-muted-foreground text-sm text-left">
+              Parte das vendas desta imersão é direcionada para a ONG{" "}
+              <strong className="text-foreground">Amigos do Bem</strong>.
+            </p>
+          </a>
+
           <CountdownTimer />
 
           <a onClick={handleCTAClick} className="cursor-pointer">
