@@ -292,7 +292,7 @@ const Index = () => {
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
-                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e BRF</strong>.
+                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF (Sadia e Perdigão)</strong>.
                   Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais.
                 </p>
                 <p>
