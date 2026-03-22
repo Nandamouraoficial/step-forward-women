@@ -293,15 +293,15 @@ const Index = () => {
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
                   <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e BRF</strong>.
-                  Chegou a Diretora Executiva para América Latina e América Central.
+                  Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais.
                 </p>
                 <p>
-                  Em 2021, fez o que muitas executivas pensam mas não executam:{" "}
+                  Em 2021, fez mais uma vez o que muitas executivas pensam mas não executam:{" "}
                   <strong className="text-foreground">parou. Intencionalmente.</strong>{" "}
                   Para decidir o próximo movimento com método — não com impulso.
                 </p>
                 <p>
-                  Já conduziu mais de 23 transições profissionais reais. Sabe o que funciona — e o que é perda de tempo.
+                  Já conduziu 23 transições profissionais reais na própria carreira. Sabe exatamente o que funciona — e o que é perda de tempo.
                 </p>
                 <p className="font-bold text-foreground">
                   Quem conduz essa imersão não fala de carreira de fora.
