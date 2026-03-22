@@ -376,11 +376,22 @@ const Index = () => {
             </p>
           </div>
 
+          <CountdownTimer />
+
+          <a onClick={handleCTAClick} className="cursor-pointer">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+            >
+              GARANTIR MINHA VAGA
+            </Button>
+          </a>
+
           <a
             href="https://www.amigosdobem.org"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 bg-accent/5 border border-accent/20 rounded-xl p-5 max-w-xl mx-auto mb-8 hover:bg-accent/10 transition-colors"
+            className="flex items-center gap-4 bg-accent/5 border border-accent/20 rounded-xl p-5 max-w-xl mx-auto mt-8 hover:bg-accent/10 transition-colors"
           >
             <img
               src="/images/amigos-do-bem.png"
@@ -391,17 +402,6 @@ const Index = () => {
               Parte das vendas desta imersão é direcionada para a ONG{" "}
               <strong className="text-foreground">Amigos do Bem</strong>.
             </p>
-          </a>
-
-          <CountdownTimer />
-
-          <a onClick={handleCTAClick} className="cursor-pointer">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-            >
-              GARANTIR MINHA VAGA
-            </Button>
           </a>
         </div>
       </section>
