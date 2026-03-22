@@ -324,16 +324,13 @@ const Index = () => {
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
-              <p className="font-display text-xl md:text-2xl font-bold text-foreground leading-snug">
-                "Eu achava que sabia me apresentar. Precisei rever minha entrega e reorganizar tudo para o público certo."
-              </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "A Fernanda faz a diferença porque entende qual momento você está e como será sua jornada. Ela busca suas habilidades através da sua história — e o mais interessante é que somos nós que montamos, com a nossa verdade, o que entregamos. Isso me deixou segura e sustento com autonomia."
+                "Minha carreira como executiva estava indo bem. Bônus, promoções, resultados e reconhecimento — tudo o que o mercado usa para medir sucesso. Mas por dentro eu estava quebrando, e ninguém via. A Fernanda não me disse o que fazer — ela montou a estratégia junto comigo e colocou as decisões na mesa para eu escolher. Foi a primeira vez que alguém tratou minha carreira com método e como decisão estratégica, não como problema emocional. Resultado: saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Carla Faria</p>
-              <p className="text-muted-foreground text-sm">Diretora de Marketing</p>
+              <p className="font-bold text-foreground">Carla Negrão</p>
+              <p className="text-muted-foreground text-sm">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
             </div>
           </div>
         </div>
