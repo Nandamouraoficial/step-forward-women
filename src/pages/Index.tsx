@@ -29,7 +29,7 @@ const Index = () => {
                 Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção.
               </h1>
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
-                Um dia de trabalho estratégico para mulheres em posições de liderança que precisam decidir o próximo movimento de carreira antes que o mercado, a empresa ou o contexto decidam por elas.
+                Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
               </p>
               <p className="text-base font-semibold mb-8 max-w-lg mx-auto lg:mx-0">
                 Não é uma imersão para "pensar melhor".
