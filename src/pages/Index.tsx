@@ -288,7 +288,7 @@ const Index = () => {
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
                   <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF (Sadia e Perdigão)</strong>.
-                  Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
+                  Passou por gerência, diretoria e C-Level internacional para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
                 </p>
                 <p>
                   Em 2021, fez mais uma vez o que muitas executivas pensam mas não executam:{" "}
