@@ -1,15 +1,14 @@
 
 
-## Adicionar "adoece" na seção "Custo de não decidir"
+## Adicionar menção a equipes em 15 países
 
-### Alteração em `src/pages/Index.tsx` (linha ~128)
+### Alteração em `src/pages/Index.tsx` (linha 296)
 
-Adicionar `<br />De adoecimento silencioso.` após "De oportunidades que passam." na lista de consequências da indecisão.
+Expandir a frase atual para incluir a gestão de equipes diversas em 15 países.
 
-O trecho ficará:
-- Ele aparece em forma de desgaste.
-- De oportunidades que passam.
-- **De adoecimento silencioso.**
-- De crescimento no lugar errado.
-- De investimento em cursos e movimentos que não mudam o que realmente importa.
+**De:**
+> Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais.
+
+**Para:**
+> Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
 
