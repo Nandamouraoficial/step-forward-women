@@ -94,7 +94,7 @@ const Index = () => {
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base">
-              Na verdade, o melhor momento para decidir a carreira é antes que algo dê errado.
+              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado — com direção, não com impulso.
             </p>
           </div>
         </div>
