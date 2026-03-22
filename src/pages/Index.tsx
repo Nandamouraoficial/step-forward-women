@@ -31,7 +31,7 @@ const Index = () => {
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
                 Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
               </p>
-              <p className="text-base font-semibold mb-8 max-w-lg mx-auto lg:mx-0">
+              <p className="text-base font-semibold mb-10 max-w-lg mx-auto lg:mx-0">
                 Não é uma imersão para "pensar melhor". É para estruturar os próximos 5-10 anos da sua carreira com método.
               </p>
 
