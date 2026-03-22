@@ -79,7 +79,7 @@ const Index = () => {
             {[
               "Ocupa uma posição de liderança ou influência",
               "Já construiu uma trajetória sólida, mas sente que o próximo passo não pode ser improvisado",
-              "Percebe que continuar no automático pode custar caro",
+              "Vê a IA transformando o mercado e quer se preparar para os próximos anos",
               "Quer decidir com mais critério, antes que a pressão venha de fora",
               "Não quer desperdiçar mais tempo ou dinheiro em caminhos que não levam ao movimento certo",
             ].map((item) => (
