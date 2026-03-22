@@ -1,12 +1,14 @@
 
 
-## Substituir logo do Amigos do Bem pela imagem enviada
+## Substituir logo do Amigos do Bem pela imagem enviada pelo usuário
+
+### Problema
+A logo atual em `public/images/amigos-do-bem-icon.png` foi baixada da internet. O usuário quer que seja usada exatamente a imagem que ele enviou agora (`user-uploads://logo.png`).
 
 ### Alteração
 
-**1. `public/images/amigos-do-bem-icon.png`**
-- Substituir pelo arquivo enviado (`user-uploads://Captura_de_Tela_2025-12-15_às_23.38.17.png`) — usar exatamente como está
+**1. Substituir o asset**
+- Copiar `user-uploads://logo.png` para `public/images/amigos-do-bem-icon.png`, sobrescrevendo o arquivo atual
 
-**2. `src/pages/Index.tsx`**
-- Remover `rounded-full` da classe da imagem (já que a logo deve aparecer exatamente como enviada, sem recorte circular forçado)
+Nenhuma alteração de código é necessária — o `src/pages/Index.tsx` já referencia `/images/amigos-do-bem-icon.png`.
 
