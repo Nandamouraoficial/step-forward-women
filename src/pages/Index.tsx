@@ -332,7 +332,7 @@ const Index = () => {
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Elza Dorigon</p>
+              <p className="font-bold text-foreground">Carla Faria</p>
               <p className="text-muted-foreground text-sm">Diretora de Marketing</p>
             </div>
           </div>
