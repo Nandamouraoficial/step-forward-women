@@ -32,9 +32,7 @@ const Index = () => {
                 Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
               </p>
               <p className="text-base font-semibold mb-8 max-w-lg mx-auto lg:mx-0">
-                Não é uma imersão para "pensar melhor".
-                <br />
-                É para decidir com clareza, critério e direção.
+                Não é uma imersão para "pensar melhor". É para estruturar os próximos 5-10 anos da sua carreira com método.
               </p>
 
               <div className="flex flex-col items-center lg:items-start gap-3">
