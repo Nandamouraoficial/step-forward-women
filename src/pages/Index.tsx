@@ -26,17 +26,13 @@ const Index = () => {
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 text-foreground text-center lg:text-left">
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6">
-                Você já construiu a carreira.
-                <br />
-                O risco agora é continuar no automático.
+                Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção.
               </h1>
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
-                Um dia de trabalho estratégico para mulheres em posições de liderança que precisam decidir o próximo movimento de carreira antes que o mercado, a empresa ou o contexto decidam por elas.
+                Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
               </p>
               <p className="text-base font-semibold mb-8 max-w-lg mx-auto lg:mx-0">
-                Não é uma imersão para "pensar melhor".
-                <br />
-                É para decidir com clareza, critério e direção.
+                Não é uma imersão para "pensar melhor". É para estruturar os próximos 5-10 anos da sua carreira com método.
               </p>
 
               <div className="flex flex-col items-center lg:items-start gap-3">
@@ -83,9 +79,9 @@ const Index = () => {
             {[
               "Ocupa uma posição de liderança ou influência",
               "Já construiu uma trajetória sólida, mas sente que o próximo passo não pode ser improvisado",
-              "Percebe que continuar no automático pode custar caro",
+              "Vê a IA transformando o mercado e quer se preparar para os próximos anos",
               "Quer decidir com mais critério, antes que a pressão venha de fora",
-              "Não quer desperdiçar mais tempo ou dinheiro em caminhos que não levam ao movimento certo",
+              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos que não levam a lugar nenhum — quer um plano com direção real",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -98,7 +94,7 @@ const Index = () => {
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base">
-              Na verdade, o melhor momento para decidir a carreira é antes que algo dê errado.
+              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado — com direção, não com impulso.
             </p>
           </div>
         </div>
@@ -117,17 +113,16 @@ const Index = () => {
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
             O erro não é só decidir errado.
             <br />
-            É deixar a decisão em aberto por tempo demais.
+            É saber que precisa mudar e continuar sem um plano concreto.
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 text-left max-w-2xl mx-auto">
             <p>
-              Em carreiras seniores, o custo da indecisão raramente aparece de uma vez.
+              Em carreiras seniores, o custo de agir sem direção raramente aparece de uma vez.
             </p>
             <p>
               Ele aparece em forma de desgaste.
                <br />De oportunidades que passam.
                <br />De adoecimento silencioso.
-              <br />De crescimento no lugar errado.
               <br />De investimento em cursos e movimentos que não mudam o que realmente importa.
             </p>
             <p>
@@ -293,7 +288,7 @@ const Index = () => {
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
                   <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF (Sadia e Perdigão)</strong>.
-                  Chegou à Diretoria Executiva C-Level para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
+                  Passou por gerência, diretoria e C-Level internacional para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
                 </p>
                 <p>
                   Em 2021, fez mais uma vez o que muitas executivas pensam mas não executam:{" "}
