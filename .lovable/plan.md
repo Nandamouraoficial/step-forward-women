@@ -1,18 +1,14 @@
 
 
-## Melhorar responsividade da headline do hero em mobile
+## Ajustar espaçamento entre título e descrição do hero
 
-### Alteração em `src/pages/Index.tsx` (linha 28)
+### Alterações em `src/pages/Index.tsx`
 
-**De:** `text-2xl sm:text-3xl md:text-4xl lg:text-5xl`
+**Linha 28** — Aumentar o `mb-6` do `h1` para `mb-8`, criando mais respiro entre o título e a descrição.
 
-**Para:** `text-xl sm:text-2xl md:text-3xl lg:text-4xl`
+**Linha 31** — Manter o `mb-4` da descrição como está (já tem boa separação para a frase de posicionamento).
 
-Tamanhos resultantes:
-- Mobile (< 640px): 20px (era 24px)
-- SM (≥ 640px): 24px (era 30px)
-- MD (≥ 768px): 30px (era 36px)
-- LG (≥ 1024px): 36px (era 48px)
+**Linha 34** — Aumentar o `mb-8` da frase de posicionamento para `mb-10`, dando mais espaço antes do CTA.
 
-A headline atual, por ser longa ("Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção."), ocupa muitas linhas em telas pequenas. Reduzir um nível melhora a legibilidade em mobile sem perder hierarquia visual em desktop.
+Resultado: hierarquia visual mais clara com respiro progressivo — título → descrição → frase → CTA.
 
