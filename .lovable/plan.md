@@ -1,17 +1,20 @@
 
 
-## Adicionar logo e menção ao Amigos do Bem na seção de Investimento
+## Trocar logo do Amigos do Bem para apenas o ícone circular
 
-### Alterações
+### Problema
+A imagem atual (`amigos-do-bem.png`) é uma captura de tela com fundo escuro. O usuário quer apenas o símbolo circular (a "bolinha") da logo.
 
-**1. Copiar logo para o projeto**
-- Copiar `user-uploads://Captura_de_Tela_2025-12-15_às_23.38.17.png` para `public/images/amigos-do-bem.png`
+### Solução
 
-**2. `src/pages/Index.tsx` — seção de Investimento (após o bloco de preço, antes do CountdownTimer)**
+**1. Salvar nova imagem**
+- Buscar o favicon/ícone circular do site amigosdobem.org (geralmente disponível como favicon ou ícone de redes sociais) e salvar como `public/images/amigos-do-bem-icon.png`
+- Alternativa: o usuário pode fazer upload apenas da bolinha da logo
 
-Adicionar um bloco discreto com:
-- Logo do Amigos do Bem (tamanho pequeno, ~60px)
-- Texto: "Parte das vendas desta imersão é direcionada para a ONG Amigos do Bem."
-- Link para https://www.amigosdobem.org abrindo em nova aba
-- Estilo: fundo suave com borda sutil, alinhado ao tom premium da página
+**2. `src/pages/Index.tsx`**
+- Trocar o `src` da imagem de `/images/amigos-do-bem.png` para `/images/amigos-do-bem-icon.png`
+- Adicionar `rounded-full` à classe da imagem para garantir formato circular
+
+### Pergunta necessária
+Preciso que você faça upload apenas da bolinha/ícone circular da logo do Amigos do Bem, pois a imagem atual inclui o fundo escuro. Você tem essa imagem separada?
 
