@@ -125,7 +125,8 @@ const Index = () => {
             </p>
             <p>
               Ele aparece em forma de desgaste.
-              <br />De oportunidades que passam.
+               <br />De oportunidades que passam.
+               <br />De adoecimento silencioso.
               <br />De crescimento no lugar errado.
               <br />De investimento em cursos e movimentos que não mudam o que realmente importa.
             </p>
