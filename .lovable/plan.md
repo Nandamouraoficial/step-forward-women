@@ -1,12 +1,17 @@
 
 
-## Substituir depoimento
+## Adicionar logo e menção ao Amigos do Bem na seção de Investimento
 
-### Alteração em `src/pages/Index.tsx` (linhas 326-336)
+### Alterações
 
-**Texto do depoimento:** Substituir as duas citações atuais por um único bloco com o novo texto da Carla Negrão.
+**1. Copiar logo para o projeto**
+- Copiar `user-uploads://Captura_de_Tela_2025-12-15_às_23.38.17.png` para `public/images/amigos-do-bem.png`
 
-**Nome e cargo:** Trocar "Carla Faria / Diretora de Marketing" por "Carla Negrão / Ex-executiva de Multinacional | Fundadora, CN Food Consulting".
+**2. `src/pages/Index.tsx` — seção de Investimento (após o bloco de preço, antes do CountdownTimer)**
 
-O layout, estilo visual e ícone de aspas permanecem iguais.
+Adicionar um bloco discreto com:
+- Logo do Amigos do Bem (tamanho pequeno, ~60px)
+- Texto: "Parte das vendas desta imersão é direcionada para a ONG Amigos do Bem."
+- Link para https://www.amigosdobem.org abrindo em nova aba
+- Estilo: fundo suave com borda sutil, alinhado ao tom premium da página
 
