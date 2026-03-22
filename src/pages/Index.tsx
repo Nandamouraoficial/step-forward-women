@@ -15,14 +15,14 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
+      {/* Selo flutuante — instância única */}
+      <SealBadge />
+
       {/* HERO */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        {/* Selo circular no canto superior esquerdo do hero */}
-        <SealBadge />
-
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
 
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
@@ -102,7 +102,6 @@ const Index = () => {
 
       {/* BLOCO ESTA IMERSÃO É PARA VOCÊ SE */}
       <section className="relative bg-secondary py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
             Esta imersão é para você se:
@@ -131,7 +130,6 @@ const Index = () => {
       </div>
 
       <section className="relative bg-background py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
             A realidade que você já percebeu
@@ -169,7 +167,6 @@ const Index = () => {
 
       {/* BLOCO PARA QUEM É */}
       <section className="relative bg-secondary py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
             Para quem é
@@ -204,7 +201,6 @@ const Index = () => {
 
       {/* BLOCO RESULTADO */}
       <section className="relative bg-background py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
             O que acontece em 6 horas
@@ -258,7 +254,6 @@ const Index = () => {
 
       {/* BLOCO O QUE VOCÊ LEVA — REESCRITO */}
       <section className="relative bg-secondary py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-4">
             O que você leva ao final da imersão
@@ -292,7 +287,6 @@ const Index = () => {
 
       {/* BLOCO SOBRE FERNANDA — REESCRITO */}
       <section className="relative bg-background py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
             Sobre a condução
@@ -381,7 +375,6 @@ const Index = () => {
         className="relative py-20 md:py-28"
         style={{ background: "var(--hero-gradient)", opacity: 0.95 }}
       >
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-foreground">Formato</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
@@ -416,7 +409,6 @@ const Index = () => {
 
       {/* BLOCO INVESTIMENTO — COM ANCORAGEM E GARANTIA */}
       <section className="relative bg-background py-20 md:py-28">
-        <SealBadge />
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
             Investimento
@@ -471,7 +463,6 @@ const Index = () => {
 
       {/* BLOCO FINAL */}
       <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
-        <SealBadge />
         <img
           src="/images/final-equipe.png"
           alt="Fernanda Moura com equipe"
