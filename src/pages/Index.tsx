@@ -148,7 +148,37 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 4. O QUE ACONTECE EM 6 HORAS ═══════════ */}
+      {/* ═══════════ 4. DEPOIMENTO CARLA NEGRÃO ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Quem já passou pela consultoria estratégica
+            </h2>
+          </div>
+          <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
+            <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
+            <div className="pt-8 space-y-4">
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                "Minha carreira como executiva estava indo bem. Bônus, promoções, resultados e reconhecimento — tudo o que o mercado usa para medir sucesso. Mas por dentro eu estava quebrando, e ninguém via. A Fernanda não me disse o que fazer — ela montou a estratégia junto comigo e colocou as decisões na mesa para eu escolher. Foi a primeira vez que alguém tratou minha carreira com método e como decisão estratégica, não como problema emocional. Resultado: saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+              </p>
+            </div>
+            <div className="mt-6 pt-6 border-t border-border">
+              <p className="font-bold text-foreground">Carla Negrão</p>
+              <p className="text-muted-foreground text-sm">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Divisor */}
+      <div className="flex items-center justify-center py-6 bg-secondary">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
+      {/* ═══════════ 5. O QUE ACONTECE EM 6 HORAS ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
@@ -198,7 +228,7 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 5. O QUE VOCÊ LEVA ═══════════ */}
+      {/* ═══════════ 6. O QUE VOCÊ LEVA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
@@ -228,7 +258,7 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 6. PROVA DE CONSEQUÊNCIA ═══════════ */}
+      {/* ═══════════ 7. PROVA DE CONSEQUÊNCIA ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
@@ -262,7 +292,7 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 7. SOBRE A FERNANDA ═══════════ */}
+      {/* ═══════════ 8. SOBRE A FERNANDA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
@@ -308,24 +338,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════ 8. DEPOIMENTO ═══════════ */}
+      {/* Divisor */}
+      <div className="flex items-center justify-center py-6 bg-background">
+        <span className="block w-16 h-px bg-accent/30" />
+        <span className="mx-3 text-accent/40 text-sm">✦</span>
+        <span className="block w-16 h-px bg-accent/30" />
+      </div>
+
+      {/* ═══════════ 9. DEPOIMENTO JULIANA ZOBARAN ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
-              Quem já passou pela consultoria estratégica
-            </h2>
-          </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "Minha carreira como executiva estava indo bem. Bônus, promoções, resultados e reconhecimento — tudo o que o mercado usa para medir sucesso. Mas por dentro eu estava quebrando, e ninguém via. A Fernanda não me disse o que fazer — ela montou a estratégia junto comigo e colocou as decisões na mesa para eu escolher. Foi a primeira vez que alguém tratou minha carreira com método e como decisão estratégica, não como problema emocional. Resultado: saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+                "Eu já era Diretora de Impostos para a América Latina. Resultado não faltava. O que faltava era clareza sobre o próximo passo — e a segurança para me posicionar além da área técnica. A Fernanda montou comigo uma estratégia que eu não conseguia enxergar sozinha. Ganhei estrutura na comunicação, presença nos fóruns que importam e passei a atrair as oportunidades certas em vez de esperar por elas. Não precisei mudar de empresa. Mudei de posicionamento."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Carla Negrão</p>
-              <p className="text-muted-foreground text-sm">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
+              <p className="font-bold text-foreground">Juliana Zobaran</p>
+              <p className="text-muted-foreground text-sm">Diretora de Impostos para América Latina · Vantiva</p>
             </div>
           </div>
         </div>
@@ -338,7 +370,7 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 9. INVESTIMENTO ═══════════ */}
+      {/* ═══════════ 10. INVESTIMENTO ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
@@ -408,7 +440,7 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* ═══════════ 10. GARANTIA ═══════════ */}
+      {/* ═══════════ 11. GARANTIA ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
@@ -426,7 +458,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════ 11. CTA FINAL ═══════════ */}
+      {/* ═══════════ 12. CTA FINAL ═══════════ */}
       <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
