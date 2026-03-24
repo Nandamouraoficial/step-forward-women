@@ -348,6 +348,11 @@ const Index = () => {
       {/* ═══════════ 9. DEPOIMENTO JULIANA ZOBARAN ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <div className="text-center mb-10">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+              Quem já passou pela consultoria estratégica
+            </h2>
+          </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
