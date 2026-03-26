@@ -3,7 +3,7 @@ import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-re
 import CountdownTimer from "@/components/CountdownTimer";
 import SealBadge from "@/components/SealBadge";
 
-const CTA_URL = "https://kiwify.app/kbzf2oK";
+const CTA_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
   const handleCTAClick = () => {
