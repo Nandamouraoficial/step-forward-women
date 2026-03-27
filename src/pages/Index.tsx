@@ -454,7 +454,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
             <Shield className="w-10 h-10 text-accent" />
-            <p className="font-display text-2xl font-bold text-foreground">
+           <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
             <p className="text-muted-foreground text-base leading-relaxed">
