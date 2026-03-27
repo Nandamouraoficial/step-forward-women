@@ -1,22 +1,12 @@
 
 
-## Adicionar evento `fbq('track', 'Lead')` ao clique do CTA
+## Corrigir Meta Pixel — manter apenas o ID correto
 
-### Alteração em `src/pages/Index.tsx`
+O pixel com ID `106120919099612` está incorreto e precisa ser removido. Apenas o pixel `4320288374856933` deve permanecer.
 
-Na função `handleCTAClick` (linha 9-14), adicionar o disparo do evento Meta Pixel antes do `window.open`:
+### Alterações
 
-```ts
-const handleCTAClick = () => {
-  if (typeof window !== 'undefined' && (window as any).lintrk) {
-    (window as any).lintrk('track', { conversion_id: 26913521 });
-  }
-  if (typeof window !== 'undefined' && (window as any).fbq) {
-    (window as any).fbq('track', 'Lead');
-  }
-  window.open(CTA_URL, '_blank');
-};
-```
+**`index.html`** (linha 61): Remover `fbq('init', '106120919099612');` e manter apenas `fbq('init', '4320288374856933');`. Também remover o `<noscript>` referente ao pixel incorreto (ID `106120919099612`) no `<body>`.
 
-Isso dispara o evento `Lead` no Meta Ads sempre que qualquer um dos 4 botões "GARANTIR MINHA VAGA" for clicado.
+**`src/pages/Index.tsx`**: Nenhuma alteração necessária — os eventos `Lead` e `InitiateCheckout` no `handleCTAClick` serão automaticamente enviados apenas para o pixel correto.
 
