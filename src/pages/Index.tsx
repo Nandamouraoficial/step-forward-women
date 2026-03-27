@@ -94,7 +94,7 @@ const Index = () => {
             ))}
           </ul>
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 max-w-xl mx-auto text-center">
-            <p className="text-foreground font-bold text-lg mb-2">
+            <p className="text-foreground font-bold text-lg mb-2 text-balance">
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base">
