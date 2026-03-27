@@ -1,42 +1,22 @@
 
 
-## Adicionar Meta Pixel (Facebook) à página
+## Adicionar evento `fbq('track', 'Lead')` ao clique do CTA
 
-### O que será feito
-Incluir o script do Meta Pixel com ID `106120919099612` no `index.html`, seguindo o mesmo padrão do pixel do LinkedIn já existente.
+### Alteração em `src/pages/Index.tsx`
 
-### Alteração em `index.html`
+Na função `handleCTAClick` (linha 9-14), adicionar o disparo do evento Meta Pixel antes do `window.open`:
 
-Adicionar no `<head>`, antes do fechamento, o snippet padrão do Meta Pixel:
-
-```html
-<!-- Meta Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '106120919099612');
-  fbq('track', 'PageView');
-</script>
-<!-- End Meta Pixel Code -->
+```ts
+const handleCTAClick = () => {
+  if (typeof window !== 'undefined' && (window as any).lintrk) {
+    (window as any).lintrk('track', { conversion_id: 26913521 });
+  }
+  if (typeof window !== 'undefined' && (window as any).fbq) {
+    (window as any).fbq('track', 'Lead');
+  }
+  window.open(CTA_URL, '_blank');
+};
 ```
 
-E no `<body>`, junto ao `<noscript>` existente do LinkedIn, adicionar o fallback:
-
-```html
-<noscript>
-  <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=106120919099612&ev=PageView&noscript=1" />
-</noscript>
-```
-
-### Detalhes técnicos
-- O script vai no `<head>` para carregar o mais cedo possível (padrão Meta)
-- O `<noscript>` fallback vai no `<body>` (mesma abordagem do pixel LinkedIn)
-- Nenhum outro arquivo precisa ser alterado
+Isso dispara o evento `Lead` no Meta Ads sempre que qualquer um dos 4 botões "GARANTIR MINHA VAGA" for clicado.
 
