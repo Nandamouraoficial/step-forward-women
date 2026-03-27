@@ -76,7 +76,7 @@ const Index = () => {
       {/* ═══════════ 2. PARA QUEM É ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
             Esta imersão é para você se:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-10">
