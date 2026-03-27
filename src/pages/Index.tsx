@@ -397,7 +397,7 @@ const Index = () => {
           </div>
 
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
-            <p className="font-body text-primary text-xl md:text-2xl font-semibold">
+            <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
             <p className="text-muted-foreground text-sm mt-2">ou R$ 1.497 à vista</p>
