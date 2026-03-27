@@ -246,7 +246,7 @@ const Index = () => {
               "Um plano de 30 dias para sair da intenção e ir para ação",
               "Clareza sobre o que parar de fazer para não continuar no caminho errado",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
                 <span>{item}</span>
               </li>
