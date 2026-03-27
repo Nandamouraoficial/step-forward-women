@@ -391,7 +391,7 @@ const Index = () => {
               Uma sessão individual com uma ex-diretora executiva C-level custa entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed mt-4">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
               Nesta imersão, você participa de um dia inteiro de trabalho estratégico, com profundidade real e aplicação direta no seu contexto, por:
             </p>
           </div>
