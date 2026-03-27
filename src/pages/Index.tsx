@@ -76,7 +76,7 @@ const Index = () => {
       {/* ═══════════ 2. PARA QUEM É ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
             Esta imersão é para você se:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-10">
@@ -94,7 +94,7 @@ const Index = () => {
             ))}
           </ul>
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 max-w-xl mx-auto text-center">
-            <p className="text-foreground font-bold text-lg mb-2">
+            <p className="text-foreground font-bold text-lg mb-2 text-balance">
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base">
@@ -114,7 +114,7 @@ const Index = () => {
       {/* ═══════════ 3. CUSTO DE NÃO DECIDIR ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10 text-balance">
             O erro não é só decidir errado.
             <br />
             É saber que precisa mudar e continuar sem um plano concreto.
@@ -156,7 +156,7 @@ const Index = () => {
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
               Quem já passou pela consultoria estratégica
             </h2>
           </div>
@@ -185,7 +185,7 @@ const Index = () => {
       {/* ═══════════ 5. O QUE ACONTECE EM 6 HORAS ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
             O que acontece em 6 horas
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
@@ -235,7 +235,7 @@ const Index = () => {
       {/* ═══════════ 6. O QUE VOCÊ LEVA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
             Ao final da imersão, você leva:
           </h2>
           <ul className="space-y-5 max-w-xl mx-auto">
@@ -265,7 +265,7 @@ const Index = () => {
       {/* ═══════════ 7. PROVA DE CONSEQUÊNCIA ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10 text-balance">
             O problema não é falta de capacidade.
             <br />
             É excesso de caminho sem critério.
@@ -299,7 +299,7 @@ const Index = () => {
       {/* ═══════════ 8. SOBRE A FERNANDA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14 text-balance">
             Quem conduz
           </h2>
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
@@ -332,7 +332,7 @@ const Index = () => {
                 <p>
                   Já conduziu 23 transições profissionais reais na própria carreira. Sabe exatamente o que funciona — e o que é perda de tempo.
                 </p>
-                <p className="font-bold text-foreground">
+                <p className="font-bold text-foreground text-balance">
                   Quem conduz essa imersão não fala de carreira de fora.
                   Ela tomou essas decisões de dentro.
                 </p>
@@ -353,7 +353,7 @@ const Index = () => {
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
               Quem já passou pela consultoria estratégica
             </h2>
           </div>
@@ -382,12 +382,12 @@ const Index = () => {
       {/* ═══════════ 10. INVESTIMENTO ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-balance">
             Investimento
           </h2>
 
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
-            <p className="text-muted-foreground text-base leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed text-balance">
               Uma sessão individual com uma ex-diretora executiva C-level custa entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
@@ -454,10 +454,10 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
             <Shield className="w-10 h-10 text-accent" />
-            <p className="font-display text-2xl font-bold text-foreground">
+           <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed text-balance">
               Se ao final da imersão você não sair com sua decisão sobre o próximo movimento e com um plano estruturado para os próximos 30 dias, eu devolvo 100% do seu investimento.
             </p>
             <p className="text-foreground font-bold text-lg">
@@ -477,7 +477,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
-          <p className="text-lg md:text-xl text-muted-foreground mb-6">
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 text-balance">
             Se você já percebeu que deixar a carreira no automático pode custar caro,
             <br />essa é a sala para decidir com método.
           </p>
