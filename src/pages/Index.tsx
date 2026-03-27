@@ -29,7 +29,7 @@ const Index = () => {
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-8">
+              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-8">
                 Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção.
               </h1>
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
