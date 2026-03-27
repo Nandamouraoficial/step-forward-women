@@ -400,7 +400,7 @@ const Index = () => {
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
-            <p className="text-muted-foreground text-sm mt-2">ou R$ 1.497 à vista</p>
+            <p className="text-muted-foreground text-base mt-2">ou R$ 1.497 à vista</p>
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
