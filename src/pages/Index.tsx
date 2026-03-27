@@ -457,7 +457,7 @@ const Index = () => {
            <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed">
+            <p className="text-muted-foreground text-base leading-relaxed text-balance">
               Se ao final da imersão você não sair com sua decisão sobre o próximo movimento e com um plano estruturado para os próximos 30 dias, eu devolvo 100% do seu investimento.
             </p>
             <p className="text-foreground font-bold text-lg">
