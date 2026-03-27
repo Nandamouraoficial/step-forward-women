@@ -200,7 +200,7 @@ const Index = () => {
                 className="border border-border rounded-xl p-6 text-left hover:shadow-md transition-shadow"
               >
                 <span className="text-accent font-display text-2xl font-bold">{String(i + 1).padStart(2, "0")}</span>
-                <p className="text-foreground text-lg mt-3">{item}</p>
+                <p className="text-foreground text-base sm:text-lg mt-3">{item}</p>
               </div>
             ))}
           </div>
