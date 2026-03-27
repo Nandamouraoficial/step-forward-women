@@ -185,7 +185,7 @@ const Index = () => {
       {/* ═══════════ 5. O QUE ACONTECE EM 6 HORAS ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
             O que acontece em 6 horas
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
