@@ -87,7 +87,7 @@ const Index = () => {
               "Quer decidir com mais critério, antes que a pressão venha de fora",
               "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos que não levam a lugar nenhum — quer um plano com direção real",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
                 <span>{item}</span>
               </li>
