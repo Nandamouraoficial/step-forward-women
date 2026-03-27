@@ -265,7 +265,7 @@ const Index = () => {
       {/* ═══════════ 7. PROVA DE CONSEQUÊNCIA ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10 text-balance">
             O problema não é falta de capacidade.
             <br />
             É excesso de caminho sem critério.
