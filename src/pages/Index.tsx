@@ -29,13 +29,13 @@ const Index = () => {
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <h1 className="font-display text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black leading-tight mb-8">
+              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-8">
                 Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção.
               </h1>
               <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
                 Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
               </p>
-              <p className="text-base font-semibold mb-10 max-w-lg mx-auto lg:mx-0">
+              <p className="text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance">
                 Não é uma imersão para "pensar melhor". É para estruturar os próximos anos da sua carreira com método.
               </p>
 
@@ -46,14 +46,14 @@ const Index = () => {
                 <a onClick={handleCTAClick} className="cursor-pointer">
                   <Button
                     size="lg"
-                    className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
                     GARANTIR MINHA VAGA
                   </Button>
                 </a>
               </div>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm opacity-80">
+              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm sm:text-base opacity-80">
                 <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
                 <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
                 <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
@@ -87,7 +87,7 @@ const Index = () => {
               "Quer decidir com mais critério, antes que a pressão venha de fora",
               "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos que não levam a lugar nenhum — quer um plano com direção real",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
                 <span>{item}</span>
               </li>
@@ -97,7 +97,7 @@ const Index = () => {
             <p className="text-foreground font-bold text-lg mb-2 text-balance">
               Você não precisa estar em transição.
             </p>
-            <p className="text-muted-foreground text-base">
+            <p className="text-muted-foreground text-base sm:text-lg text-balance">
               Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado — com direção, não com impulso.
             </p>
           </div>
@@ -200,7 +200,7 @@ const Index = () => {
                 className="border border-border rounded-xl p-6 text-left hover:shadow-md transition-shadow"
               >
                 <span className="text-accent font-display text-2xl font-bold">{String(i + 1).padStart(2, "0")}</span>
-                <p className="text-foreground text-lg mt-3">{item}</p>
+                <p className="text-foreground text-base sm:text-lg mt-3">{item}</p>
               </div>
             ))}
           </div>
@@ -217,7 +217,7 @@ const Index = () => {
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -246,7 +246,7 @@ const Index = () => {
               "Um plano de 30 dias para sair da intenção e ir para ação",
               "Clareza sobre o que parar de fazer para não continuar no caminho errado",
             ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-lg text-foreground">
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
                 <span>{item}</span>
               </li>
@@ -391,16 +391,16 @@ const Index = () => {
               Uma sessão individual com uma ex-diretora executiva C-level custa entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed mt-4">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
               Nesta imersão, você participa de um dia inteiro de trabalho estratégico, com profundidade real e aplicação direta no seu contexto, por:
             </p>
           </div>
 
           <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
-            <p className="font-body text-primary text-xl md:text-2xl font-semibold">
+            <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
-            <p className="text-muted-foreground text-sm mt-2">ou R$ 1.497 à vista</p>
+            <p className="text-muted-foreground text-base mt-2">ou R$ 1.497 à vista</p>
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
@@ -417,7 +417,7 @@ const Index = () => {
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
@@ -482,14 +482,14 @@ const Index = () => {
             <br />essa é a sala para decidir com método.
           </p>
           <div className="flex flex-col items-center gap-2 mb-10">
-            <span className="text-foreground font-bold">Grupo reduzido.</span>
-            <span className="text-foreground font-bold">Discussão estratégica real.</span>
-            <span className="text-foreground font-bold">Próximo movimento com direção.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Grupo reduzido.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Discussão estratégica real.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Próximo movimento com direção.</span>
           </div>
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
-              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-sm sm:text-base px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
               GARANTIR MINHA VAGA
             </Button>
