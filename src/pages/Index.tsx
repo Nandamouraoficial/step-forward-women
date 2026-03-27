@@ -477,7 +477,7 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
-          <p className="text-lg md:text-xl text-muted-foreground mb-6">
+          <p className="text-lg md:text-xl text-muted-foreground mb-6 text-balance">
             Se você já percebeu que deixar a carreira no automático pode custar caro,
             <br />essa é a sala para decidir com método.
           </p>
