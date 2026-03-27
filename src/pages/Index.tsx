@@ -235,7 +235,7 @@ const Index = () => {
       {/* ═══════════ 6. O QUE VOCÊ LEVA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
             Ao final da imersão, você leva:
           </h2>
           <ul className="space-y-5 max-w-xl mx-auto">
