@@ -299,7 +299,7 @@ const Index = () => {
       {/* ═══════════ 8. SOBRE A FERNANDA ═══════════ */}
       <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14 text-balance">
             Quem conduz
           </h2>
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
