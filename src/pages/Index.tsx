@@ -482,9 +482,9 @@ const Index = () => {
             <br />essa é a sala para decidir com método.
           </p>
           <div className="flex flex-col items-center gap-2 mb-10">
-            <span className="text-foreground font-bold">Grupo reduzido.</span>
-            <span className="text-foreground font-bold">Discussão estratégica real.</span>
-            <span className="text-foreground font-bold">Próximo movimento com direção.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Grupo reduzido.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Discussão estratégica real.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Próximo movimento com direção.</span>
           </div>
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
