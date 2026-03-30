@@ -90,7 +90,7 @@ const Index = () => {
               "Já construiu uma trajetória sólida, mas sente que o próximo passo não pode ser improvisado",
               "Vê a IA transformando o mercado e quer se preparar para os próximos anos",
               "Quer decidir com mais critério, antes que a pressão venha de fora",
-              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos que não levam a lugar nenhum — quer um plano com direção real",
+              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos sem direção",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
