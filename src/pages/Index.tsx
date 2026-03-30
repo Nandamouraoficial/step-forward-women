@@ -347,19 +347,19 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Quem já passou pela consultoria estratégica
+              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
             </h2>
           </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "Eu já era Diretora de Impostos para a América Latina. Resultado não faltava. O que faltava era clareza sobre o próximo passo — e a segurança para me posicionar além da área técnica. A Fernanda montou comigo uma estratégia que eu não conseguia enxergar sozinha. Ganhei estrutura na comunicação, presença nos fóruns que importam e passei a atrair as oportunidades certas em vez de esperar por elas. Não precisei mudar de empresa. Mudei de posicionamento."
+                "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="font-bold text-foreground">Juliana Zobaran</p>
-              <p className="text-muted-foreground text-sm">Diretora de Impostos para América Latina · Vantiva</p>
+              <p className="text-muted-foreground text-sm">Diretora para América Latina</p>
             </div>
           </div>
         </div>
