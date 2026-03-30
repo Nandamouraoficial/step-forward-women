@@ -381,11 +381,11 @@ const Index = () => {
 
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base leading-relaxed text-balance">
-              Uma sessão individual com uma ex-diretora executiva C-level custa entre{" "}
+              Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
-              Nesta imersão, você participa de um dia inteiro de trabalho estratégico, com profundidade real e aplicação direta no seu contexto, por:
+              Aqui, você participa de um dia inteiro de decisão estratégica, com aplicação direta no seu contexto:
             </p>
           </div>
 
