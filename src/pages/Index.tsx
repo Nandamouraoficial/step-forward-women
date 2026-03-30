@@ -222,9 +222,9 @@ const Index = () => {
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
               size="lg"
-               className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+               className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
             >
-              GARANTIR MINHA VAGA
+              Quero estruturar meu próximo passo
             </Button>
           </a>
         </div>
