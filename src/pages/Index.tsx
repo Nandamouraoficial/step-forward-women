@@ -317,20 +317,17 @@ const Index = () => {
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
-                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF (Sadia e Perdigão)</strong>.
-                  Passou por gerência, diretoria e C-Level internacional para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
+                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF</strong>.
                 </p>
                 <p>
-                  Em 2021, fez mais uma vez o que muitas executivas pensam mas não executam:{" "}
-                  <strong className="text-foreground">parou. Intencionalmente.</strong>{" "}
-                  Para decidir o próximo movimento com método — não com impulso.
+                  Atuou em posições de liderança, diretoria e C-level internacional, conduzindo equipes em 15 países.
                 </p>
                 <p>
-                  Já conduziu 23 transições profissionais reais na própria carreira. Sabe exatamente o que funciona — e o que é perda de tempo.
+                  Já realizou 23 transições profissionais reais na própria carreira.
                 </p>
                 <p className="font-bold text-foreground text-balance">
-                  Quem conduz essa imersão não fala de carreira de fora.
-                  Ela tomou essas decisões de dentro.
+                  Não fala de carreira de fora.
+                  <br />Tomou essas decisões de dentro.
                 </p>
               </div>
             </div>
