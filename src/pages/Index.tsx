@@ -353,7 +353,7 @@ const Index = () => {
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
               </p>
             </div>
