@@ -162,13 +162,13 @@ const Index = () => {
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="font-bold text-foreground">Carla Negrão</p>
-              <p className="text-muted-foreground text-sm">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
             </div>
           </div>
         </div>
@@ -314,7 +314,7 @@ const Index = () => {
               <p className="text-accent font-bold mb-6">
                 Estrategista Executiva de Carreira
               </p>
-              <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
+              <div className="text-lg sm:text-xl leading-relaxed text-muted-foreground space-y-4">
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
                   <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF</strong>.
@@ -353,13 +353,13 @@ const Index = () => {
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="font-bold text-foreground">Juliana Zobaran</p>
-              <p className="text-muted-foreground text-sm">Diretora para América Latina</p>
+              <p className="text-muted-foreground text-sm sm:text-base">Diretora para América Latina</p>
             </div>
           </div>
         </div>
@@ -380,7 +380,7 @@ const Index = () => {
           </h2>
 
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
-            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-balance">
               Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
@@ -397,7 +397,7 @@ const Index = () => {
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
-            <p className="text-foreground font-bold text-base text-balance">
+            <p className="text-foreground font-bold text-lg text-balance">
               Menos que uma sessão — com impacto direto no seu próximo movimento.
             </p>
           </div>
@@ -447,7 +447,7 @@ const Index = () => {
            <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+            <p className="text-muted-foreground text-lg leading-relaxed text-balance">
               Se você não sair com uma decisão clara e um plano estruturado, eu devolvo 100%.
             </p>
             <p className="text-foreground font-bold text-lg">
