@@ -397,7 +397,7 @@ const Index = () => {
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
-            <p className="text-foreground font-bold text-base text-balance">
+            <p className="text-foreground font-bold text-lg text-balance">
               Menos que uma sessão — com impacto direto no seu próximo movimento.
             </p>
           </div>
