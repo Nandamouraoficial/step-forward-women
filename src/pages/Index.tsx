@@ -31,14 +31,14 @@ const Index = () => {
             <div className="flex-1 text-foreground text-center lg:text-left">
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5 text-balance">
                 Sabe o que quer.<br />
-                Falta o método.
+                Mas ainda não estruturou como chegar lá.
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0 text-balance">
-                Estruture seu próximo movimento de carreira com clareza — em 6 horas.
+                Essa imersão existe para transformar intenção em decisão — com método.
               </p>
               <p className="text-base sm:text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance opacity-90">
-                Não é uma imersão para "pensar melhor".<br />
-                É uma decisão estratégica sobre os próximos anos da sua carreira.
+                Não é uma imersão para refletir.<br />
+                É para decidir.
               </p>
 
               <div className="flex flex-col items-center lg:items-start gap-3">
@@ -90,7 +90,7 @@ const Index = () => {
               "Já construiu uma trajetória sólida, mas sente que o próximo passo não pode ser improvisado",
               "Vê a IA transformando o mercado e quer se preparar para os próximos anos",
               "Quer decidir com mais critério, antes que a pressão venha de fora",
-              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos que não levam a lugar nenhum — quer um plano com direção real",
+              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos sem direção",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -103,7 +103,7 @@ const Index = () => {
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg text-balance">
-              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado — com direção, não com impulso.
+              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado.
             </p>
           </div>
         </div>
@@ -126,22 +126,16 @@ const Index = () => {
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 text-left max-w-2xl mx-auto">
             <p>
-              Em carreiras seniores, o custo de agir sem direção raramente aparece de uma vez.
+              Em carreiras seniores, o custo não vem de uma vez.
             </p>
             <p>
-              Ele aparece em forma de desgaste.
-               <br />De oportunidades que passam.
-               <br />De adoecimento silencioso.
-              <br />De investimento em cursos e movimentos que não mudam o que realmente importa.
+              Ele aparece em desgaste.
+              <br />Em oportunidades perdidas.
+              <br />Em decisões adiadas.
+              <br />Em investimento que não muda o que realmente importa.
             </p>
             <p>
-              Muita gente só para para pensar na carreira quando algo dá errado.
-            </p>
-            <p>
-              Quando a empresa muda.
-              <br />Quando o chefe muda.
-              <br />Quando a avaliação vem ruim.
-              <br />Quando o mercado já começou a pedir outra leitura.
+              Muita gente só para quando algo dá errado.
             </p>
             <p className="font-bold text-foreground text-center">
               Essa imersão existe para evitar esse ponto.
@@ -162,14 +156,14 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Quem já passou pela consultoria estratégica
+              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
             </h2>
           </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "Minha carreira como executiva estava indo bem. Bônus, promoções, resultados e reconhecimento — tudo o que o mercado usa para medir sucesso. Mas por dentro eu estava quebrando, e ninguém via. A Fernanda não me disse o que fazer — ela montou a estratégia junto comigo e colocou as decisões na mesa para eu escolher. Foi a primeira vez que alguém tratou minha carreira com método e como decisão estratégica, não como problema emocional. Resultado: saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+                "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
@@ -191,14 +185,14 @@ const Index = () => {
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
-            O que acontece em 6 horas
+            Você sai com clareza sobre o que está travando sua carreira hoje.
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
-              "Você identifica com precisão o que está travando seu avanço hoje",
-              "Analisa possibilidades reais — e elimina caminhos que parecem bons, mas não fazem sentido",
-              "Define o próximo movimento com critério, não por impulso ou pressão externa",
-              "Sai com um plano estruturado para os próximos 30 dias",
+              "Define o próximo movimento com critério",
+              "Elimina caminhos que parecem bons, mas não fazem sentido",
+              "Estrutura uma decisão com base estratégica",
+              "Sai com um plano de 30 dias para ação",
             ].map((item, i) => (
               <div
                 key={i}
@@ -249,7 +243,7 @@ const Index = () => {
               "Um diagnóstico objetivo do que está travando sua carreira",
               "Um mapa dos caminhos possíveis com análise estratégica",
               "Um plano de 30 dias para sair da intenção e ir para ação",
-              "Clareza sobre o que parar de fazer para não continuar no caminho errado",
+              "Clareza sobre o que parar de fazer",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -278,16 +272,13 @@ const Index = () => {
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 max-w-2xl mx-auto">
             <p>
               Você pode continuar estudando.
-              <br />Pode fazer mais um curso.
-              <br />Pode esperar a próxima oportunidade aparecer.
+              <br />Pode esperar a próxima oportunidade.
             </p>
             <p>
               Mas isso não garante direção.
-              <br />Nem posicionamento.
-              <br />Nem movimento.
             </p>
             <p className="font-bold text-foreground">
-              O que muda a carreira de alguém sênior não é consumir mais.
+              O que muda uma carreira sênior não é consumir mais.
               <br />É decidir melhor.
             </p>
           </div>
@@ -326,20 +317,17 @@ const Index = () => {
               <div className="text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
                   26 anos dentro do sistema corporativo —{" "}
-                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF (Sadia e Perdigão)</strong>.
-                  Passou por gerência, diretoria e C-Level internacional para América Latina e América Central, além de ter liderado diversos projetos globais e ter equipes diversas em 15 países simultaneamente.
+                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF</strong>.
                 </p>
                 <p>
-                  Em 2021, fez mais uma vez o que muitas executivas pensam mas não executam:{" "}
-                  <strong className="text-foreground">parou. Intencionalmente.</strong>{" "}
-                  Para decidir o próximo movimento com método — não com impulso.
+                  Atuou em posições de liderança, diretoria e C-level internacional, conduzindo equipes em 15 países.
                 </p>
                 <p>
-                  Já conduziu 23 transições profissionais reais na própria carreira. Sabe exatamente o que funciona — e o que é perda de tempo.
+                  Já realizou 23 transições profissionais reais na própria carreira.
                 </p>
                 <p className="font-bold text-foreground text-balance">
-                  Quem conduz essa imersão não fala de carreira de fora.
-                  Ela tomou essas decisões de dentro.
+                  Não fala de carreira de fora.
+                  <br />Tomou essas decisões de dentro.
                 </p>
               </div>
             </div>
@@ -359,19 +347,19 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Quem já passou pela consultoria estratégica
+              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
             </h2>
           </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "Eu já era Diretora de Impostos para a América Latina. Resultado não faltava. O que faltava era clareza sobre o próximo passo — e a segurança para me posicionar além da área técnica. A Fernanda montou comigo uma estratégia que eu não conseguia enxergar sozinha. Ganhei estrutura na comunicação, presença nos fóruns que importam e passei a atrair as oportunidades certas em vez de esperar por elas. Não precisei mudar de empresa. Mudei de posicionamento."
+                "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
               <p className="font-bold text-foreground">Juliana Zobaran</p>
-              <p className="text-muted-foreground text-sm">Diretora de Impostos para América Latina · Vantiva</p>
+              <p className="text-muted-foreground text-sm">Diretora para América Latina</p>
             </div>
           </div>
         </div>
@@ -393,11 +381,11 @@ const Index = () => {
 
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base leading-relaxed text-balance">
-              Uma sessão individual com uma ex-diretora executiva C-level custa entre{" "}
+              Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
-              Nesta imersão, você participa de um dia inteiro de trabalho estratégico, com profundidade real e aplicação direta no seu contexto, por:
+              Aqui, você participa de um dia inteiro de decisão estratégica, com aplicação direta no seu contexto:
             </p>
           </div>
 
@@ -409,11 +397,8 @@ const Index = () => {
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
-            <p className="text-muted-foreground text-base">
-              O grupo é reduzido justamente para garantir qualidade nas discussões e profundidade na condução.
-            </p>
-            <p className="text-foreground font-bold text-base mt-2">
-              Por isso, as vagas são limitadas.
+            <p className="text-foreground font-bold text-base text-balance">
+              Menos que uma sessão — com impacto direto no seu próximo movimento.
             </p>
           </div>
 
@@ -463,7 +448,7 @@ const Index = () => {
               Garantia de resultado
             </p>
             <p className="text-muted-foreground text-base leading-relaxed text-balance">
-              Se ao final da imersão você não sair com sua decisão sobre o próximo movimento e com um plano estruturado para os próximos 30 dias, eu devolvo 100% do seu investimento.
+              Se você não sair com uma decisão clara e um plano estruturado, eu devolvo 100%.
             </p>
             <p className="text-foreground font-bold text-lg">
               Sem burocracia.
@@ -483,13 +468,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
           <p className="text-lg md:text-xl text-muted-foreground mb-6 text-balance">
-            Se você já percebeu que deixar a carreira no automático pode custar caro,
+            Se você já percebeu que continuar sem direção tem custo,
             <br />essa é a sala para decidir com método.
           </p>
           <div className="flex flex-col items-center gap-2 mb-10">
-            <span className="text-foreground font-bold text-base sm:text-lg">Grupo reduzido.</span>
-            <span className="text-foreground font-bold text-base sm:text-lg">Discussão estratégica real.</span>
-            <span className="text-foreground font-bold text-base sm:text-lg">Próximo movimento com direção.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
