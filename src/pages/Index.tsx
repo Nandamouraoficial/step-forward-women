@@ -31,14 +31,14 @@ const Index = () => {
             <div className="flex-1 text-foreground text-center lg:text-left">
               <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5 text-balance">
                 Sabe o que quer.<br />
-                Falta o método.
+                Mas ainda não estruturou como chegar lá.
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0 text-balance">
-                Estruture seu próximo movimento de carreira com clareza — em 6 horas.
+                Essa imersão existe para transformar intenção em decisão — com método.
               </p>
               <p className="text-base sm:text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance opacity-90">
-                Não é uma imersão para "pensar melhor".<br />
-                É uma decisão estratégica sobre os próximos anos da sua carreira.
+                Não é uma imersão para refletir.<br />
+                É para decidir.
               </p>
 
               <div className="flex flex-col items-center lg:items-start gap-3">
