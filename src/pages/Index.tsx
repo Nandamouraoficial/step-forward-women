@@ -380,7 +380,7 @@ const Index = () => {
           </h2>
 
           <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
-            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+            <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-balance">
               Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
