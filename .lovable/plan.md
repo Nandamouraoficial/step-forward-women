@@ -1,22 +1,23 @@
 
 
-## Corrigir headline cortada no mobile
+## Redistribuir headline em duas linhas equilibradas
 
-### Problema
-A headline "Mas ainda não estruturou como chegar lá." está ultrapassando a largura da tela em 375px. O `text-3xl` (30px) com Playfair Display `font-black` é muito largo para o espaço disponível (375px - 32px padding = 343px).
+### Alteração em `src/pages/Index.tsx` (linhas 32-35)
 
-### Alteração em `src/pages/Index.tsx`
+Adicionar um `<br />` manual para quebrar a segunda linha em dois trechos mais equilibrados:
 
-**Linha 32** — Reduzir o tamanho base da headline:
+**De:**
+```
+Sabe o que quer.
+Mas ainda não estruturou como chegar lá.
+```
 
-`text-3xl sm:text-4xl` → `text-2xl sm:text-3xl`
+**Para:**
+```
+Sabe o que quer.
+Mas ainda não estruturou
+como chegar lá.
+```
 
-Manter o restante da escala (`md:text-5xl lg:text-[3.25rem]`) inalterado.
-
-Classe final: `font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5 text-balance`
-
-### Impacto
-- Corrige o overflow no mobile (375px)
-- Mantém a escala progressiva em telas maiores
-- Alinhado com a diretriz de tipografia do hero (`text-2xl sm:text-2xl md:text-3xl...`)
+Isso distribui melhor o peso visual entre as linhas, evitando uma segunda linha muito longa. Remover `text-balance` do `h1` para que os `<br />` manuais controlem as quebras.
 
