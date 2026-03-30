@@ -447,7 +447,7 @@ const Index = () => {
            <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
-            <p className="text-muted-foreground text-base leading-relaxed text-balance">
+            <p className="text-muted-foreground text-lg leading-relaxed text-balance">
               Se você não sair com uma decisão clara e um plano estruturado, eu devolvo 100%.
             </p>
             <p className="text-foreground font-bold text-lg">
