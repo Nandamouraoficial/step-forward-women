@@ -397,11 +397,8 @@ const Index = () => {
           </div>
 
           <div className="max-w-xl mx-auto mb-8">
-            <p className="text-muted-foreground text-base">
-              O grupo é reduzido justamente para garantir qualidade nas discussões e profundidade na condução.
-            </p>
-            <p className="text-foreground font-bold text-base mt-2">
-              Por isso, as vagas são limitadas.
+            <p className="text-foreground font-bold text-base text-balance">
+              Menos que uma sessão — com impacto direto no seu próximo movimento.
             </p>
           </div>
 
