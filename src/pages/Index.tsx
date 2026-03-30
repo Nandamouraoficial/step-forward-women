@@ -29,9 +29,10 @@ const Index = () => {
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5 text-balance">
+              <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5">
                 Sabe o que quer.<br />
-                Mas ainda não estruturou como chegar lá.
+                Mas ainda não estruturou<br />
+                como chegar lá.
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0 text-balance">
                 Essa imersão existe para transformar intenção em decisão — com método.
