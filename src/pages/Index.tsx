@@ -29,28 +29,33 @@ const Index = () => {
         <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
             <div className="flex-1 text-foreground text-center lg:text-left">
-              <h1 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-8">
-                Você já construiu a carreira. Já decidiu que quer mudança. Agora precisa de direção.
+              <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5 text-balance">
+                Sabe o que quer.<br />
+                Falta o método.
               </h1>
-              <p className="text-lg md:text-xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0">
-                Um dia de trabalho estratégico para mulheres em posições de liderança que precisam estruturar o próximo movimento de carreira com clareza — antes que o mercado, a IA ou o tempo decidam por elas.
+              <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0 text-balance">
+                Estruture seu próximo movimento de carreira com clareza — em 6 horas.
               </p>
-              <p className="text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance">
-                Não é uma imersão para "pensar melhor". É para estruturar os próximos anos da sua carreira com método.
+              <p className="text-base sm:text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance opacity-90">
+                Não é uma imersão para "pensar melhor".<br />
+                É uma decisão estratégica sobre os próximos anos da sua carreira.
               </p>
 
               <div className="flex flex-col items-center lg:items-start gap-3">
                 <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
                   Grupo fechado para até 15 executivas
                 </span>
-                <a onClick={handleCTAClick} className="cursor-pointer">
+                <a onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
                   <Button
                     size="lg"
-                     className="bg-primary hover:bg-cta-hover text-primary-foreground font-bold text-base sm:text-lg px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-xl shadow-primary/20 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                    className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
-                    GARANTIR MINHA VAGA
+                    Quero estruturar meu próximo passo
                   </Button>
                 </a>
+                <p className="text-sm sm:text-base text-muted-foreground mt-2 max-w-md mx-auto lg:mx-0 text-balance italic">
+                  Continuar onde você está, sem clareza, costuma custar mais caro do que decidir.
+                </p>
               </div>
 
               <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm sm:text-base opacity-80">
