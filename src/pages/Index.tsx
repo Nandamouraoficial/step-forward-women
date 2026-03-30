@@ -126,22 +126,16 @@ const Index = () => {
           </h2>
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 text-left max-w-2xl mx-auto">
             <p>
-              Em carreiras seniores, o custo de agir sem direção raramente aparece de uma vez.
+              Em carreiras seniores, o custo não vem de uma vez.
             </p>
             <p>
-              Ele aparece em forma de desgaste.
-               <br />De oportunidades que passam.
-               <br />De adoecimento silencioso.
-              <br />De investimento em cursos e movimentos que não mudam o que realmente importa.
+              Ele aparece em desgaste.
+              <br />Em oportunidades perdidas.
+              <br />Em decisões adiadas.
+              <br />Em investimento que não muda o que realmente importa.
             </p>
             <p>
-              Muita gente só para para pensar na carreira quando algo dá errado.
-            </p>
-            <p>
-              Quando a empresa muda.
-              <br />Quando o chefe muda.
-              <br />Quando a avaliação vem ruim.
-              <br />Quando o mercado já começou a pedir outra leitura.
+              Muita gente só para quando algo dá errado.
             </p>
             <p className="font-bold text-foreground text-center">
               Essa imersão existe para evitar esse ponto.
