@@ -185,14 +185,14 @@ const Index = () => {
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
-            O que acontece em 6 horas
+            Você sai com clareza sobre o que está travando sua carreira hoje.
           </h2>
           <div className="grid md:grid-cols-2 gap-6 mb-14">
             {[
-              "Você identifica com precisão o que está travando seu avanço hoje",
-              "Analisa possibilidades reais — e elimina caminhos que parecem bons, mas não fazem sentido",
-              "Define o próximo movimento com critério, não por impulso ou pressão externa",
-              "Sai com um plano estruturado para os próximos 30 dias",
+              "Define o próximo movimento com critério",
+              "Elimina caminhos que parecem bons, mas não fazem sentido",
+              "Estrutura uma decisão com base estratégica",
+              "Sai com um plano de 30 dias para ação",
             ].map((item, i) => (
               <div
                 key={i}
