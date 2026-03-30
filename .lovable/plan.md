@@ -1,28 +1,71 @@
 
 
-## Harmonizar quebras de linha na landing page
+## Atualizar copy completa da landing page
 
-### Problema identificado
-Em diversas seções, frases estão quebrando de forma desarmoniosa, deixando poucas palavras isoladas na segunda linha. Exemplos:
+### Resumo
+Reescrever os textos de todas as 12 seções do `src/pages/Index.tsx` para alinhar com o novo briefing, mantendo a estrutura HTML/CSS, lógica de botões e eventos de pixel intactos.
 
-1. **"Quem já passou pela consultoria / estratégica"** — apenas "estratégica" na segunda linha (aparece 2x)
-2. **"É saber que precisa mudar e continuar sem / um plano concreto."** — "um plano concreto." isolado
-3. **"Ela tomou essas / decisões de dentro."** — "decisões de dentro." órfão
-4. **"...custa entre R$ / 3.000 e R$ 10.000"** — "R$" quebrando do valor
+### Alterações detalhadas em `src/pages/Index.tsx`
 
-### Solução
+**HERO (seção 1)**
+- Headline: "Sabe o que quer." / "Mas ainda não estruturou como chegar lá."
+- Subheadline: "Essa imersão existe para transformar intenção em decisão — com método."
+- Frase de posicionamento: "Não é uma imersão para refletir." / "É para decidir."
+- Manter badge, CTA, frase abaixo do CTA e metadados (data/hora) como estão
 
-Aplicar `text-wrap: balance` via Tailwind (`text-balance`) nos títulos (h2) e parágrafos-chave que sofrem com esse problema. Essa propriedade CSS moderna distribui as palavras de forma mais equilibrada entre as linhas, evitando órfãos automaticamente — sem precisar adicionar `<br />` manuais que quebram em outros tamanhos de tela.
+**PARA QUEM É (seção 2)**
+- Atualizar último item da lista de "Não quer mais desperdiçar tempo..." para "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos sem direção"
+- Callout: manter "Você não precisa estar em transição." e ajustar segunda frase para "Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado."
 
-### Alterações em `src/pages/Index.tsx`
+**CUSTO DE NÃO DECIDIR (seção 3)**
+- Simplificar corpo: remover "De adoecimento silencioso", "Quando a empresa muda / chefe muda / avaliação vem ruim / mercado pedir outra leitura"
+- Novo corpo conforme briefing: desgaste, oportunidades perdidas, decisões adiadas, investimento que não muda o que importa
+- Fechar com "Muita gente só para quando algo dá errado. Essa imersão existe para evitar esse ponto."
 
-- Adicionar classe `text-balance` em todos os `<h2>` das seções (linhas 79, 117, 159, 188, 238, 268, 302, 357, 385, 457)
-- Adicionar `text-balance` nos parágrafos com frases impactantes que sofrem com o problema:
-  - Frase bold do bio da Fernanda (linha 335)
-  - Parágrafo do investimento com "R$ 3.000 e R$ 10.000" (linha 391)
-  - Frase do CTA final (linha 480-482)
-  - Callout "Você não precisa estar em transição" (linha 97-98)
-  - Texto de garantia (linha 460-461)
+**DEPOIMENTO CARLA (seção 4) — prova social**
+- Trocar título para "Executivas que estavam paradas há meses tomaram decisões em uma única sessão."
+- Encurtar depoimento para: "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+- Manter nome e cargo
 
-Isso resolve o problema de forma responsiva, sem quebras manuais, adaptando-se a qualquer tamanho de tela.
+**O QUE ACONTECE EM 6H (seção 5)**
+- Ajustar título para "Você sai com clareza sobre o que está travando sua carreira hoje."
+- Atualizar os 4 cards conforme briefing
+- Manter bloco "Você não sai com mais conteúdo. Sai com uma decisão tomada." e CTA
+
+**O QUE VOCÊ LEVA (seção 6)**
+- Atualizar lista para os 5 itens do briefing (decisão clara, diagnóstico, mapa, plano 30 dias, clareza sobre o que parar)
+
+**PROVA DE CONSEQUÊNCIA / REENQUADRAMENTO (seção 7)**
+- Simplificar corpo: remover "Pode fazer mais um curso" e "Nem posicionamento / Nem movimento"
+- Novo texto conforme briefing: "Você pode continuar estudando. Pode esperar a próxima oportunidade. Mas isso não garante direção."
+- Fechar com "O que muda uma carreira sênior não é consumir mais. É decidir melhor."
+
+**SOBRE A FERNANDA (seção 8)**
+- Simplificar bio conforme briefing: 26 anos, empresas, liderança/diretoria/C-level, 15 países, 23 transições
+- Fechar com "Não fala de carreira de fora. Tomou essas decisões de dentro."
+
+**DEPOIMENTO JULIANA (seção 9)**
+- Mesmo padrão da seção 4: título de prova social
+- Encurtar depoimento para: "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
+- Manter nome: "Juliana Zobaran — Diretora para América Latina"
+
+**INVESTIMENTO (seção 10)**
+- Ajustar texto de contexto: "Uma sessão individual... pode custar entre R$ 3.000 e R$ 10.000."
+- Subtexto: "Aqui, você participa de um dia inteiro de decisão estratégica, com aplicação direta no seu contexto"
+- Adicionar "Menos que uma sessão — com impacto direto no seu próximo movimento."
+- Manter valores, countdown e CTA
+
+**GARANTIA (seção 11)**
+- Simplificar: "Se você não sair com uma decisão clara e um plano estruturado, eu devolvo 100%." + "Sem burocracia."
+
+**CTA FINAL (seção 12)**
+- Texto: "Se você já percebeu que continuar sem direção tem custo, essa é a sala para decidir com método."
+- Substituir bullets por: "Não para pensar. Para decidir."
+- Manter CTA e badge de escassez
+
+### O que NÃO muda
+- `handleCTAClick` e eventos Lead/InitiateCheckout
+- Texto dos botões ("Quero estruturar meu próximo passo")
+- Estrutura HTML, classes CSS, componentes
+- Pixel tracking, countdown, seal badge
 
