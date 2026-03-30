@@ -468,13 +468,12 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
           <p className="text-lg md:text-xl text-muted-foreground mb-6 text-balance">
-            Se você já percebeu que deixar a carreira no automático pode custar caro,
+            Se você já percebeu que continuar sem direção tem custo,
             <br />essa é a sala para decidir com método.
           </p>
           <div className="flex flex-col items-center gap-2 mb-10">
-            <span className="text-foreground font-bold text-base sm:text-lg">Grupo reduzido.</span>
-            <span className="text-foreground font-bold text-base sm:text-lg">Discussão estratégica real.</span>
-            <span className="text-foreground font-bold text-base sm:text-lg">Próximo movimento com direção.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
+            <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
           <a onClick={handleCTAClick} className="cursor-pointer">
             <Button
