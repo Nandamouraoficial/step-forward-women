@@ -272,16 +272,13 @@ const Index = () => {
           <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 max-w-2xl mx-auto">
             <p>
               Você pode continuar estudando.
-              <br />Pode fazer mais um curso.
-              <br />Pode esperar a próxima oportunidade aparecer.
+              <br />Pode esperar a próxima oportunidade.
             </p>
             <p>
               Mas isso não garante direção.
-              <br />Nem posicionamento.
-              <br />Nem movimento.
             </p>
             <p className="font-bold text-foreground">
-              O que muda a carreira de alguém sênior não é consumir mais.
+              O que muda uma carreira sênior não é consumir mais.
               <br />É decidir melhor.
             </p>
           </div>
