@@ -103,7 +103,7 @@ const Index = () => {
               Você não precisa estar em transição.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg text-balance">
-              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado — com direção, não com impulso.
+              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado.
             </p>
           </div>
         </div>
