@@ -156,14 +156,14 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <div className="text-center mb-10">
             <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Quem já passou pela consultoria estratégica
+              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
             </h2>
           </div>
           <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
               <p className="text-lg text-muted-foreground leading-relaxed">
-                "Minha carreira como executiva estava indo bem. Bônus, promoções, resultados e reconhecimento — tudo o que o mercado usa para medir sucesso. Mas por dentro eu estava quebrando, e ninguém via. A Fernanda não me disse o que fazer — ela montou a estratégia junto comigo e colocou as decisões na mesa para eu escolher. Foi a primeira vez que alguém tratou minha carreira com método e como decisão estratégica, não como problema emocional. Resultado: saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+                "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
