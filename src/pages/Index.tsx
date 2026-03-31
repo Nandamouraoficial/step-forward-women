@@ -3,7 +3,7 @@ import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-re
 import CountdownTimer from "@/components/CountdownTimer";
 import SealBadge from "@/components/SealBadge";
 
-const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20tenho%20interesse%20na%20Imers%C3%A3o%20Step%20Forward%20Women%20de%2011%20de%20abril.";
+const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20tenho%20interesse%20na%20Imers%C3%A3o%20O%20Pr%C3%B3ximo%20Passo%20de%2011%20de%20abril.";
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
