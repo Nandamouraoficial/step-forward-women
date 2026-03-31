@@ -112,6 +112,20 @@ const Index = () => {
               Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado.
             </p>
           </div>
+          <div className="flex flex-col items-center gap-3 mt-10">
+            <a onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              >
+                GARANTIR MINHA VAGA VIA WHATSAPP
+              </Button>
+            </a>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+              Prefiro comprar diretamente → acessar o checkout
+            </a>
+          </div>
         </div>
       </section>
 
@@ -521,6 +535,17 @@ const Index = () => {
           <p className="text-xs opacity-50 mt-4">© 2026 O Próximo Passo</p>
         </div>
       </footer>
+      {/* ═══════════ BARRA FIXA MOBILE ═══════════ */}
+      <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-background border-t border-border px-4 py-3 shadow-2xl">
+        <a onClick={handleCTAClick} className="cursor-pointer block">
+          <Button
+            size="lg"
+            className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
+          >
+            GARANTIR MINHA VAGA VIA WHATSAPP
+          </Button>
+        </a>
+      </div>
     </main>
   );
 };
