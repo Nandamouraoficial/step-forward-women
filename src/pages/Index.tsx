@@ -55,7 +55,7 @@ const Index = () => {
                     GARANTIR MINHA VAGA VIA WHATSAPP
                   </Button>
                 </a>
-                <p className="text-sm text-muted-foreground mt-1">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+                <p className="text-sm text-muted-foreground mt-1">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
                 <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
                   Prefiro comprar diretamente → acessar o checkout
                 </a>
@@ -228,7 +228,7 @@ const Index = () => {
                 GARANTIR MINHA VAGA VIA WHATSAPP
               </Button>
             </a>
-            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro comprar diretamente → acessar o checkout
             </a>
@@ -425,7 +425,7 @@ const Index = () => {
                 GARANTIR MINHA VAGA VIA WHATSAPP
               </Button>
             </a>
-            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro comprar diretamente → acessar o checkout
             </a>
@@ -502,7 +502,7 @@ const Index = () => {
                 GARANTIR MINHA VAGA VIA WHATSAPP
               </Button>
             </a>
-            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro comprar diretamente → acessar o checkout
             </a>
