@@ -3,7 +3,8 @@ import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-re
 import CountdownTimer from "@/components/CountdownTimer";
 import SealBadge from "@/components/SealBadge";
 
-const CTA_URL = "https://pay.kiwify.com.br/VrHaDPn";
+const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20tenho%20interesse%20na%20Imers%C3%A3o%20Step%20Forward%20Women%20de%2011%20de%20abril.";
+const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
   const handleCTAClick = () => {
@@ -14,7 +15,7 @@ const Index = () => {
       (window as any).fbq('track', 'Lead');
       (window as any).fbq('track', 'InitiateCheckout');
     }
-    window.open(CTA_URL, '_blank');
+    window.open(WHATSAPP_URL, '_blank');
   };
 
   return (
@@ -51,8 +52,12 @@ const Index = () => {
                     size="lg"
                     className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                   >
-                    Quero estruturar meu próximo passo
+                    GARANTIR MINHA VAGA VIA WHATSAPP
                   </Button>
+                </a>
+                <p className="text-sm text-muted-foreground mt-1">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+                  Prefiro comprar diretamente → acessar o checkout
                 </a>
                 <p className="text-sm sm:text-base text-muted-foreground mt-2 max-w-md mx-auto lg:mx-0 text-balance italic">
                   Continuar onde você está, sem clareza, costuma custar mais caro do que decidir.
@@ -214,14 +219,20 @@ const Index = () => {
             </p>
           </div>
 
-          <a onClick={handleCTAClick} className="cursor-pointer">
-            <Button
-              size="lg"
-               className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-            >
-              Quero estruturar meu próximo passo
-            </Button>
-          </a>
+          <div className="flex flex-col items-center gap-3">
+            <a onClick={handleCTAClick} className="cursor-pointer">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              >
+                GARANTIR MINHA VAGA VIA WHATSAPP
+              </Button>
+            </a>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+              Prefiro comprar diretamente → acessar o checkout
+            </a>
+          </div>
         </div>
       </section>
 
@@ -405,14 +416,20 @@ const Index = () => {
 
           <CountdownTimer />
 
-          <a onClick={handleCTAClick} className="cursor-pointer">
-            <Button
-              size="lg"
-               className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-            >
-              Quero estruturar meu próximo passo
-            </Button>
-          </a>
+          <div className="flex flex-col items-center gap-3">
+            <a onClick={handleCTAClick} className="cursor-pointer">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              >
+                GARANTIR MINHA VAGA VIA WHATSAPP
+              </Button>
+            </a>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+              Prefiro comprar diretamente → acessar o checkout
+            </a>
+          </div>
 
           <a
             href="https://www.amigosdobem.org"
@@ -476,14 +493,20 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
-          <a onClick={handleCTAClick} className="cursor-pointer">
-            <Button
-              size="lg"
-               className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-            >
-              Quero estruturar meu próximo passo
-            </Button>
-          </a>
+          <div className="flex flex-col items-center gap-3">
+            <a onClick={handleCTAClick} className="cursor-pointer">
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+              >
+                GARANTIR MINHA VAGA VIA WHATSAPP
+              </Button>
+            </a>
+            <p className="text-sm text-muted-foreground">Fernanda responde em até 2h com a confirmação da sua vaga.</p>
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+              Prefiro comprar diretamente → acessar o checkout
+            </a>
+          </div>
         </div>
       </section>
 
