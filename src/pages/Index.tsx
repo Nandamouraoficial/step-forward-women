@@ -1,3 +1,4 @@
+import { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-react";
 import CountdownTimer from "@/components/CountdownTimer";
