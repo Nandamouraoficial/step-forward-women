@@ -10,6 +10,7 @@ const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 const Index = () => {
   const sentinelRef = useRef<HTMLDivElement>(null);
   const midpointRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sentinelEl = sentinelRef.current;
