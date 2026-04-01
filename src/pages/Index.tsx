@@ -26,39 +26,35 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-4 sm:px-6 pt-12 md:pt-20 lg:pt-28 pb-10 md:pb-20">
+        <div className="relative container mx-auto px-4 sm:px-6 pt-8 md:pt-20 lg:pt-28 pb-8 md:pb-20">
           <div className="max-w-2xl mx-auto text-foreground text-center">
-            <h1 className="font-display text-xl sm:text-2xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
+            <h1 className="font-display text-lg sm:text-2xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-3">
               Você já percebeu que continuar fazendo mais do mesmo não vai te levar para o próximo nível.
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed mb-6 max-w-xl mx-auto opacity-90">
+            <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
               Mas ainda não estruturou qual é, de fato, o próximo movimento — e está adiando uma decisão que já sabe que precisa tomar.
             </p>
 
-            <div className="space-y-2 text-sm sm:text-base leading-loose opacity-75 mb-6 max-w-md mx-auto">
+            <div className="space-y-1 text-xs sm:text-base leading-relaxed opacity-75 mb-4 max-w-md mx-auto">
               <p>Em carreiras seniores, o custo não aparece de uma vez.</p>
               <p>Ele aparece em oportunidades que não vêm.</p>
               <p>Em desgaste que aumenta.</p>
               <p>Em decisões adiadas.</p>
             </div>
 
-            <div className="mb-6">
-              <p className="text-base sm:text-lg">Essa imersão existe para uma coisa:</p>
-              <p className="text-base sm:text-lg text-accent font-bold">
+            <div className="mb-4">
+              <p className="text-sm sm:text-lg">Essa imersão existe para uma coisa:</p>
+              <p className="text-sm sm:text-lg text-accent font-bold">
                 Te fazer sair com uma decisão estruturada sobre o seu próximo passo.
               </p>
             </div>
 
-            <p className="text-base sm:text-lg font-semibold mb-8 opacity-90">
-              Não é conteúdo. É decisão.
-            </p>
-
-            <div className="flex flex-col items-center gap-3">
+            <div className="flex flex-col items-center gap-3 mb-5">
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-5 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   QUERO DECIDIR MEU PRÓXIMO PASSO
                 </Button>
@@ -66,7 +62,7 @@ const Index = () => {
               <p className="text-sm text-muted-foreground mt-1">Acesso direto à inscrição</p>
             </div>
 
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-sm sm:text-base opacity-80">
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-5 text-sm sm:text-base opacity-80">
               <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
               <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
               <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
