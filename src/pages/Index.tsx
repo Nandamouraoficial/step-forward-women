@@ -10,6 +10,7 @@ const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 const Index = () => {
   const sentinelRef = useRef<HTMLDivElement>(null);
   const midpointRef = useRef<HTMLDivElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const sentinelEl = sentinelRef.current;
@@ -35,8 +36,10 @@ const Index = () => {
     };
 
     const observers: IntersectionObserver[] = [];
+    const bottomEl = bottomRef.current;
     if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
     if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+    if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
 
     return () => observers.forEach(o => o.disconnect());
   }, []);
@@ -554,6 +557,9 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      {/* Bottom sentinel for scroll tracking */}
+      <div ref={bottomRef} aria-hidden="true" />
 
       {/* RODAPÉ */}
       <footer
