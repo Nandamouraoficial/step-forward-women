@@ -36,8 +36,10 @@ const Index = () => {
     };
 
     const observers: IntersectionObserver[] = [];
+    const bottomEl = bottomRef.current;
     if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
     if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+    if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
 
     return () => observers.forEach(o => o.disconnect());
   }, []);
