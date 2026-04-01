@@ -558,6 +558,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Bottom sentinel for scroll tracking */}
+      <div ref={bottomRef} aria-hidden="true" />
+
       {/* RODAPÉ */}
       <footer
         className="py-10"
