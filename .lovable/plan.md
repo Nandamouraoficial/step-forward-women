@@ -1,18 +1,23 @@
 
 
-## Compactar Hero para caber na primeira dobra (375px)
+## Adicionar scroll tracking na primeira dobra
 
-### Alterações em `src/pages/Index.tsx` (linhas 29–74)
+### O que será feito
+Adicionar um `useEffect` em `src/pages/Index.tsx` que usa `IntersectionObserver` para detectar quando o usuário passa da primeira dobra (hero). Ao cruzar esse ponto, dispara eventos nos pixels Meta (`fbq('trackCustom', 'ScrollPastHero')`) e LinkedIn (`lintrk('track', ...)`), garantindo que o evento só dispare uma vez por sessão.
 
-1. **Reduzir padding superior**: `pt-8 md:pt-20 lg:pt-28` (de `pt-12`)
-2. **Reduzir fonte da headline**: `text-lg sm:text-2xl md:text-4xl` (de `text-xl`), `mb-3` (de `mb-4`)
-3. **Compactar subhead**: `mb-4` (de `mb-6`), `text-sm sm:text-lg` (de `text-base sm:text-lg`)
-4. **Bloco de tensão**: trocar `leading-loose` por `leading-relaxed`, `space-y-1` (de `space-y-2`), `mb-4` (de `mb-6`), `text-xs sm:text-base` (de `text-sm sm:text-base`)
-5. **Posicionamento**: `mb-4` (de `mb-6`), `text-sm sm:text-lg`
-6. **Remover frase de remate** (linhas 53–55): "Não é conteúdo. É decisão." — eliminar completamente
-7. **CTA**: `mb-5` (de `mb-8`), reduzir padding do botão para `py-5 sm:py-8`
-8. **Meta-info**: `mt-5` (de `mt-8`)
-9. **Padding inferior**: `pb-8 md:pb-20` (de `pb-10`)
+### Alterações em `src/pages/Index.tsx`
 
-Essas reduções acumuladas devem liberar ~120px de altura vertical no mobile, permitindo que o botão CTA fique visível sem scroll em 375×812.
+1. **Adicionar `import`**: `useEffect, useRef` do React
+2. **Adicionar ref**: `useRef` no elemento sentinela (um `<div>` invisível logo após a seção Hero)
+3. **Adicionar `useEffect`** com `IntersectionObserver`:
+   - Observa o `<div>` sentinela posicionado entre o Hero e a seção 2
+   - Quando `isIntersecting` é `true`, dispara:
+     - `fbq('trackCustom', 'ScrollPastHero')` (Meta)
+     - `lintrk('track', { conversion_id: 26913521 })` — ou um ID separado se preferir não misturar com o CTA
+   - Desconecta o observer após o primeiro disparo (fire once)
+4. **Inserir `<div ref={sentinelRef} />`** entre o fechamento da seção Hero e a abertura da seção 2
+
+### Nenhuma outra alteração
+- Sem mudanças visuais
+- Sem mudanças em outras seções
 
