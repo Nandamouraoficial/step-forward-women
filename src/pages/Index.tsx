@@ -573,7 +573,7 @@ const Index = () => {
         <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer block">
           <Button
             size="lg"
-            className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
+            className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
             GARANTIR MINHA VAGA
           </Button>
