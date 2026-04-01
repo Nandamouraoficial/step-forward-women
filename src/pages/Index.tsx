@@ -26,58 +26,51 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-4 sm:px-6 pt-20 md:pt-28 lg:pt-32 pb-16 md:pb-24 lg:pb-32">
-          <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            <div className="flex-1 text-foreground text-center lg:text-left">
-              <h1 className="font-display text-2xl sm:text-3xl md:text-5xl lg:text-[3.25rem] font-black leading-[1.15] mb-5">
-                Sabe o que quer.<br />
-                Mas ainda não estruturou<br />
-                como chegar lá.
-              </h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-light leading-relaxed mb-4 max-w-lg mx-auto lg:mx-0 text-balance">
-                Essa imersão existe para transformar intenção em decisão — com método.
-              </p>
-              <p className="text-base sm:text-lg md:text-xl font-semibold mb-10 max-w-lg mx-auto lg:mx-0 text-balance opacity-90">
-                Não é uma imersão para refletir.<br />
-                É para decidir.
-              </p>
+        <div className="relative container mx-auto px-4 sm:px-6 pt-12 md:pt-20 lg:pt-28 pb-10 md:pb-20">
+          <div className="max-w-2xl mx-auto text-foreground text-center">
+            <h1 className="font-display text-xl sm:text-2xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
+              Você já percebeu que continuar fazendo mais do mesmo não vai te levar para o próximo nível.
+            </h1>
 
-              <div className="flex flex-col items-center lg:items-start gap-3">
-                <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
-                  Grupo fechado para até 15 executivas
-                </span>
-                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-                  <Button
-                    size="lg"
-                    className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-                  >
-                    GARANTIR MINHA VAGA VIA WHATSAPP
-                  </Button>
-                </a>
-                <p className="text-sm text-muted-foreground mt-1">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
-                <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-                  Prefiro comprar diretamente → acessar o checkout
-                </a>
-                <p className="text-sm sm:text-base text-muted-foreground mt-2 max-w-md mx-auto lg:mx-0 text-balance italic">
-                  Continuar onde você está, sem clareza, costuma custar mais caro do que decidir.
-                </p>
-              </div>
+            <p className="text-base sm:text-lg md:text-xl font-light leading-relaxed mb-6 max-w-xl mx-auto opacity-90">
+              Mas ainda não estruturou qual é, de fato, o próximo movimento — e está adiando uma decisão que já sabe que precisa tomar.
+            </p>
 
-              <div className="flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2 mt-8 text-sm sm:text-base opacity-80">
-                <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
-                <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
-                <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
-                <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
-              </div>
+            <div className="space-y-2 text-sm sm:text-base leading-loose opacity-75 mb-6 max-w-md mx-auto">
+              <p>Em carreiras seniores, o custo não aparece de uma vez.</p>
+              <p>Ele aparece em oportunidades que não vêm.</p>
+              <p>Em desgaste que aumenta.</p>
+              <p>Em decisões adiadas.</p>
             </div>
 
-            <div className="flex-1 flex justify-center lg:justify-end">
-              <img
-                src="/images/foto_terno.jpeg"
-                alt="Fernanda Moura — Estrategista Executiva de Carreira"
-                className="w-full max-w-md lg:max-w-lg max-h-[400px] rounded-2xl shadow-2xl object-cover object-[center_15%]"
-                loading="eager"
-              />
+            <div className="mb-6">
+              <p className="text-base sm:text-lg">Essa imersão existe para uma coisa:</p>
+              <p className="text-base sm:text-lg text-accent font-bold">
+                Te fazer sair com uma decisão estruturada sobre o seu próximo passo.
+              </p>
+            </div>
+
+            <p className="text-base sm:text-lg font-semibold mb-8 opacity-90">
+              Não é conteúdo. É decisão.
+            </p>
+
+            <div className="flex flex-col items-center gap-3">
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
+                <Button
+                  size="lg"
+                  className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                >
+                  QUERO DECIDIR MEU PRÓXIMO PASSO
+                </Button>
+              </a>
+              <p className="text-sm text-muted-foreground mt-1">Acesso direto à inscrição</p>
+            </div>
+
+            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-8 text-sm sm:text-base opacity-80">
+              <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
+              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
+              <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
+              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
             </div>
           </div>
         </div>
