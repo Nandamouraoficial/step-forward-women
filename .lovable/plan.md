@@ -1,31 +1,64 @@
 
 
-## Atualizar CTAs abaixo do hero para o novo padrão
+## Corrigir referência ao sentinelRef no scroll tracking
 
-Existem **4 blocos de CTA** que precisam ser invertidos para seguir o padrão do hero (botão principal = checkout, link secundário = WhatsApp):
+### Diagnóstico
 
-### Alterações em `src/pages/Index.tsx`
+O código atual captura `sentinelRef.current` e `midpointRef.current` no topo do `useEffect` (linhas 16-17), mas `bottomRef.current` é capturado separadamente na linha 40. Todos têm guard clauses (`if (el)`), então o erro reportado pelo Clarity provavelmente ocorre em cenários de montagem parcial — quando o DOM ainda não renderizou os sentinel divs antes do efeito rodar (navegação rápida, hidratação lenta, etc.).
 
-1. **Seção 2 — "Para quem é"** (linhas 146-159): Trocar botão principal para `CHECKOUT_URL` com texto "GARANTIR MINHA VAGA", remover texto "Fernanda responde...", trocar link secundário para WhatsApp com texto "Prefiro conversar no WhatsApp"
+### Alteração em `src/pages/Index.tsx` (linhas 15-46)
 
-2. **Seção 5 — "O que acontece em 6h"** (linhas 267-280): Mesmo padrão
-
-3. **Seção 10 — "Investimento"** (linhas 467-479): Mesmo padrão
-
-4. **Seção 12 — "CTA Final"** (linhas 544-557): Mesmo padrão
-
-5. **Barra fixa mobile** (linhas 576-584): Trocar link para `CHECKOUT_URL` e texto para "GARANTIR MINHA VAGA"
-
-### Padrão aplicado em cada bloco
+Unificar a captura dos três refs e adicionar uma verificação defensiva extra com `requestAnimationFrame` para garantir que os elementos existam no DOM antes de criar os observers:
 
 ```tsx
-<a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-  <Button size="lg" className="...">GARANTIR MINHA VAGA</Button>
-</a>
-<a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-  Prefiro conversar no WhatsApp
-</a>
+useEffect(() => {
+  let cancelled = false;
+
+  const createObserver = (el: HTMLElement, eventName: string) => {
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          console.log(`[ScrollTracking] ${eventName} disparado`, new Date().toISOString());
+          if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('trackCustom', eventName);
+          }
+          if (typeof window !== 'undefined' && (window as any).lintrk) {
+            (window as any).lintrk('track', { conversion_id: 26913521 });
+          }
+          obs.disconnect();
+        }
+      },
+      { threshold: 0 }
+    );
+    obs.observe(el);
+    return obs;
+  };
+
+  const rafId = requestAnimationFrame(() => {
+    if (cancelled) return;
+    const observers: IntersectionObserver[] = [];
+    const sentinelEl = sentinelRef.current;
+    const midpointEl = midpointRef.current;
+    const bottomEl = bottomRef.current;
+
+    if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+    if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+    if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+
+    // Store for cleanup
+    (window as any).__scrollObservers = observers;
+  });
+
+  return () => {
+    cancelled = true;
+    cancelAnimationFrame(rafId);
+    const obs = (window as any).__scrollObservers;
+    if (obs) obs.forEach((o: IntersectionObserver) => o.disconnect());
+  };
+}, []);
 ```
 
-Nenhuma outra alteração visual ou funcional.
+A mudança-chave: mover a leitura de `.current` para dentro de um `requestAnimationFrame`, garantindo que o browser já fez layout e os refs estão populados. A flag `cancelled` evita race conditions no unmount.
+
+### Nenhuma outra alteração
 
