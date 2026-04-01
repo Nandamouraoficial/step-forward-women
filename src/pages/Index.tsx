@@ -8,7 +8,7 @@ const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
-  const sentinelRef = useRef<HTMLDivElement>(null);
+  const midpointRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const el = sentinelRef.current;
