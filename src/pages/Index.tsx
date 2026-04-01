@@ -13,8 +13,7 @@ const Index = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const sentinelEl = sentinelRef.current;
-    const midpointEl = midpointRef.current;
+    let cancelled = false;
 
     const createObserver = (el: HTMLElement, eventName: string) => {
       const obs = new IntersectionObserver(
@@ -36,13 +35,26 @@ const Index = () => {
       return obs;
     };
 
-    const observers: IntersectionObserver[] = [];
-    const bottomEl = bottomRef.current;
-    if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
-    if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
-    if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+    const rafId = requestAnimationFrame(() => {
+      if (cancelled) return;
+      const observers: IntersectionObserver[] = [];
+      const sentinelEl = sentinelRef.current;
+      const midpointEl = midpointRef.current;
+      const bottomEl = bottomRef.current;
 
-    return () => observers.forEach(o => o.disconnect());
+      if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+      if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+      if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+
+      (window as any).__scrollObservers = observers;
+    });
+
+    return () => {
+      cancelled = true;
+      cancelAnimationFrame(rafId);
+      const obs = (window as any).__scrollObservers;
+      if (obs) obs.forEach((o: IntersectionObserver) => o.disconnect());
+    };
   }, []);
 
   const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
