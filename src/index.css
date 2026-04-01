@@ -39,6 +39,8 @@
     /* Custom tokens */
     --hero-gradient: linear-gradient(135deg, hsl(220 40% 10%), hsl(220 35% 18%), hsl(220 40% 13%));
     --cta-hover: 38 45% 38%;
+    --cta-green: 152 45% 38%;
+    --cta-green-foreground: 0 0% 100%;
 
     --sidebar-background: 220 40% 11%;
     --sidebar-foreground: 40 50% 85%;
