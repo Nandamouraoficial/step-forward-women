@@ -20,6 +20,7 @@ const Index = () => {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
+            console.log(`[ScrollTracking] ${eventName} disparado`, new Date().toISOString());
             if (typeof window !== 'undefined' && (window as any).fbq) {
               (window as any).fbq('trackCustom', eventName);
             }
