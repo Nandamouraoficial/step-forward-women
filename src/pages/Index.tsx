@@ -59,7 +59,10 @@ const Index = () => {
                   QUERO DECIDIR MEU PRÓXIMO PASSO
                 </Button>
               </a>
-              <p className="text-sm text-muted-foreground mt-1">Acesso direto à inscrição</p>
+              <p className="text-sm text-muted-foreground mt-1">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
+              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+                Prefiro comprar diretamente → acessar o checkout
+              </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-5 text-sm sm:text-base opacity-80">
