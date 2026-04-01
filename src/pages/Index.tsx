@@ -99,6 +99,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Sentinel for scroll tracking */}
+      <div ref={sentinelRef} aria-hidden="true" />
+
       {/* ═══════════ 2. PARA QUEM É ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
