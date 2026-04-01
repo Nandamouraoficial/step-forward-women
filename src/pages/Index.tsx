@@ -11,24 +11,33 @@ const Index = () => {
   const midpointRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const el = sentinelRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          if (typeof window !== 'undefined' && (window as any).fbq) {
-            (window as any).fbq('trackCustom', 'ScrollPastHero');
+    const sentinelEl = sentinelRef.current;
+    const midpointEl = midpointRef.current;
+
+    const createObserver = (el: HTMLElement, eventName: string) => {
+      const obs = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            if (typeof window !== 'undefined' && (window as any).fbq) {
+              (window as any).fbq('trackCustom', eventName);
+            }
+            if (typeof window !== 'undefined' && (window as any).lintrk) {
+              (window as any).lintrk('track', { conversion_id: 26913521 });
+            }
+            obs.disconnect();
           }
-          if (typeof window !== 'undefined' && (window as any).lintrk) {
-            (window as any).lintrk('track', { conversion_id: 26913521 });
-          }
-          observer.disconnect();
-        }
-      },
-      { threshold: 0 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
+        },
+        { threshold: 0 }
+      );
+      obs.observe(el);
+      return obs;
+    };
+
+    const observers: IntersectionObserver[] = [];
+    if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+    if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+
+    return () => observers.forEach(o => o.disconnect());
   }, []);
 
   const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
