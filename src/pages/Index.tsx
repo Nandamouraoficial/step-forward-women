@@ -7,7 +7,7 @@ const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
-  const handleCTAClick = () => {
+  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (typeof window !== 'undefined' && (window as any).lintrk) {
       (window as any).lintrk('track', { conversion_id: 26913521 });
     }
@@ -15,7 +15,6 @@ const Index = () => {
       (window as any).fbq('track', 'Lead');
       (window as any).fbq('track', 'InitiateCheckout');
     }
-    window.open(WHATSAPP_URL, '_blank');
   };
 
   return (
@@ -47,7 +46,7 @@ const Index = () => {
                 <span className="inline-block text-xs uppercase tracking-wider font-bold text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
                   Grupo fechado para até 15 executivas
                 </span>
-                <a onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
                   <Button
                     size="lg"
                     className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -113,7 +112,7 @@ const Index = () => {
             </p>
           </div>
           <div className="flex flex-col items-center gap-3 mt-10">
-            <a onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -234,7 +233,7 @@ const Index = () => {
           </div>
 
           <div className="flex flex-col items-center gap-3">
-            <a onClick={handleCTAClick} className="cursor-pointer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -431,7 +430,7 @@ const Index = () => {
           <CountdownTimer />
 
           <div className="flex flex-col items-center gap-3">
-            <a onClick={handleCTAClick} className="cursor-pointer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -508,7 +507,7 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
           <div className="flex flex-col items-center gap-3">
-            <a onClick={handleCTAClick} className="cursor-pointer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
@@ -537,7 +536,7 @@ const Index = () => {
       </footer>
       {/* ═══════════ BARRA FIXA MOBILE ═══════════ */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-background border-t border-border px-4 py-3 shadow-2xl">
-        <a onClick={handleCTAClick} className="cursor-pointer block">
+        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer block">
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
