@@ -8,6 +8,29 @@ const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
+  const sentinelRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = sentinelRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          if (typeof window !== 'undefined' && (window as any).fbq) {
+            (window as any).fbq('trackCustom', 'ScrollPastHero');
+          }
+          if (typeof window !== 'undefined' && (window as any).lintrk) {
+            (window as any).lintrk('track', { conversion_id: 26913521 });
+          }
+          observer.disconnect();
+        }
+      },
+      { threshold: 0 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (typeof window !== 'undefined' && (window as any).lintrk) {
       (window as any).lintrk('track', { conversion_id: 26913521 });
