@@ -539,17 +539,16 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
           <div className="flex flex-col items-center gap-3">
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer">
+            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
                 className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-accent/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
               >
-                GARANTIR MINHA VAGA VIA WHATSAPP
+                GARANTIR MINHA VAGA
               </Button>
             </a>
-            <p className="text-sm text-muted-foreground">Fernanda responde em até 24h com a confirmação da sua vaga.</p>
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-              Prefiro comprar diretamente → acessar o checkout
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
+              Prefiro conversar no WhatsApp
             </a>
           </div>
         </div>
