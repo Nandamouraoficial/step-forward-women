@@ -570,12 +570,12 @@ const Index = () => {
       </footer>
       {/* ═══════════ BARRA FIXA MOBILE ═══════════ */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-background border-t border-border px-4 py-3 shadow-2xl">
-        <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer block">
+        <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer block">
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/85 text-accent-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
-            GARANTIR MINHA VAGA VIA WHATSAPP
+            GARANTIR MINHA VAGA
           </Button>
         </a>
       </div>
