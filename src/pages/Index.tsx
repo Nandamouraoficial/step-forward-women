@@ -119,7 +119,7 @@ const Index = () => {
               <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
                 Prefiro conversar no WhatsApp
               </a>
-              <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
+              <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
             </div>
 
             <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-5 text-sm sm:text-base opacity-80">
@@ -175,7 +175,7 @@ const Index = () => {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro conversar no WhatsApp
             </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
+            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
           </div>
         </div>
       </section>
@@ -296,7 +296,7 @@ const Index = () => {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro conversar no WhatsApp
             </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
+            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
           </div>
         </div>
       </section>
@@ -496,7 +496,7 @@ const Index = () => {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro conversar no WhatsApp
             </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
+            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
           </div>
 
           <a
@@ -573,7 +573,7 @@ const Index = () => {
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro conversar no WhatsApp
             </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
+            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
           </div>
         </div>
       </section>
@@ -602,7 +602,7 @@ const Index = () => {
             GARANTIR MINHA VAGA AGORA
           </Button>
         </a>
-        <p className="text-xs text-muted-foreground mt-1 text-center">Restam poucas vagas — turma fecha em 11/04</p>
+        <p className="text-xs text-muted-foreground mt-1 text-center">Restam poucas vagas — turma fecha em 10/04</p>
       </div>
     </main>
   );
