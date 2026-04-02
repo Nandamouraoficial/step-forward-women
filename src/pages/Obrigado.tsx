@@ -10,12 +10,16 @@ declare global {
 
 const Obrigado = () => {
   useEffect(() => {
-    if (window.fbq) {
-      window.fbq('track', 'Purchase', { currency: 'BRL', value: 1497 });
-    }
-    if (window.lintrk) {
-      window.lintrk('track', { conversion_id: 19394961 });
-    }
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Purchase', { currency: 'BRL', value: 1497 });
+      }
+    } catch (_) {}
+    try {
+      if (typeof window.lintrk === 'function') {
+        window.lintrk('track', { conversion_id: 19394961 });
+      }
+    } catch (_) {}
   }, []);
 
   return (

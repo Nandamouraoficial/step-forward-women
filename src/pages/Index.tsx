@@ -18,12 +18,16 @@ const Index = () => {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            if (typeof window !== 'undefined' && (window as any).fbq) {
-              (window as any).fbq('trackCustom', eventName);
-            }
-            if (typeof window !== 'undefined' && (window as any).lintrk) {
-              (window as any).lintrk('track', { conversion_id: 26913521 });
-            }
+            try {
+              if (typeof (window as any).fbq === 'function') {
+                (window as any).fbq('trackCustom', eventName);
+              }
+            } catch (_) {}
+            try {
+              if (typeof (window as any).lintrk === 'function') {
+                (window as any).lintrk('track', { conversion_id: 26913521 });
+              }
+            } catch (_) {}
             obs.disconnect();
           }
         },
