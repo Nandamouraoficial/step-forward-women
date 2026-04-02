@@ -599,9 +599,10 @@ const Index = () => {
             size="lg"
             className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
-            GARANTIR MINHA VAGA
+            GARANTIR MINHA VAGA AGORA
           </Button>
         </a>
+        <p className="text-xs text-muted-foreground mt-1 text-center">Restam poucas vagas — turma fecha em 11/04</p>
       </div>
     </main>
   );
