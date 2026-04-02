@@ -36,25 +36,27 @@ const Index = () => {
       return obs;
     };
 
+    let observers: IntersectionObserver[] = [];
+
     const rafId = requestAnimationFrame(() => {
       if (cancelled) return;
-      const observers: IntersectionObserver[] = [];
-      const sentinelEl = sentinelRef.current;
-      const midpointEl = midpointRef.current;
-      const bottomEl = bottomRef.current;
+      try {
+        const sentinelEl = sentinelRef.current;
+        const midpointEl = midpointRef.current;
+        const bottomEl = bottomRef.current;
 
-      if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
-      if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
-      if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
-
-      (window as any).__scrollObservers = observers;
+        if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+        if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+        if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+      } catch (e) {
+        // Silently handle edge cases where refs are unavailable
+      }
     });
 
     return () => {
       cancelled = true;
       cancelAnimationFrame(rafId);
-      const obs = (window as any).__scrollObservers;
-      if (obs) obs.forEach((o: IntersectionObserver) => o.disconnect());
+      observers.forEach((o) => { try { o.disconnect(); } catch (_) {} });
     };
   }, []);
 
