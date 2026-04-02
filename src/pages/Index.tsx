@@ -485,7 +485,7 @@ const Index = () => {
             </p>
           </div>
 
-          <CountdownTimer />
+          <Suspense fallback={null}><CountdownTimer /></Suspense>
 
           <div className="flex flex-col items-center gap-3">
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
