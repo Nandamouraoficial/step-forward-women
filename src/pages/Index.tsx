@@ -567,12 +567,13 @@ const Index = () => {
                 size="lg"
                 className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
               >
-                GARANTIR MINHA VAGA
+                GARANTIR MINHA VAGA AGORA
               </Button>
             </a>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
               Prefiro conversar no WhatsApp
             </a>
+            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 11/04</p>
           </div>
         </div>
       </section>
