@@ -57,13 +57,20 @@ const Index = () => {
     };
   }, []);
 
-  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (typeof window !== 'undefined' && (window as any).lintrk) {
-      (window as any).lintrk('track', { conversion_id: 26913521 });
-    }
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-      (window as any).fbq('track', 'InitiateCheckout');
+  const handleCTAClick = () => {
+    const fire = () => {
+      if ((window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+        (window as any).fbq('track', 'InitiateCheckout');
+      }
+      if ((window as any).lintrk) {
+        (window as any).lintrk('track', { conversion_id: 26913521 });
+      }
+    };
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(fire);
+    } else {
+      setTimeout(fire, 0);
     }
   };
 
