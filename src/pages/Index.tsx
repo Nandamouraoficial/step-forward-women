@@ -57,13 +57,20 @@ const Index = () => {
     };
   }, []);
 
-  const handleCTAClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (typeof window !== 'undefined' && (window as any).lintrk) {
-      (window as any).lintrk('track', { conversion_id: 26913521 });
-    }
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-      (window as any).fbq('track', 'InitiateCheckout');
+  const handleCTAClick = () => {
+    const fire = () => {
+      if ((window as any).fbq) {
+        (window as any).fbq('track', 'Lead');
+        (window as any).fbq('track', 'InitiateCheckout');
+      }
+      if ((window as any).lintrk) {
+        (window as any).lintrk('track', { conversion_id: 26913521 });
+      }
+    };
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(fire);
+    } else {
+      setTimeout(fire, 0);
     }
   };
 
@@ -104,7 +111,7 @@ const Index = () => {
               <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
                 <Button
                   size="lg"
-                  className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-5 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                  className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-5 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
                 >
                   GARANTIR MINHA VAGA
                 </Button>
@@ -159,7 +166,7 @@ const Index = () => {
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 GARANTIR MINHA VAGA
               </Button>
@@ -279,7 +286,7 @@ const Index = () => {
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 GARANTIR MINHA VAGA
               </Button>
@@ -478,7 +485,7 @@ const Index = () => {
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 GARANTIR MINHA VAGA
               </Button>
@@ -554,7 +561,7 @@ const Index = () => {
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
               <Button
                 size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-all duration-300 hover:scale-105 w-full sm:w-auto"
+                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
               >
                 GARANTIR MINHA VAGA
               </Button>
