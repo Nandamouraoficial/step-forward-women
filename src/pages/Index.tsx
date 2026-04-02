@@ -79,7 +79,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
-      <SealBadge />
+      <Suspense fallback={null}><SealBadge /></Suspense>
 
       {/* ═══════════ 1. HERO ═══════════ */}
       <section
