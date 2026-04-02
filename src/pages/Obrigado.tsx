@@ -11,7 +11,7 @@ declare global {
 const Obrigado = () => {
   useEffect(() => {
     if (window.fbq) {
-      window.fbq('track', 'Purchase', { currency: 'BRL', value: 0 });
+      window.fbq('track', 'Purchase', { currency: 'BRL', value: 1497 });
     }
     if (window.lintrk) {
       window.lintrk('track', { conversion_id: 19394961 });
