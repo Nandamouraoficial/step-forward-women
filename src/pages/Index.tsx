@@ -1,8 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-react";
-import CountdownTimer from "@/components/CountdownTimer";
-import SealBadge from "@/components/SealBadge";
+
+const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
+const SealBadge = lazy(() => import("@/components/SealBadge"));
 
 const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20tenho%20interesse%20na%20Imers%C3%A3o%20O%20Pr%C3%B3ximo%20Passo%20de%2011%20de%20abril.";
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
@@ -35,25 +36,27 @@ const Index = () => {
       return obs;
     };
 
+    let observers: IntersectionObserver[] = [];
+
     const rafId = requestAnimationFrame(() => {
       if (cancelled) return;
-      const observers: IntersectionObserver[] = [];
-      const sentinelEl = sentinelRef.current;
-      const midpointEl = midpointRef.current;
-      const bottomEl = bottomRef.current;
+      try {
+        const sentinelEl = sentinelRef.current;
+        const midpointEl = midpointRef.current;
+        const bottomEl = bottomRef.current;
 
-      if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
-      if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
-      if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
-
-      (window as any).__scrollObservers = observers;
+        if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+        if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+        if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+      } catch (e) {
+        // Silently handle edge cases where refs are unavailable
+      }
     });
 
     return () => {
       cancelled = true;
       cancelAnimationFrame(rafId);
-      const obs = (window as any).__scrollObservers;
-      if (obs) obs.forEach((o: IntersectionObserver) => o.disconnect());
+      observers.forEach((o) => { try { o.disconnect(); } catch (_) {} });
     };
   }, []);
 
@@ -76,7 +79,7 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
-      <SealBadge />
+      <Suspense fallback={null}><SealBadge /></Suspense>
 
       {/* ═══════════ 1. HERO ═══════════ */}
       <section
@@ -482,7 +485,7 @@ const Index = () => {
             </p>
           </div>
 
-          <CountdownTimer />
+          <Suspense fallback={null}><CountdownTimer /></Suspense>
 
           <div className="flex flex-col items-center gap-3">
             <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
