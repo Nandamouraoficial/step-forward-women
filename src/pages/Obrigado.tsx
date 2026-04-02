@@ -53,7 +53,7 @@ const Obrigado = () => {
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <MapPin className="w-6 h-6 text-primary mx-auto" />
             <p className="text-sm text-muted-foreground">Formato</p>
-            <p className="text-foreground font-semibold text-lg">Presencial em SP</p>
+            <p className="text-foreground font-semibold text-lg">Online e ao vivo</p>
           </div>
         </div>
 
