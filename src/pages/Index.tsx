@@ -14,13 +14,10 @@ const Index = () => {
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let cancelled = false;
-
     const createObserver = (el: HTMLElement, eventName: string) => {
       const obs = new IntersectionObserver(
         ([entry]) => {
           if (entry.isIntersecting) {
-            
             if (typeof window !== 'undefined' && (window as any).fbq) {
               (window as any).fbq('trackCustom', eventName);
             }
@@ -36,26 +33,21 @@ const Index = () => {
       return obs;
     };
 
-    let observers: IntersectionObserver[] = [];
+    const observers: IntersectionObserver[] = [];
 
-    const rafId = requestAnimationFrame(() => {
-      if (cancelled) return;
-      try {
-        const sentinelEl = sentinelRef.current;
-        const midpointEl = midpointRef.current;
-        const bottomEl = bottomRef.current;
+    try {
+      const sentinelEl = sentinelRef.current;
+      const midpointEl = midpointRef.current;
+      const bottomEl = bottomRef.current;
 
-        if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
-        if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
-        if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
-      } catch (e) {
-        // Silently handle edge cases where refs are unavailable
-      }
-    });
+      if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
+      if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
+      if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
+    } catch (e) {
+      // Silently handle edge cases where refs are unavailable
+    }
 
     return () => {
-      cancelled = true;
-      cancelAnimationFrame(rafId);
       observers.forEach((o) => { try { o.disconnect(); } catch (_) {} });
     };
   }, []);
