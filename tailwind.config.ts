@@ -85,11 +85,16 @@ export default {
           "0%, 100%": { transform: "scale(1)" },
           "50%": { transform: "scale(1.06)" },
         },
+        "seal-enter": {
+          from: { transform: "scale(0) rotate(0deg)", opacity: "0" },
+          to: { transform: "scale(1) rotate(-12deg)", opacity: "1" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "pulse-subtle": "pulse-subtle 2.5s ease-in-out infinite",
+        "seal-enter": "seal-enter 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both",
       },
     },
   },

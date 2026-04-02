@@ -10,12 +10,16 @@ declare global {
 
 const Obrigado = () => {
   useEffect(() => {
-    if (window.fbq) {
-      window.fbq('track', 'Purchase', { currency: 'BRL', value: 1497 });
-    }
-    if (window.lintrk) {
-      window.lintrk('track', { conversion_id: 19394961 });
-    }
+    try {
+      if (typeof window.fbq === 'function') {
+        window.fbq('track', 'Purchase', { currency: 'BRL', value: 1497 });
+      }
+    } catch (_) {}
+    try {
+      if (typeof window.lintrk === 'function') {
+        window.lintrk('track', { conversion_id: 19394961 });
+      }
+    } catch (_) {}
   }, []);
 
   return (
@@ -43,7 +47,7 @@ const Obrigado = () => {
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <Calendar className="w-6 h-6 text-primary mx-auto" />
             <p className="text-sm text-muted-foreground">Data</p>
-            <p className="text-foreground font-semibold text-lg">10 de maio</p>
+            <p className="text-foreground font-semibold text-lg">11 de abril</p>
           </div>
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <Clock className="w-6 h-6 text-primary mx-auto" />
@@ -53,7 +57,7 @@ const Obrigado = () => {
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <MapPin className="w-6 h-6 text-primary mx-auto" />
             <p className="text-sm text-muted-foreground">Formato</p>
-            <p className="text-foreground font-semibold text-lg">Presencial em SP</p>
+            <p className="text-foreground font-semibold text-lg">Online e ao vivo</p>
           </div>
         </div>
 
