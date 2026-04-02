@@ -43,7 +43,7 @@ const Obrigado = () => {
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <Calendar className="w-6 h-6 text-primary mx-auto" />
             <p className="text-sm text-muted-foreground">Data</p>
-            <p className="text-foreground font-semibold text-lg">10 de maio</p>
+            <p className="text-foreground font-semibold text-lg">11 de abril</p>
           </div>
           <div className="rounded-lg border border-border bg-card p-6 space-y-2">
             <Clock className="w-6 h-6 text-primary mx-auto" />
