@@ -54,13 +54,17 @@ const Index = () => {
 
   const handleCTAClick = () => {
     const fire = () => {
-      if ((window as any).fbq) {
-        (window as any).fbq('track', 'Lead');
-        (window as any).fbq('track', 'InitiateCheckout');
-      }
-      if ((window as any).lintrk) {
-        (window as any).lintrk('track', { conversion_id: 26913521 });
-      }
+      try {
+        if (typeof (window as any).fbq === 'function') {
+          (window as any).fbq('track', 'Lead');
+          (window as any).fbq('track', 'InitiateCheckout');
+        }
+      } catch (_) {}
+      try {
+        if (typeof (window as any).lintrk === 'function') {
+          (window as any).lintrk('track', { conversion_id: 26913521 });
+        }
+      } catch (_) {}
     };
     setTimeout(fire, 0);
   };
