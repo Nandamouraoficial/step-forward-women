@@ -1,4 +1,4 @@
-import { useEffect, useRef, lazy, Suspense } from "react";
+import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-react";
 
@@ -9,51 +9,40 @@ const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
-  const sentinelRef = useRef<HTMLDivElement>(null);
-  const midpointRef = useRef<HTMLDivElement>(null);
-  const bottomRef = useRef<HTMLDivElement>(null);
-
   useEffect(() => {
-    const createObserver = (el: HTMLElement, eventName: string) => {
-      const obs = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) {
-            try {
-              if (typeof (window as any).fbq === 'function') {
-                (window as any).fbq('trackCustom', eventName);
-              }
-            } catch (_) {}
-            try {
-              if (typeof (window as any).lintrk === 'function') {
-                (window as any).lintrk('track', { conversion_id: 26913521 });
-              }
-            } catch (_) {}
-            obs.disconnect();
-          }
-        },
-        { threshold: 0 }
-      );
-      obs.observe(el);
-      return obs;
+    const fired = { hero: false, mid: false, bottom: false };
+
+    const onScroll = () => {
+      try {
+        const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
+
+        const fireEvent = (key: keyof typeof fired, eventName: string) => {
+          if (fired[key]) return;
+          fired[key] = true;
+          try {
+            if (typeof (window as any).fbq === 'function') {
+              (window as any).fbq('trackCustom', eventName);
+            }
+          } catch (_) {}
+          try {
+            if (typeof (window as any).lintrk === 'function') {
+              (window as any).lintrk('track', { conversion_id: 26913521 });
+            }
+          } catch (_) {}
+        };
+
+        if (pct > 0.15) fireEvent('hero', 'ScrollPastHero');
+        if (pct > 0.50) fireEvent('mid', 'ScrollMidpoint');
+        if (pct > 0.85) fireEvent('bottom', 'ScrollBottom');
+
+        if (fired.hero && fired.mid && fired.bottom) {
+          window.removeEventListener('scroll', onScroll);
+        }
+      } catch (_) {}
     };
 
-    const observers: IntersectionObserver[] = [];
-
-    try {
-      const sentinelEl = sentinelRef.current;
-      const midpointEl = midpointRef.current;
-      const bottomEl = bottomRef.current;
-
-      if (sentinelEl) observers.push(createObserver(sentinelEl, 'ScrollPastHero'));
-      if (midpointEl) observers.push(createObserver(midpointEl, 'ScrollMidpoint'));
-      if (bottomEl) observers.push(createObserver(bottomEl, 'ScrollBottom'));
-    } catch (e) {
-      // Silently handle edge cases where refs are unavailable
-    }
-
-    return () => {
-      observers.forEach((o) => { try { o.disconnect(); } catch (_) {} });
-    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   const handleCTAClick = () => {
@@ -131,8 +120,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Sentinel for scroll tracking */}
-      <div ref={sentinelRef} aria-hidden="true" />
 
       {/* ═══════════ 2. PARA QUEM É ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
@@ -337,8 +324,6 @@ const Index = () => {
         <span className="block w-16 h-px bg-accent/30" />
       </div>
 
-      {/* Midpoint sentinel for scroll tracking */}
-      <div ref={midpointRef} aria-hidden="true" />
 
       {/* ═══════════ 7. PROVA DE CONSEQUÊNCIA ═══════════ */}
       <section className="relative bg-secondary py-20 md:py-28">
@@ -577,8 +562,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Bottom sentinel for scroll tracking */}
-      <div ref={bottomRef} aria-hidden="true" />
 
       {/* RODAPÉ */}
       <footer
