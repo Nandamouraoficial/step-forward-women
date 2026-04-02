@@ -1,39 +1,72 @@
 
 
-## Revisão Completa da Landing Page (Produção)
+## Correção Definitiva: "sentinelRef is not defined"
 
-### Análise do Estado Atual
+### Diagnóstico
 
-Após inspecionar todo o código-fonte, o estado é significativamente melhor do que antes das correções anteriores. Veja o que encontrei:
+O código atual (linhas 12-57 de `Index.tsx`) está sintaticamente correto — `sentinelRef` é declarado com `useRef` e acessado com null checks. Porém, em in-app browsers (Instagram/Facebook), o bundle JS pode ser interrompido parcialmente ou o engine pode falhar ao inicializar o componente, resultando em um `ReferenceError` onde a variável `sentinelRef` simplesmente não existe no escopo.
 
-**Já está correto:**
-- `framer-motion` já foi removido (não está no package.json)
-- SealBadge já usa CSS puro com animações em tailwind.config.ts
-- Tracking scripts (fbq, lintrk) já têm `try-catch` e `typeof === 'function'` checks
-- IntersectionObserver refs (sentinelRef, midpointRef, bottomRef) estão corretamente implementados
-- index.html já tem scripts defensivos com `setTimeout(1500ms)` e `try-catch`
-- Nenhuma referência a `lovableproject.com` ou `id-preview` no código
-- Canonical e OG tags estão consolidados apontando para `step-forward-women.lovable.app`
-- Noscript pixels estão no `<body>` (correto)
+O `try-catch` na linha 42 protege apenas o acesso a `.current`, mas se o próprio `useRef` falhar na inicialização (linha 12), o erro ocorre antes do try-catch.
 
-**Problemas encontrados:**
+### Solução
 
-1. **Página /obrigado — dados já estão corretos** (11 de abril, Online e ao vivo) — nenhuma ação necessária.
+**Eliminar os refs de scroll tracking completamente.** Substituir por um único `scroll` event listener que calcula a posição baseada em `scrollY` e `document.body.scrollHeight`. Isso remove toda dependência de `useRef` e `IntersectionObserver` para tracking, mantendo a mesma funcionalidade analítica.
 
-2. **Nenhum erro de JS identificável no código** — o código está defensivo. Os "Script error" reportados anteriormente eram de scripts de terceiros (Clarity, fbq, LinkedIn) em in-app browsers, que já estão envolvidos em `try-catch`.
+### Mudanças
 
-3. **Nenhum problema de CTA** — todos os botões usam `<a href={CHECKOUT_URL} target="_blank">` com `<Button>` dentro, sem overlays bloqueantes.
+**Arquivo: `src/pages/Index.tsx`**
 
-### Conclusão
+1. Remover as 3 linhas de `useRef` (sentinelRef, midpointRef, bottomRef)
+2. Remover os 3 `<div ref={...} aria-hidden="true" />` do JSX (linhas ~135, ~341, ~581)
+3. Substituir o `useEffect` inteiro (linhas 16-57) por:
 
-Não há correções pendentes necessárias. O código já implementa todas as correções listadas no plano anterior (`.lovable/plan.md`):
+```tsx
+useEffect(() => {
+  const fired = { hero: false, mid: false, bottom: false };
 
-- Tags duplicadas removidas do index.html
-- Scripts defensivos implementados
-- framer-motion removido
-- CSS animations no lugar
-- Dados consistentes entre páginas
-- URLs padronizadas para o domínio principal
+  const onScroll = () => {
+    try {
+      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
 
-**Recomendação:** Publicar a versão atual e testar manualmente no in-app browser do Instagram/Facebook, pois essa verificação não pode ser feita programaticamente. O código está preparado para funcionar nesses ambientes.
+      const fireEvent = (key: keyof typeof fired, eventName: string) => {
+        if (fired[key]) return;
+        fired[key] = true;
+        try {
+          if (typeof (window as any).fbq === 'function') {
+            (window as any).fbq('trackCustom', eventName);
+          }
+        } catch (_) {}
+        try {
+          if (typeof (window as any).lintrk === 'function') {
+            (window as any).lintrk('track', { conversion_id: 26913521 });
+          }
+        } catch (_) {}
+      };
+
+      if (pct > 0.15) fireEvent('hero', 'ScrollPastHero');
+      if (pct > 0.50) fireEvent('mid', 'ScrollMidpoint');
+      if (pct > 0.85) fireEvent('bottom', 'ScrollBottom');
+
+      if (fired.hero && fired.mid && fired.bottom) {
+        window.removeEventListener('scroll', onScroll);
+      }
+    } catch (_) {}
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
+  return () => window.removeEventListener('scroll', onScroll);
+}, []);
+```
+
+### Por que funciona
+
+- **Zero refs** → impossível ter "sentinelRef is not defined"
+- **Zero IntersectionObserver** → API que pode não estar totalmente disponível em in-app browsers antigos
+- **`{ passive: true }`** → sem impacto no scroll performance
+- **Auto-cleanup** → listener se remove após os 3 eventos dispararem
+- **try-catch completo** → qualquer falha é silenciada
+- Os thresholds (15%, 50%, 85%) correspondem aproximadamente às posições dos sentinels originais no layout
+
+### Nenhuma mudança visual
+As divs sentinel eram invisíveis (`aria-hidden="true"`, sem conteúdo). Removê-las não altera nada visualmente.
 
