@@ -62,11 +62,7 @@ const Index = () => {
         (window as any).lintrk('track', { conversion_id: 26913521 });
       }
     };
-    if ('requestIdleCallback' in window) {
-      (window as any).requestIdleCallback(fire);
-    } else {
-      setTimeout(fire, 0);
-    }
+    setTimeout(fire, 0);
   };
 
   return (
