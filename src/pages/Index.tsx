@@ -62,7 +62,7 @@ const Index = () => {
     setTimeout(fire, 0);
   };
 
-  const CTABlock = ({ label = "QUERO DECIDIR MEU PRÓXIMO PASSO", microcopy }: { label?: string; microcopy?: string }) => (
+  const CTABlock = ({ label = "GARANTIR MINHA VAGA", microcopy }: { label?: string; microcopy?: string }) => (
     <div className="flex flex-col items-center gap-3">
       <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
         <Button
