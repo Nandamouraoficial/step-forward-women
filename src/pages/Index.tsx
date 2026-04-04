@@ -221,7 +221,7 @@ const Index = () => {
               </h2>
               <div className="text-base sm:text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  Juliana já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
+                  Já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
                 </p>
                 <p>
                   Dentro do seu ecossistema, era reconhecida.
