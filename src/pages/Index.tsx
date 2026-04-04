@@ -410,7 +410,7 @@ const Index = () => {
       <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10 text-balance">
-            Você sai com:
+            Ao final da imersão, você sai com:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-8">
             {[
