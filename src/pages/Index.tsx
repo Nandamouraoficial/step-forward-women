@@ -1,11 +1,11 @@
 import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
-import { Check, Calendar, Clock, Monitor, Users, Shield, Quote } from "lucide-react";
+import { Check, Shield, Quote } from "lucide-react";
+import julianaPhoto from "@/assets/juliana-zobaran.jpeg";
 
 const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
 const SealBadge = lazy(() => import("@/components/SealBadge"));
 
-const WHATSAPP_URL = "https://wa.me/5511995698168?text=Ol%C3%A1%20Fernanda%2C%20tenho%20interesse%20na%20Imers%C3%A3o%20O%20Pr%C3%B3ximo%20Passo%20de%2011%20de%20abril.";
 const CHECKOUT_URL = "https://pay.kiwify.com.br/VrHaDPn";
 
 const Index = () => {
@@ -62,6 +62,28 @@ const Index = () => {
     setTimeout(fire, 0);
   };
 
+  const CTABlock = ({ label = "QUERO DECIDIR MEU PRÓXIMO PASSO", microcopy }: { label?: string; microcopy?: string }) => (
+    <div className="flex flex-col items-center gap-3">
+      <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
+        <Button
+          size="lg"
+          className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-5 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
+        >
+          {label}
+        </Button>
+      </a>
+      {microcopy && <p className="text-sm text-muted-foreground">{microcopy}</p>}
+    </div>
+  );
+
+  const Divider = () => (
+    <div className="flex items-center justify-center py-6">
+      <span className="block w-16 h-px bg-accent/30" />
+      <span className="mx-3 text-accent/40 text-sm">✦</span>
+      <span className="block w-16 h-px bg-accent/30" />
+    </div>
+  );
+
   return (
     <main className="min-h-screen bg-background text-foreground font-body">
       <Suspense fallback={null}><SealBadge /></Suspense>
@@ -71,69 +93,225 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-4 sm:px-6 pt-8 md:pt-20 lg:pt-28 pb-8 md:pb-20">
+        <div className="relative container mx-auto px-4 sm:px-6 pt-10 md:pt-24 lg:pt-32 pb-10 md:pb-24">
           <div className="max-w-2xl mx-auto text-foreground text-center">
-            <h1 className="font-display text-lg sm:text-2xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-3">
-              Você já percebeu que continuar fazendo mais do mesmo não vai te levar para o próximo nível.
+            <h1 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
+              Você não está travada.
+              <br />
+              Está adiando uma decisão.
             </h1>
 
             <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              Mas ainda não estruturou qual é, de fato, o próximo movimento — e está adiando uma decisão que já sabe que precisa tomar.
+              Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão.
             </p>
 
-            <div className="space-y-1 text-xs sm:text-base leading-relaxed opacity-75 mb-4 max-w-md mx-auto">
-              <p>Em carreiras seniores, o custo não aparece de uma vez.</p>
-              <p>Ele aparece em oportunidades que não vêm.</p>
-              <p>Em desgaste que aumenta.</p>
-              <p>Em decisões adiadas.</p>
-            </div>
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto">
+              <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
+            </p>
 
-            <div className="mb-4">
-              <p className="text-sm sm:text-lg">Essa imersão existe para uma coisa:</p>
-              <p className="text-sm sm:text-lg text-accent font-bold">
-                Te fazer sair com uma decisão estruturada sobre o seu próximo passo.
-              </p>
-            </div>
+            <CTABlock microcopy="Em 6 horas. Com método." />
+          </div>
+        </div>
+      </section>
 
-            <div className="flex flex-col items-center gap-3 mb-5">
-              <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-                <Button
-                  size="lg"
-                  className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-5 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
-                >
-                  GARANTIR MINHA VAGA AGORA
-                </Button>
-              </a>
-              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-                Prefiro conversar no WhatsApp
-              </a>
-              <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
-            </div>
+      <Divider />
 
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-5 text-sm sm:text-base opacity-80">
-              <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> 11 de abril</span>
-              <span className="flex items-center gap-1.5"><Clock className="w-4 h-4" /> 9h às 15h</span>
-              <span className="flex items-center gap-1.5"><Monitor className="w-4 h-4" /> Online e ao vivo</span>
-              <span className="flex items-center gap-1.5"><Users className="w-4 h-4" /> 15 vagas</span>
+      {/* ═══════════ 2. BLOCO DE DIAGNÓSTICO ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10 text-balance">
+            Se você está:
+          </h2>
+          <ul className="space-y-4 max-w-xl mx-auto mb-8">
+            {[
+              "entregando resultado, mas sem avanço proporcional",
+              "sendo reconhecida, mas não evoluindo",
+              "considerando mudança, mas sem clareza",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="text-center text-accent font-bold text-lg sm:text-xl">
+            👉 você já está em momento de decisão.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 3. CONSEQUÊNCIA ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-10 text-balance">
+            O custo não aparece hoje.
+          </h2>
+          <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-4 text-left max-w-2xl mx-auto">
+            <p>Aparece em oportunidades que não vêm.</p>
+            <p>Na sensação de estar sempre ocupada — mas não avançando.</p>
+            <p>Em decisões que você sabe que precisa tomar, mas continua adiando.</p>
+          </div>
+          <div className="mt-10 max-w-2xl mx-auto">
+            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+              Carreiras seniores não travam de uma vez.
+              <br />Elas perdem timing.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 4. CASE JULIANA (BLOCO PRINCIPAL DE PROVA) ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
+          <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
+            {/* Foto */}
+            <div className="flex-shrink-0 mx-auto lg:mx-0">
+              <img
+                src={julianaPhoto}
+                alt="Juliana Zobaran — Diretora para América Latina"
+                className="w-64 md:w-80 rounded-2xl shadow-xl object-cover object-top aspect-[3/4]"
+                loading="lazy"
+              />
+            </div>
+            {/* Texto */}
+            <div className="flex-1">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-balance">
+                O problema não era capacidade.
+                <br />Era posicionamento.
+              </h2>
+              <div className="text-base sm:text-lg leading-relaxed text-muted-foreground space-y-4">
+                <p>
+                  Juliana Zobaran já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado, governança e estratégia.
+                </p>
+                <p>
+                  Dentro do seu ecossistema, era reconhecida.
+                  <br />Fora dele, o mercado quase não a via.
+                </p>
+                <p>
+                  E esse é o ponto onde muitas carreiras travam — não por falta de entrega, mas por falta de posicionamento estruturado.
+                </p>
+                <p>
+                  Em poucas horas, ela conseguiu estruturar uma decisão que vinha sendo adiada há meses.
+                </p>
+                <p>
+                  Ajustou sua forma de se posicionar, ampliou sua presença e passou a comunicar seu valor com clareza.
+                </p>
+                <p>
+                  A partir disso, novas oportunidades começaram a surgir — e ela foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas, em parceria com a London School of Economics.
+                </p>
+                <p className="text-foreground font-bold">
+                  Não porque ficou mais competente.
+                  <br />Mas porque o mercado finalmente passou a enxergar o que ela já era.
+                </p>
+              </div>
+              <div className="mt-6 pt-6 border-t border-border">
+                <p className="font-bold text-foreground">Juliana Zobaran</p>
+                <p className="text-muted-foreground text-sm sm:text-base">Diretora de Impostos para América Latina</p>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-12 text-center">
+            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+              Executivas não travam por falta de capacidade.
+              <br />Travam porque continuam operando sem uma decisão estruturada.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 5. O QUE É A IMERSÃO ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+            Não é um curso.
+            <br />É uma decisão estruturada.
+          </h2>
+          <p className="text-muted-foreground text-lg mb-10">Em 6 horas, você sai com:</p>
+          <ul className="space-y-4 max-w-xl mx-auto text-left mb-10">
+            {[
+              "uma decisão clara sobre seu próximo movimento",
+              "critérios objetivos para escolher o caminho certo",
+              "um plano de 30 dias para execução",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+          <CTABlock />
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 6. TRANSFORMAÇÃO (ANTES vs DEPOIS) ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
+            O que muda quando você decide
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* ANTES */}
+            <div className="bg-background/50 border border-border rounded-2xl p-8">
+              <h3 className="font-display text-xl font-bold text-muted-foreground mb-6">Antes</h3>
+              <ul className="space-y-3 text-muted-foreground text-base sm:text-lg">
+                <li>Você continua entregando, mas sem crescimento proporcional</li>
+                <li>Avalia caminhos, mas não escolhe</li>
+                <li>Sente que está pronta para mais, mas não avança</li>
+                <li>Vive a sensação de estar "quase lá"</li>
+              </ul>
+            </div>
+            {/* DEPOIS */}
+            <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8">
+              <h3 className="font-display text-xl font-bold text-accent mb-6">Depois</h3>
+              <ul className="space-y-3 text-foreground text-base sm:text-lg">
+                <li>Você sabe exatamente qual é o seu próximo movimento</li>
+                <li>Decide com critério e segurança</li>
+                <li>Elimina caminhos que não fazem sentido</li>
+                <li>Executa com clareza e direção</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
+      <Divider />
 
-      {/* ═══════════ 2. PARA QUEM É ═══════════ */}
-      <section className="relative bg-secondary py-20 md:py-28">
+      {/* ═══════════ 7. CONTRAPONTO ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
+            O mercado não recompensa quem trabalha mais.
+            <br />Recompensa quem decide melhor.
+          </p>
+          <p className="text-foreground font-bold text-xl md:text-2xl text-balance">
+            Clareza não vem com mais informação.
+            <br />Vem com decisão.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 8. PARA QUEM É ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
-            Esta imersão é para você se:
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-10 text-balance">
+            Essa imersão é para você se:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-10">
             {[
-              "Ocupa uma posição de liderança ou influência",
-              "Já construiu uma trajetória sólida, mas sente que o próximo passo não pode ser improvisado",
-              "Vê a IA transformando o mercado e quer se preparar para os próximos anos",
-              "Quer decidir com mais critério, antes que a pressão venha de fora",
-              "Não quer mais desperdiçar tempo e dinheiro em cursos e movimentos sem direção",
+              "já construiu uma trajetória sólida",
+              "continua entregando resultado",
+              "mas sabe que o próximo passo não pode ser improvisado",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -141,172 +319,42 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <div className="bg-accent/5 border border-accent/20 rounded-xl p-6 max-w-xl mx-auto text-center">
-            <p className="text-foreground font-bold text-lg mb-2 text-balance">
-              Você não precisa estar em transição.
-            </p>
-            <p className="text-muted-foreground text-base sm:text-lg text-balance">
-              Mas se já sabe que quer mudança, o melhor momento para estruturar o próximo passo é antes que algo dê errado.
-            </p>
-          </div>
-          <div className="flex flex-col items-center gap-3 mt-10">
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
-              >
-                GARANTIR MINHA VAGA AGORA
-              </Button>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-              Prefiro conversar no WhatsApp
-            </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
-          </div>
+          <CTABlock />
         </div>
       </section>
 
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-secondary">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
+      <Divider />
 
-      {/* ═══════════ 3. CUSTO DE NÃO DECIDIR ═══════════ */}
-      <section className="relative bg-background py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10 text-balance">
-            O erro não é só decidir errado.
-            <br />
-            É saber que precisa mudar e continuar sem um plano concreto.
-          </h2>
-          <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 text-left max-w-2xl mx-auto">
-            <p>
-              Em carreiras seniores, o custo não vem de uma vez.
-            </p>
-            <p>
-              Ele aparece em desgaste.
-              <br />Em oportunidades perdidas.
-              <br />Em decisões adiadas.
-              <br />Em investimento que não muda o que realmente importa.
-            </p>
-            <p>
-              Muita gente só para quando algo dá errado.
-            </p>
-            <p className="font-bold text-foreground text-center">
-              Essa imersão existe para evitar esse ponto.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-background">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
-
-      {/* ═══════════ 4. DEPOIMENTO CARLA NEGRÃO ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
+      {/* ═══════════ 9. PROVA SECUNDÁRIA (JULIANA CURTA) ═══════════ */}
+      <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
-            </h2>
-          </div>
-          <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
+          <div className="bg-secondary border border-border rounded-2xl p-8 md:p-10 relative">
             <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
             <div className="pt-8 space-y-4">
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
+              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
+                "O problema nunca foi competência.
+                <br />Era posicionamento.
+                <br />Quando isso ficou claro, tudo começou a mudar."
               </p>
             </div>
             <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Carla Negrão</p>
-              <p className="text-muted-foreground text-sm sm:text-base">Ex-executiva de Multinacional | Fundadora, CN Food Consulting</p>
+              <p className="font-bold text-foreground">Juliana Zobaran</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-secondary">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
+      <Divider />
 
-      {/* ═══════════ 5. O QUE ACONTECE EM 6 HORAS ═══════════ */}
-      <section className="relative bg-secondary py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-12 text-balance">
-            Você sai com clareza sobre o que está travando sua carreira hoje.
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-14">
-            {[
-              "Define o próximo movimento com critério",
-              "Elimina caminhos que parecem bons, mas não fazem sentido",
-              "Estrutura uma decisão com base estratégica",
-              "Sai com um plano de 30 dias para ação",
-            ].map((item, i) => (
-              <div
-                key={i}
-                className="border border-border rounded-xl p-6 text-left hover:shadow-md transition-shadow"
-              >
-                <span className="text-accent font-display text-2xl font-bold">{String(i + 1).padStart(2, "0")}</span>
-                <p className="text-foreground text-base sm:text-lg mt-3">{item}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className="bg-primary/5 border border-primary/20 rounded-xl py-8 px-6 mb-10">
-            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary">
-              Você não sai com mais conteúdo.
-            </p>
-            <p className="font-display text-xl sm:text-2xl md:text-3xl font-bold text-primary mt-2">
-              Sai com uma decisão tomada.
-            </p>
-          </div>
-
-          <div className="flex flex-col items-center gap-3">
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
-              >
-                GARANTIR MINHA VAGA AGORA
-              </Button>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-              Prefiro conversar no WhatsApp
-            </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-secondary">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
-
-      {/* ═══════════ 6. O QUE VOCÊ LEVA ═══════════ */}
-      <section className="relative bg-background py-20 md:py-28">
+      {/* ═══════════ 10. O QUE VOCÊ SAI COM ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
-            Ao final da imersão, você leva:
-          </h2>
-          <ul className="space-y-5 max-w-xl mx-auto">
+          <ul className="space-y-4 max-w-xl mx-auto mb-8">
             {[
-              "Uma decisão clara sobre seu próximo movimento",
-              "Um diagnóstico objetivo do que está travando sua carreira",
-              "Um mapa dos caminhos possíveis com análise estratégica",
-              "Um plano de 30 dias para sair da intenção e ir para ação",
-              "Clareza sobre o que parar de fazer",
+              "Decisão estruturada",
+              "Clareza do que está travando sua carreira",
+              "Plano de 30 dias",
+              "Eliminação de caminhos errados",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -314,54 +362,20 @@ const Index = () => {
               </li>
             ))}
           </ul>
-        </div>
-      </section>
-
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-background">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
-
-
-      {/* ═══════════ 7. PROVA DE CONSEQUÊNCIA ═══════════ */}
-      <section className="relative bg-secondary py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-10 text-balance">
-            O problema não é falta de capacidade.
-            <br />
-            É excesso de caminho sem critério.
-          </h2>
-          <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-6 max-w-2xl mx-auto">
-            <p>
-              Você pode continuar estudando.
-              <br />Pode esperar a próxima oportunidade.
-            </p>
-            <p>
-              Mas isso não garante direção.
-            </p>
-            <p className="font-bold text-foreground">
-              O que muda uma carreira sênior não é consumir mais.
-              <br />É decidir melhor.
+          <div className="text-center">
+            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+              Você não sai com mais conteúdo.
+              <br />Sai com uma decisão tomada.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-secondary">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
+      <Divider />
 
-      {/* ═══════════ 8. SOBRE A FERNANDA ═══════════ */}
-      <section className="relative bg-background py-20 md:py-28">
+      {/* ═══════════ 11. QUEM CONDUZ ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground text-center mb-14 text-balance">
-            Quem conduz
-          </h2>
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
             <div className="flex-shrink-0">
               <img
@@ -372,26 +386,25 @@ const Index = () => {
               />
             </div>
             <div className="flex-1 text-center lg:text-left">
-              <h3 className="font-display text-2xl font-bold text-foreground mb-1">
+              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-1">
                 Fernanda Moura
-              </h3>
+              </h2>
               <p className="text-accent font-bold mb-6">
                 Estrategista Executiva de Carreira
               </p>
               <div className="text-lg sm:text-xl leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  26 anos dentro do sistema corporativo —{" "}
-                  <strong className="text-foreground">Coca-Cola, Cargill, Kraft Heinz, Kimberly-Clark e MBRF</strong>.
+                  Depois de 26 anos dentro do sistema corporativo, eu reconheço exatamente quando uma carreira está em ponto de decisão — e quando a pessoa ainda está se enganando.
                 </p>
-                <p>
-                  Atuou em posições de liderança, diretoria e C-level internacional, conduzindo equipes em 15 países.
-                </p>
-                <p>
-                  Já realizou 23 transições profissionais reais na própria carreira.
-                </p>
-                <p className="font-bold text-foreground text-balance">
-                  Não fala de carreira de fora.
-                  <br />Tomou essas decisões de dentro.
+                <div className="flex flex-wrap gap-2 my-4">
+                  {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "BRF"].map((company) => (
+                    <span key={company} className="bg-accent/10 border border-accent/20 text-foreground text-sm px-3 py-1 rounded-full">
+                      {company}
+                    </span>
+                  ))}
+                </div>
+                <p className="font-bold text-foreground">
+                  23 transições profissionais reais.
                 </p>
               </div>
             </div>
@@ -399,61 +412,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-background">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
+      <Divider />
 
-      {/* ═══════════ 9. DEPOIMENTO JULIANA ZOBARAN ═══════════ */}
+      {/* ═══════════ 12. INVESTIMENTO ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 text-balance">
-              Executivas que estavam paradas há meses tomaram decisões em uma única sessão.
-            </h2>
-          </div>
-          <div className="bg-background border border-border rounded-2xl p-8 md:p-10 relative">
-            <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
-            <div className="pt-8 space-y-4">
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
-              </p>
-            </div>
-            <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Juliana Zobaran</p>
-              <p className="text-muted-foreground text-sm sm:text-base">Diretora para América Latina</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-secondary">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
-
-      {/* ═══════════ 10. INVESTIMENTO ═══════════ */}
-      <section className="relative bg-background py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-8 text-balance">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 text-balance">
             Investimento
           </h2>
 
-          <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
+          <div className="bg-background/50 rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-balance">
-              Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
+              Uma sessão individual pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
-              Aqui, você participa de um dia inteiro de decisão estratégica, com aplicação direta no seu contexto:
+              Aqui, você participa de um dia inteiro de decisão estratégica:
             </p>
           </div>
 
-          <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
+          <div className="bg-background/50 rounded-2xl py-10 px-8 mb-8 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
@@ -468,20 +446,7 @@ const Index = () => {
 
           <Suspense fallback={null}><CountdownTimer /></Suspense>
 
-          <div className="flex flex-col items-center gap-3">
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
-              >
-                GARANTIR MINHA VAGA AGORA
-              </Button>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-              Prefiro conversar no WhatsApp
-            </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
-          </div>
+          <CTABlock label="GARANTIR MINHA VAGA" microcopy="Turma limitada — encerramento em 10/04" />
 
           <a
             href="https://www.amigosdobem.org"
@@ -502,19 +467,14 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Divisor */}
-      <div className="flex items-center justify-center py-6 bg-background">
-        <span className="block w-16 h-px bg-accent/30" />
-        <span className="mx-3 text-accent/40 text-sm">✦</span>
-        <span className="block w-16 h-px bg-accent/30" />
-      </div>
+      <Divider />
 
-      {/* ═══════════ 11. GARANTIA ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-20">
+      {/* ═══════════ 13. GARANTIA ═══════════ */}
+      <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
             <Shield className="w-10 h-10 text-accent" />
-           <p className="font-display text-2xl font-bold text-foreground text-balance">
+            <p className="font-display text-2xl font-bold text-foreground text-balance">
               Garantia de resultado
             </p>
             <p className="text-muted-foreground text-lg leading-relaxed text-balance">
@@ -527,7 +487,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* ═══════════ 12. CTA FINAL ═══════════ */}
+      {/* ═══════════ 14. FECHAMENTO + CTA FINAL ═══════════ */}
       <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
@@ -545,23 +505,9 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
-          <div className="flex flex-col items-center gap-3">
-            <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
-              <Button
-                size="lg"
-                className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-lg sm:text-xl px-10 sm:px-14 py-7 sm:py-8 rounded-lg shadow-2xl shadow-cta-green/25 tracking-wide transition-transform duration-300 hover:scale-105 w-full sm:w-auto"
-              >
-                GARANTIR MINHA VAGA AGORA
-              </Button>
-            </a>
-            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer" className="text-sm text-accent underline underline-offset-4 hover:opacity-80 transition-opacity">
-              Prefiro conversar no WhatsApp
-            </a>
-            <p className="text-sm text-muted-foreground mt-2">Restam poucas vagas — turma fecha em 10/04</p>
-          </div>
+          <CTABlock label="GARANTIR MINHA VAGA" microcopy="Turma limitada — encerramento em 10/04" />
         </div>
       </section>
-
 
       {/* RODAPÉ */}
       <footer
@@ -574,6 +520,7 @@ const Index = () => {
           <p className="text-xs opacity-50 mt-4">© 2026 O Próximo Passo</p>
         </div>
       </footer>
+
       {/* ═══════════ BARRA FIXA MOBILE ═══════════ */}
       <div className="fixed bottom-0 left-0 right-0 z-50 sm:hidden bg-background border-t border-border px-4 py-3 shadow-2xl">
         <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer block">
@@ -581,10 +528,10 @@ const Index = () => {
             size="lg"
             className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
-            GARANTIR MINHA VAGA AGORA
+            GARANTIR MINHA VAGA
           </Button>
         </a>
-        <p className="text-xs text-muted-foreground mt-1 text-center">Restam poucas vagas — turma fecha em 10/04</p>
+        <p className="text-xs text-muted-foreground mt-1 text-center">Turma limitada — encerramento em 10/04</p>
       </div>
     </main>
   );
