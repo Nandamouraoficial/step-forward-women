@@ -1,50 +1,34 @@
 
 
-## Ajustes Finais — LP Versão Definitiva
+## Ajustes nos Depoimentos — Eliminar Repetição e Diferenciar
 
-### O que já está correto (não mexer)
-Hero, Prova Imediata, Diagnóstico, Consequência, O Que É, Transformação, Contraponto, Para Quem É, Autoridade, Investimento, Garantia, Fechamento, Rodapé — todos já correspondem ao briefing.
+### Problema atual
+Ambos os depoimentos (Juliana e Carla) usam frases similares ("em poucas horas", "decisão que vinha sendo adiada"). Precisam ter linguagem própria.
 
-### 5 mudanças necessárias em `src/pages/Index.tsx`
+### 3 edições em `src/pages/Index.tsx`
 
-**1. Transição (seção 5) — Extrair do Case e tornar seção independente**
-Atualmente a frase "E quando essa decisão é estruturada..." está dentro do bloco do Case (linhas 254-259). Precisa virar uma seção standalone ANTES do Case Juliana, não depois.
+**1. Depoimento curto da Juliana (seção 2, linhas 139-143)**
+Trocar a quote por:
+> "O problema nunca foi competência.
+> Era posicionamento.
+> Quando isso ficou claro, minha forma de me posicionar mudou — e o mercado começou a responder de forma diferente."
 
-**2. Case Juliana — Remover transição interna + Adicionar fechamento separado (seção 7)**
-Remover o bloco "E quando essa decisão..." de dentro do Case. Após o Case, adicionar nova seção 7 com: "Executivas não travam por falta de capacidade. Travam porque continuam operando sem uma decisão estruturada."
+**2. Case Juliana (seção 6, linhas 242-257)**
+Remover as linhas 242-246 ("Em poucas horas, ela estruturou..." e "Ajustou seu posicionamento..."). Manter apenas o trecho final:
+> A partir disso:
+> Foi selecionada para o SW50 do Santander, entre milhares de candidatas.
+> Não porque ficou mais competente. Mas porque passou a ser percebida como sempre foi.
 
-**3. Depoimento da Carla — Nova seção 8 (INSERIR)**
-Após o fechamento do Case, adicionar bloco completo da Carla com: introdução ("E quando a decisão sai do papel..."), quote em itálico, assinatura (Carla Negrão — Ex-executiva | Fundadora, CN Food Consulting), e frase de fechamento ("Decisão não muda só clareza. Muda o que você faz com ela."). Estilo visual similar ao bloco de Prova Imediata (quote com ícone, sem foto).
+**3. Depoimento da Carla (seção 8, linhas 288-308)**
+- Trocar linha de conexão (289) para: "E quando a decisão deixa de ser reflexão e vira ação, o impacto aparece rápido."
+- Trocar quote (293-298) para:
+> "Eu sabia que precisava mudar, mas continuava no mesmo lugar — entregando bem e cada vez mais distante do próximo nível.
+> O que faltava não era clareza. Era decisão.
+> Quando isso ficou estruturado, eu parei de adiar — e dei início à minha consultoria."
+- Manter fechamento ("Decisão não muda só clareza...") como está.
 
-**4. Entrega Final — Ajustar título**
-Trocar "Você sai com:" por "Ao final da imersão, você sai com:"
-
-**5. Pré-Investimento — Adicionar frase de transição (seção 15)**
-Antes da seção de Investimento, inserir bloco curto: "Você pode continuar analisando. Ou pode decidir."
-
-### Ordem final resultante
-```text
-1.  Hero
-2.  Prova Imediata (Juliana)
-3.  Diagnóstico
-4.  Consequência
-5.  Transição (standalone)
-6.  Case Juliana (sem transição interna)
-7.  Fechamento do Case ("Executivas não travam...")
-8.  Depoimento Carla (NOVO)
-9.  O Que É
-10. Transformação
-11. Contraponto
-12. Para Quem É
-13. Entrega Final (título ajustado)
-14. Autoridade
-15. Pré-Investimento (NOVO — frase curta)
-16. Investimento + CTA
-17. Garantia
-18. Fechamento + CTA
-    Rodapé
-```
-
-### Arquivo editado
-Apenas `src/pages/Index.tsx`. Toda lógica existente (scroll tracking, CTA, barra fixa, CountdownTimer, SealBadge) permanece intacta.
+### Resultado
+- Juliana = posicionamento + percepção de mercado
+- Carla = decisão interna + ação concreta
+- Zero frases repetidas entre os dois blocos
 
