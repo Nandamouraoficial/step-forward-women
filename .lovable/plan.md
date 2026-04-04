@@ -1,48 +1,40 @@
 
 
-## Reestruturação da Landing Page — Nova Ordem e Copy
+## Ajustes Finais — LP "O Próximo Passo"
 
-### O que muda (atual → novo)
+### Mudanças pontuais em `src/pages/Index.tsx`
 
-**Mudanças estruturais:**
+**1. HERO — Ajuste de texto (linhas 104-110)**
+- Linha 105: trocar "Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão." por "Você continua entregando — mas não está crescendo na mesma proporção."
+- Adicionar novo parágrafo logo abaixo: "O problema não é falta de capacidade. É uma decisão que ainda não foi estruturada."
+- Manter o parágrafo do "O Próximo Passo" após esse novo bloco
 
-1. **Nova seção 2 — "Prova Imediata"**: Quote curta da Juliana com foto (crop busto pra cima) logo após o Hero. Substitui a seção 9 atual (Prova Secundária).
-2. **Seção 9 (Prova Secundária) removida** — já virou a seção 2.
-3. **Diagnóstico**: Copy simplificado ("entrega bem, mas não avança" em vez de "entregando resultado, mas sem avanço proporcional").
-4. **Consequência**: Reestruturado com "Aparece:" como introdução + lista.
-5. **Case Juliana**: Texto encurtado — remove parágrafo sobre "posicionamento estruturado", simplifica linguagem, muda cargo para "Diretora para América Latina".
-6. **Transformação**: Remove item "vive a sensação de estar 'quase lá'" do Antes; "executa com clareza e direção" → "executa com direção".
-7. **Ordem final**: CTA Final vem antes da Garantia (atualmente Garantia vem antes do Fechamento).
-8. **Rodapé**: Simplificado para apenas "© O Próximo Passo".
+**2. CTA — Padronizar todos os botões**
+- Linha 65: mudar label default de `"QUERO DECIDIR MEU PRÓXIMO PASSO"` para `"GARANTIR MINHA VAGA"`
+- Isso afeta automaticamente os CTAs das seções 6 (O Que É) e qualquer outro que use o default
 
-### Ordem final das seções
+**3. Transição antes do Case Juliana (linha 249-254)**
+- Trocar a frase de fechamento do bloco Consequência/transição para Case: "E quando essa decisão é estruturada, o que muda não é só a clareza. É o que passa a acontecer na sua carreira."
+- Inserir como novo bloco entre Consequência (seção 4) e Case Juliana (seção 5)
 
-```text
-1.  Hero
-2.  Prova Imediata (NOVO — foto Juliana + quote curta)
-3.  Diagnóstico
-4.  Consequência
-5.  Case Juliana (encurtado)
-6.  O Que É
-7.  Transformação
-8.  Contraponto
-9.  Para Quem É
-10. Entrega Final
-11. Autoridade (Fernanda)
-12. Investimento + CTA Final
-13. Garantia
-14. Fechamento + CTA Final
-    Rodapé
-```
+**4. Case Juliana — "Resultado:" → "A partir disso:" (linha 232)**
+- Trocar `Resultado:` por `A partir disso:`
 
-### Implementação
+**5. Bloco Carla — Não existe na LP atual**
+- A LP não tem um bloco/depoimento da Carla. Este item será ignorado (não adicionar blocos novos, conforme regra da estrutura).
 
-Editar apenas `src/pages/Index.tsx`:
+**6. Investimento — Adicionar linha final (após linha 452)**
+- Após "Menos que uma sessão — com impacto direto no seu próximo movimento.", adicionar: "Sem depender de timing externo ou validação do mercado."
 
-- Inserir bloco "Prova Imediata" após o Hero (foto da Juliana com `object-top` crop do busto, ao lado da quote curta em layout 2 colunas no desktop)
-- Atualizar copy do Diagnóstico, Consequência, Case Juliana, Transformação conforme o briefing
-- Reordenar: mover Garantia para depois do bloco de Investimento/CTA
-- Remover seção 9 (Prova Secundária standalone)
-- Simplificar rodapé para "© O Próximo Passo"
-- Manter toda lógica existente (scroll tracking, CTA click, barra fixa mobile, CountdownTimer, SealBadge)
+**7. Limpeza — Verificar repetições do nome "Juliana" no case**
+- No case (linhas 217-241), "Juliana" aparece na linha 219 ("Juliana já era diretora..."). Manter apenas a menção no bloco de assinatura (linha 243). Trocar linha 219 para remover o nome: "Já era diretora para América Latina, com mais de 20 anos..."
+
+**8. Foto Juliana — Ajustar crop do busto pra cima**
+- Na seção Prova Imediata (linha 123-130): aplicar container com aspect-ratio e `h-[140%] object-cover object-top` para cortar do busto pra cima
+- Na seção Case Juliana (linha 204-211): mesmo tratamento
+
+### O que NÃO muda
+- Toda a lógica (scroll tracking, CTA click, barra fixa mobile, CountdownTimer, SealBadge)
+- Ordem das seções (já está correta)
+- Rodapé (já está "© O Próximo Passo")
 
