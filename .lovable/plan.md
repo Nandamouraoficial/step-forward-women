@@ -1,40 +1,50 @@
 
 
-## Ajustes Finais — LP "O Próximo Passo"
+## Ajustes Finais — LP Versão Definitiva
 
-### Mudanças pontuais em `src/pages/Index.tsx`
+### O que já está correto (não mexer)
+Hero, Prova Imediata, Diagnóstico, Consequência, O Que É, Transformação, Contraponto, Para Quem É, Autoridade, Investimento, Garantia, Fechamento, Rodapé — todos já correspondem ao briefing.
 
-**1. HERO — Ajuste de texto (linhas 104-110)**
-- Linha 105: trocar "Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão." por "Você continua entregando — mas não está crescendo na mesma proporção."
-- Adicionar novo parágrafo logo abaixo: "O problema não é falta de capacidade. É uma decisão que ainda não foi estruturada."
-- Manter o parágrafo do "O Próximo Passo" após esse novo bloco
+### 5 mudanças necessárias em `src/pages/Index.tsx`
 
-**2. CTA — Padronizar todos os botões**
-- Linha 65: mudar label default de `"QUERO DECIDIR MEU PRÓXIMO PASSO"` para `"GARANTIR MINHA VAGA"`
-- Isso afeta automaticamente os CTAs das seções 6 (O Que É) e qualquer outro que use o default
+**1. Transição (seção 5) — Extrair do Case e tornar seção independente**
+Atualmente a frase "E quando essa decisão é estruturada..." está dentro do bloco do Case (linhas 254-259). Precisa virar uma seção standalone ANTES do Case Juliana, não depois.
 
-**3. Transição antes do Case Juliana (linha 249-254)**
-- Trocar a frase de fechamento do bloco Consequência/transição para Case: "E quando essa decisão é estruturada, o que muda não é só a clareza. É o que passa a acontecer na sua carreira."
-- Inserir como novo bloco entre Consequência (seção 4) e Case Juliana (seção 5)
+**2. Case Juliana — Remover transição interna + Adicionar fechamento separado (seção 7)**
+Remover o bloco "E quando essa decisão..." de dentro do Case. Após o Case, adicionar nova seção 7 com: "Executivas não travam por falta de capacidade. Travam porque continuam operando sem uma decisão estruturada."
 
-**4. Case Juliana — "Resultado:" → "A partir disso:" (linha 232)**
-- Trocar `Resultado:` por `A partir disso:`
+**3. Depoimento da Carla — Nova seção 8 (INSERIR)**
+Após o fechamento do Case, adicionar bloco completo da Carla com: introdução ("E quando a decisão sai do papel..."), quote em itálico, assinatura (Carla Negrão — Ex-executiva | Fundadora, CN Food Consulting), e frase de fechamento ("Decisão não muda só clareza. Muda o que você faz com ela."). Estilo visual similar ao bloco de Prova Imediata (quote com ícone, sem foto).
 
-**5. Bloco Carla — Não existe na LP atual**
-- A LP não tem um bloco/depoimento da Carla. Este item será ignorado (não adicionar blocos novos, conforme regra da estrutura).
+**4. Entrega Final — Ajustar título**
+Trocar "Você sai com:" por "Ao final da imersão, você sai com:"
 
-**6. Investimento — Adicionar linha final (após linha 452)**
-- Após "Menos que uma sessão — com impacto direto no seu próximo movimento.", adicionar: "Sem depender de timing externo ou validação do mercado."
+**5. Pré-Investimento — Adicionar frase de transição (seção 15)**
+Antes da seção de Investimento, inserir bloco curto: "Você pode continuar analisando. Ou pode decidir."
 
-**7. Limpeza — Verificar repetições do nome "Juliana" no case**
-- No case (linhas 217-241), "Juliana" aparece na linha 219 ("Juliana já era diretora..."). Manter apenas a menção no bloco de assinatura (linha 243). Trocar linha 219 para remover o nome: "Já era diretora para América Latina, com mais de 20 anos..."
+### Ordem final resultante
+```text
+1.  Hero
+2.  Prova Imediata (Juliana)
+3.  Diagnóstico
+4.  Consequência
+5.  Transição (standalone)
+6.  Case Juliana (sem transição interna)
+7.  Fechamento do Case ("Executivas não travam...")
+8.  Depoimento Carla (NOVO)
+9.  O Que É
+10. Transformação
+11. Contraponto
+12. Para Quem É
+13. Entrega Final (título ajustado)
+14. Autoridade
+15. Pré-Investimento (NOVO — frase curta)
+16. Investimento + CTA
+17. Garantia
+18. Fechamento + CTA
+    Rodapé
+```
 
-**8. Foto Juliana — Ajustar crop do busto pra cima**
-- Na seção Prova Imediata (linha 123-130): aplicar container com aspect-ratio e `h-[140%] object-cover object-top` para cortar do busto pra cima
-- Na seção Case Juliana (linha 204-211): mesmo tratamento
-
-### O que NÃO muda
-- Toda a lógica (scroll tracking, CTA click, barra fixa mobile, CountdownTimer, SealBadge)
-- Ordem das seções (já está correta)
-- Rodapé (já está "© O Próximo Passo")
+### Arquivo editado
+Apenas `src/pages/Index.tsx`. Toda lógica existente (scroll tracking, CTA, barra fixa, CountdownTimer, SealBadge) permanece intacta.
 
