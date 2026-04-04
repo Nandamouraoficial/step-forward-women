@@ -102,7 +102,12 @@ const Index = () => {
             </h1>
 
             <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão.
+              Você continua entregando — mas não está crescendo na mesma proporção.
+            </p>
+
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
+              O problema não é falta de capacidade.
+              <br />É uma decisão que ainda não foi estruturada.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto">
