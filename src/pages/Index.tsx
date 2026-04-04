@@ -124,16 +124,7 @@ const Index = () => {
       {/* ═══════════ 2. PROVA IMEDIATA ═══════════ */}
       <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0 w-32 md:w-44 aspect-square rounded-full shadow-xl overflow-hidden">
-              <img
-                src={julianaPhoto}
-                alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full h-[140%] object-cover object-top"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex-1 text-center md:text-left">
+          <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto text-center">
               <div className="relative">
                 <Quote className="w-8 h-8 text-accent/30 mb-2" />
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
