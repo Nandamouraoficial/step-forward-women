@@ -62,7 +62,7 @@ const Index = () => {
     setTimeout(fire, 0);
   };
 
-  const CTABlock = ({ label = "QUERO DECIDIR MEU PRÓXIMO PASSO", microcopy }: { label?: string; microcopy?: string }) => (
+  const CTABlock = ({ label = "GARANTIR MINHA VAGA", microcopy }: { label?: string; microcopy?: string }) => (
     <div className="flex flex-col items-center gap-3">
       <a href={CHECKOUT_URL} target="_blank" rel="noopener noreferrer" onClick={handleCTAClick} className="cursor-pointer w-full sm:w-auto">
         <Button
@@ -102,7 +102,12 @@ const Index = () => {
             </h1>
 
             <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão.
+              Você continua entregando — mas não está crescendo na mesma proporção.
+            </p>
+
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
+              O problema não é falta de capacidade.
+              <br />É uma decisão que ainda não foi estruturada.
             </p>
 
             <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto">
@@ -120,11 +125,11 @@ const Index = () => {
       <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0 w-32 md:w-44">
+            <div className="flex-shrink-0 w-32 md:w-44 aspect-square rounded-full shadow-xl overflow-hidden">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full rounded-full shadow-xl object-cover"
+                className="w-full h-[140%] object-cover object-top"
                 loading="lazy"
               />
             </div>
@@ -201,11 +206,11 @@ const Index = () => {
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
-            <div className="flex-shrink-0 mx-auto lg:mx-0 w-52 md:w-64">
+            <div className="flex-shrink-0 mx-auto lg:mx-0 w-52 md:w-64 aspect-square rounded-full shadow-xl overflow-hidden">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full rounded-full shadow-xl object-cover"
+                className="w-full h-[140%] object-cover object-top"
                 loading="lazy"
               />
             </div>
@@ -216,7 +221,7 @@ const Index = () => {
               </h2>
               <div className="text-base sm:text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  Juliana já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
+                  Já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
                 </p>
                 <p>
                   Dentro do seu ecossistema, era reconhecida.
@@ -229,7 +234,7 @@ const Index = () => {
                   Ajustou seu posicionamento, ampliou sua presença e passou a comunicar seu valor com clareza.
                 </p>
                 <p>
-                  Resultado:
+                  A partir disso:
                 </p>
                 <p>
                   Foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas.
@@ -248,8 +253,8 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-              Executivas não travam por falta de capacidade.
-              <br />Travam porque continuam operando sem uma decisão estruturada.
+              E quando essa decisão é estruturada, o que muda não é só a clareza.
+              <br />É o que passa a acontecer na sua carreira.
             </p>
           </div>
         </div>
@@ -450,6 +455,7 @@ const Index = () => {
           <div className="max-w-xl mx-auto mb-8">
             <p className="text-foreground font-bold text-lg text-balance">
               Menos que uma sessão — com impacto direto no seu próximo movimento.
+              <br />Sem depender de timing externo ou validação do mercado.
             </p>
           </div>
 
