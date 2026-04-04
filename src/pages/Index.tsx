@@ -240,12 +240,6 @@ const Index = () => {
                   <br />Fora dele, o mercado quase não a via.
                 </p>
                 <p>
-                  Em poucas horas, ela estruturou uma decisão que vinha sendo adiada há meses.
-                </p>
-                <p>
-                  Ajustou seu posicionamento, ampliou sua presença e passou a comunicar seu valor com clareza.
-                </p>
-                <p>
                   A partir disso:
                 </p>
                 <p>
