@@ -1,34 +1,23 @@
 
 
-## Ajustes nos Depoimentos — Eliminar Repetição e Diferenciar
+## Scroll Suave — Análise e Plano
 
-### Problema atual
-Ambos os depoimentos (Juliana e Carla) usam frases similares ("em poucas horas", "decisão que vinha sendo adiada"). Precisam ter linguagem própria.
+### Situação atual
+Todos os CTAs da página ("GARANTIR MINHA VAGA") apontam para o link externo do Kiwify (`target="_blank"`). **Não existem links internos** (âncoras `#seção`) na LP — portanto, não há navegação interna que se beneficie de scroll suave.
 
-### 3 edições em `src/pages/Index.tsx`
+### O que posso implementar
 
-**1. Depoimento curto da Juliana (seção 2, linhas 139-143)**
-Trocar a quote por:
-> "O problema nunca foi competência.
-> Era posicionamento.
-> Quando isso ficou claro, minha forma de me posicionar mudou — e o mercado começou a responder de forma diferente."
+**Opção A — CSS `scroll-behavior: smooth` global**
+Adicionar `scroll-behavior: smooth` ao `<html>` em `src/index.css`. Isso garante que qualquer scroll programático (ex.: `window.scrollTo`, âncoras futuras) seja animado. Mudança de 1 linha.
 
-**2. Case Juliana (seção 6, linhas 242-257)**
-Remover as linhas 242-246 ("Em poucas horas, ela estruturou..." e "Ajustou seu posicionamento..."). Manter apenas o trecho final:
-> A partir disso:
-> Foi selecionada para o SW50 do Santander, entre milhares de candidatas.
-> Não porque ficou mais competente. Mas porque passou a ser percebida como sempre foi.
+**Opção B — Além do CSS, criar navegação interna com âncoras**
+Adicionar `id`s nas seções principais (hero, diagnóstico, investimento, etc.) e criar links internos (ex.: no topo ou como menu) que fazem scroll suave até cada seção. Isso é uma mudança maior e altera a estrutura visual.
 
-**3. Depoimento da Carla (seção 8, linhas 288-308)**
-- Trocar linha de conexão (289) para: "E quando a decisão deixa de ser reflexão e vira ação, o impacto aparece rápido."
-- Trocar quote (293-298) para:
-> "Eu sabia que precisava mudar, mas continuava no mesmo lugar — entregando bem e cada vez mais distante do próximo nível.
-> O que faltava não era clareza. Era decisão.
-> Quando isso ficou estruturado, eu parei de adiar — e dei início à minha consultoria."
-- Manter fechamento ("Decisão não muda só clareza...") como está.
+### Plano recomendado (Opção A — mínimo e funcional)
 
-### Resultado
-- Juliana = posicionamento + percepção de mercado
-- Carla = decisão interna + ação concreta
-- Zero frases repetidas entre os dois blocos
+1. **`src/index.css`** — Adicionar `scroll-behavior: smooth` no seletor `html` existente
+2. Pronto. Qualquer scroll programático ou âncora futura terá animação suave automaticamente
+
+### Arquivo editado
+- `src/index.css` (1 linha)
 
