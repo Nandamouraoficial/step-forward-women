@@ -1,72 +1,48 @@
 
 
-## Correção Definitiva: "sentinelRef is not defined"
+## Reestruturação da Landing Page — Nova Ordem e Copy
 
-### Diagnóstico
+### O que muda (atual → novo)
 
-O código atual (linhas 12-57 de `Index.tsx`) está sintaticamente correto — `sentinelRef` é declarado com `useRef` e acessado com null checks. Porém, em in-app browsers (Instagram/Facebook), o bundle JS pode ser interrompido parcialmente ou o engine pode falhar ao inicializar o componente, resultando em um `ReferenceError` onde a variável `sentinelRef` simplesmente não existe no escopo.
+**Mudanças estruturais:**
 
-O `try-catch` na linha 42 protege apenas o acesso a `.current`, mas se o próprio `useRef` falhar na inicialização (linha 12), o erro ocorre antes do try-catch.
+1. **Nova seção 2 — "Prova Imediata"**: Quote curta da Juliana com foto (crop busto pra cima) logo após o Hero. Substitui a seção 9 atual (Prova Secundária).
+2. **Seção 9 (Prova Secundária) removida** — já virou a seção 2.
+3. **Diagnóstico**: Copy simplificado ("entrega bem, mas não avança" em vez de "entregando resultado, mas sem avanço proporcional").
+4. **Consequência**: Reestruturado com "Aparece:" como introdução + lista.
+5. **Case Juliana**: Texto encurtado — remove parágrafo sobre "posicionamento estruturado", simplifica linguagem, muda cargo para "Diretora para América Latina".
+6. **Transformação**: Remove item "vive a sensação de estar 'quase lá'" do Antes; "executa com clareza e direção" → "executa com direção".
+7. **Ordem final**: CTA Final vem antes da Garantia (atualmente Garantia vem antes do Fechamento).
+8. **Rodapé**: Simplificado para apenas "© O Próximo Passo".
 
-### Solução
+### Ordem final das seções
 
-**Eliminar os refs de scroll tracking completamente.** Substituir por um único `scroll` event listener que calcula a posição baseada em `scrollY` e `document.body.scrollHeight`. Isso remove toda dependência de `useRef` e `IntersectionObserver` para tracking, mantendo a mesma funcionalidade analítica.
-
-### Mudanças
-
-**Arquivo: `src/pages/Index.tsx`**
-
-1. Remover as 3 linhas de `useRef` (sentinelRef, midpointRef, bottomRef)
-2. Remover os 3 `<div ref={...} aria-hidden="true" />` do JSX (linhas ~135, ~341, ~581)
-3. Substituir o `useEffect` inteiro (linhas 16-57) por:
-
-```tsx
-useEffect(() => {
-  const fired = { hero: false, mid: false, bottom: false };
-
-  const onScroll = () => {
-    try {
-      const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight);
-
-      const fireEvent = (key: keyof typeof fired, eventName: string) => {
-        if (fired[key]) return;
-        fired[key] = true;
-        try {
-          if (typeof (window as any).fbq === 'function') {
-            (window as any).fbq('trackCustom', eventName);
-          }
-        } catch (_) {}
-        try {
-          if (typeof (window as any).lintrk === 'function') {
-            (window as any).lintrk('track', { conversion_id: 26913521 });
-          }
-        } catch (_) {}
-      };
-
-      if (pct > 0.15) fireEvent('hero', 'ScrollPastHero');
-      if (pct > 0.50) fireEvent('mid', 'ScrollMidpoint');
-      if (pct > 0.85) fireEvent('bottom', 'ScrollBottom');
-
-      if (fired.hero && fired.mid && fired.bottom) {
-        window.removeEventListener('scroll', onScroll);
-      }
-    } catch (_) {}
-  };
-
-  window.addEventListener('scroll', onScroll, { passive: true });
-  return () => window.removeEventListener('scroll', onScroll);
-}, []);
+```text
+1.  Hero
+2.  Prova Imediata (NOVO — foto Juliana + quote curta)
+3.  Diagnóstico
+4.  Consequência
+5.  Case Juliana (encurtado)
+6.  O Que É
+7.  Transformação
+8.  Contraponto
+9.  Para Quem É
+10. Entrega Final
+11. Autoridade (Fernanda)
+12. Investimento + CTA Final
+13. Garantia
+14. Fechamento + CTA Final
+    Rodapé
 ```
 
-### Por que funciona
+### Implementação
 
-- **Zero refs** → impossível ter "sentinelRef is not defined"
-- **Zero IntersectionObserver** → API que pode não estar totalmente disponível em in-app browsers antigos
-- **`{ passive: true }`** → sem impacto no scroll performance
-- **Auto-cleanup** → listener se remove após os 3 eventos dispararem
-- **try-catch completo** → qualquer falha é silenciada
-- Os thresholds (15%, 50%, 85%) correspondem aproximadamente às posições dos sentinels originais no layout
+Editar apenas `src/pages/Index.tsx`:
 
-### Nenhuma mudança visual
-As divs sentinel eram invisíveis (`aria-hidden="true"`, sem conteúdo). Removê-las não altera nada visualmente.
+- Inserir bloco "Prova Imediata" após o Hero (foto da Juliana com `object-top` crop do busto, ao lado da quote curta em layout 2 colunas no desktop)
+- Atualizar copy do Diagnóstico, Consequência, Case Juliana, Transformação conforme o briefing
+- Reordenar: mover Garantia para depois do bloco de Investimento/CTA
+- Remover seção 9 (Prova Secundária standalone)
+- Simplificar rodapé para "© O Próximo Passo"
+- Manter toda lógica existente (scroll tracking, CTA click, barra fixa mobile, CountdownTimer, SealBadge)
 
