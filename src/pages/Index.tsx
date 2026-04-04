@@ -280,16 +280,16 @@ const Index = () => {
             <span className="text-accent/40">✦</span>
           </p>
           <p className="text-center text-foreground font-bold text-lg md:text-xl mb-10 text-balance">
-            E quando a decisão sai do papel, o impacto aparece rápido.
+            E quando a decisão deixa de ser reflexão e vira ação, o impacto aparece rápido.
           </p>
           <div className="max-w-2xl mx-auto">
             <Quote className="w-8 h-8 text-accent/30 mb-4 mx-auto md:mx-0" />
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic text-center md:text-left">
               "Eu sabia que precisava mudar, mas continuava no mesmo lugar — entregando bem e cada vez mais distante do próximo nível.
               <br /><br />
-              Em poucas horas, consegui estruturar uma decisão que eu vinha adiando há meses.
+              O que faltava não era clareza. Era decisão.
               <br /><br />
-              Saí com clareza, segurança e um plano concreto — e dei início à minha consultoria."
+              Quando isso ficou estruturado, eu parei de adiar — e dei início à minha consultoria."
             </p>
             <div className="mt-6 pt-4 border-t border-border text-center md:text-left">
               <p className="font-bold text-foreground">Carla Negrão</p>
