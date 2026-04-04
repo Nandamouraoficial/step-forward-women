@@ -1,7 +1,7 @@
 import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Quote } from "lucide-react";
-import julianaPhoto from "@/assets/juliana-zobaran-nobg.png";
+import julianaPhoto from "@/assets/juliana-zobaran.png";
 
 const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
 const SealBadge = lazy(() => import("@/components/SealBadge"));
@@ -120,11 +120,11 @@ const Index = () => {
       <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0 w-40 md:w-52 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
+            <div className="flex-shrink-0 w-32 md:w-44">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full h-[180%] object-cover object-top"
+                className="w-full rounded-full shadow-xl object-cover"
                 loading="lazy"
               />
             </div>
@@ -201,11 +201,11 @@ const Index = () => {
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
-            <div className="flex-shrink-0 mx-auto lg:mx-0 w-64 md:w-80 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
+            <div className="flex-shrink-0 mx-auto lg:mx-0 w-52 md:w-64">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full h-[180%] object-cover object-top"
+                className="w-full rounded-full shadow-xl object-cover"
                 loading="lazy"
               />
             </div>
