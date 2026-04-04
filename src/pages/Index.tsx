@@ -116,17 +116,49 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 2. BLOCO DE DIAGNÓSTICO ═══════════ */}
+      {/* ═══════════ 2. PROVA IMEDIATA ═══════════ */}
+      <section className="relative bg-background py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-shrink-0 w-40 md:w-52 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
+              <img
+                src={julianaPhoto}
+                alt="Juliana Zobaran — Diretora para América Latina"
+                className="w-full h-[180%] object-cover object-top"
+                loading="lazy"
+              />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <div className="relative">
+                <Quote className="w-8 h-8 text-accent/30 mb-2" />
+                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
+                  "O problema nunca foi competência.
+                  <br />Era posicionamento.
+                  <br />Quando isso ficou claro, tudo começou a mudar."
+                </p>
+              </div>
+              <div className="mt-6 pt-4 border-t border-border">
+                <p className="font-bold text-foreground">Juliana Zobaran</p>
+                <p className="text-muted-foreground text-sm">Diretora para América Latina</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 3. DIAGNÓSTICO ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10 text-balance">
-            Se você está:
+            Se você:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-8">
             {[
-              "entregando resultado, mas sem avanço proporcional",
-              "sendo reconhecida, mas não evoluindo",
-              "considerando mudança, mas sem clareza",
+              "entrega bem, mas não avança",
+              "sabe que precisa mudar, mas não decide",
+              "sente que está pronta para mais, mas não está indo",
             ].map((item) => (
               <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
                 <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
@@ -142,17 +174,18 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 3. CONSEQUÊNCIA ═══════════ */}
+      {/* ═══════════ 4. CONSEQUÊNCIA ═══════════ */}
       <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-10 text-balance">
             O custo não aparece hoje.
           </h2>
-          <div className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-4 text-left max-w-2xl mx-auto">
-            <p>Aparece em oportunidades que não vêm.</p>
-            <p>Na sensação de estar sempre ocupada — mas não avançando.</p>
-            <p>Em decisões que você sabe que precisa tomar, mas continua adiando.</p>
-          </div>
+          <p className="text-lg md:text-xl text-muted-foreground mb-6">Aparece:</p>
+          <ul className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-4 text-left max-w-2xl mx-auto list-disc list-inside">
+            <li>nas oportunidades que não vêm</li>
+            <li>na sensação de estar sempre ocupada — mas não avançando</li>
+            <li>em decisões que você já sabe que precisa tomar</li>
+          </ul>
           <div className="mt-10 max-w-2xl mx-auto">
             <p className="text-foreground font-bold text-lg md:text-xl text-balance">
               Carreiras seniores não travam de uma vez.
@@ -164,12 +197,11 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 4. CASE JULIANA (BLOCO PRINCIPAL DE PROVA) ═══════════ */}
+      {/* ═══════════ 5. CASE JULIANA (ENCURTADO) ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
-            {/* Foto */}
-             <div className="flex-shrink-0 mx-auto lg:mx-0 w-64 md:w-80 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
+            <div className="flex-shrink-0 mx-auto lg:mx-0 w-64 md:w-80 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
@@ -177,7 +209,6 @@ const Index = () => {
                 loading="lazy"
               />
             </div>
-            {/* Texto */}
             <div className="flex-1">
               <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-balance">
                 O problema não era capacidade.
@@ -185,32 +216,32 @@ const Index = () => {
               </h2>
               <div className="text-base sm:text-lg leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  Juliana Zobaran já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado, governança e estratégia.
+                  Juliana já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
                 </p>
                 <p>
                   Dentro do seu ecossistema, era reconhecida.
                   <br />Fora dele, o mercado quase não a via.
                 </p>
                 <p>
-                  E esse é o ponto onde muitas carreiras travam — não por falta de entrega, mas por falta de posicionamento estruturado.
+                  Em poucas horas, ela estruturou uma decisão que vinha sendo adiada há meses.
                 </p>
                 <p>
-                  Em poucas horas, ela conseguiu estruturar uma decisão que vinha sendo adiada há meses.
+                  Ajustou seu posicionamento, ampliou sua presença e passou a comunicar seu valor com clareza.
                 </p>
                 <p>
-                  Ajustou sua forma de se posicionar, ampliou sua presença e passou a comunicar seu valor com clareza.
+                  Resultado:
                 </p>
                 <p>
-                  A partir disso, novas oportunidades começaram a surgir — e ela foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas, em parceria com a London School of Economics.
+                  Foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas.
                 </p>
                 <p className="text-foreground font-bold">
                   Não porque ficou mais competente.
-                  <br />Mas porque o mercado finalmente passou a enxergar o que ela já era.
+                  <br />Mas porque passou a ser percebida como sempre foi.
                 </p>
               </div>
               <div className="mt-6 pt-6 border-t border-border">
                 <p className="font-bold text-foreground">Juliana Zobaran</p>
-                <p className="text-muted-foreground text-sm sm:text-base">Diretora de Impostos para América Latina</p>
+                <p className="text-muted-foreground text-sm sm:text-base">Diretora para América Latina</p>
               </div>
             </div>
           </div>
@@ -226,7 +257,7 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 5. O QUE É A IMERSÃO ═══════════ */}
+      {/* ═══════════ 6. O QUE É ═══════════ */}
       <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
@@ -252,31 +283,28 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 6. TRANSFORMAÇÃO (ANTES vs DEPOIS) ═══════════ */}
+      {/* ═══════════ 7. TRANSFORMAÇÃO (ANTES vs DEPOIS) ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
             O que muda quando você decide
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            {/* ANTES */}
             <div className="bg-background/50 border border-border rounded-2xl p-8">
               <h3 className="font-display text-xl font-bold text-muted-foreground mb-6">Antes</h3>
               <ul className="space-y-3 text-muted-foreground text-base sm:text-lg">
                 <li>Você continua entregando, mas sem crescimento proporcional</li>
                 <li>Avalia caminhos, mas não escolhe</li>
                 <li>Sente que está pronta para mais, mas não avança</li>
-                <li>Vive a sensação de estar "quase lá"</li>
               </ul>
             </div>
-            {/* DEPOIS */}
             <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8">
               <h3 className="font-display text-xl font-bold text-accent mb-6">Depois</h3>
               <ul className="space-y-3 text-foreground text-base sm:text-lg">
                 <li>Você sabe exatamente qual é o seu próximo movimento</li>
                 <li>Decide com critério e segurança</li>
                 <li>Elimina caminhos que não fazem sentido</li>
-                <li>Executa com clareza e direção</li>
+                <li>Executa com direção</li>
               </ul>
             </div>
           </div>
@@ -285,7 +313,7 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 7. CONTRAPONTO ═══════════ */}
+      {/* ═══════════ 8. CONTRAPONTO ═══════════ */}
       <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
@@ -301,11 +329,11 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 8. PARA QUEM É ═══════════ */}
+      {/* ═══════════ 9. PARA QUEM É ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-10 text-balance">
-            Essa imersão é para você se:
+            Para você que:
           </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-10">
             {[
@@ -319,36 +347,17 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <CTABlock />
         </div>
       </section>
 
       <Divider />
 
-      {/* ═══════════ 9. PROVA SECUNDÁRIA (JULIANA CURTA) ═══════════ */}
-      <section className="relative bg-background py-16 md:py-20">
+      {/* ═══════════ 10. ENTREGA FINAL ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <div className="bg-secondary border border-border rounded-2xl p-8 md:p-10 relative">
-            <Quote className="w-10 h-10 text-accent/30 absolute top-6 left-6" />
-            <div className="pt-8 space-y-4">
-              <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
-                "O problema nunca foi competência.
-                <br />Era posicionamento.
-                <br />Quando isso ficou claro, tudo começou a mudar."
-              </p>
-            </div>
-            <div className="mt-6 pt-6 border-t border-border">
-              <p className="font-bold text-foreground">Juliana Zobaran</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 10. O QUE VOCÊ SAI COM ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10 text-balance">
+            Você sai com:
+          </h2>
           <ul className="space-y-4 max-w-xl mx-auto mb-8">
             {[
               "Decisão estruturada",
@@ -373,8 +382,8 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 11. QUEM CONDUZ ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
+      {/* ═══════════ 11. AUTORIDADE ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
             <div className="flex-shrink-0">
@@ -394,7 +403,7 @@ const Index = () => {
               </p>
               <div className="text-lg sm:text-xl leading-relaxed text-muted-foreground space-y-4">
                 <p>
-                  Depois de 26 anos dentro do sistema corporativo, eu reconheço exatamente quando uma carreira está em ponto de decisão — e quando a pessoa ainda está se enganando.
+                  26 anos dentro do sistema corporativo.
                 </p>
                 <div className="flex flex-wrap gap-2 my-4">
                   {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "BRF"].map((company) => (
@@ -414,14 +423,14 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 12. INVESTIMENTO ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
+      {/* ═══════════ 12. INVESTIMENTO + CTA ═══════════ */}
+      <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 text-balance">
             Investimento
           </h2>
 
-          <div className="bg-background/50 rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
+          <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-balance">
               Uma sessão individual pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
@@ -431,7 +440,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="bg-background/50 rounded-2xl py-10 px-8 mb-8 inline-block">
+          <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
@@ -470,7 +479,7 @@ const Index = () => {
       <Divider />
 
       {/* ═══════════ 13. GARANTIA ═══════════ */}
-      <section className="relative bg-background py-16 md:py-20">
+      <section className="relative bg-secondary py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
             <Shield className="w-10 h-10 text-accent" />
@@ -486,6 +495,8 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <Divider />
 
       {/* ═══════════ 14. FECHAMENTO + CTA FINAL ═══════════ */}
       <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
@@ -510,14 +521,9 @@ const Index = () => {
       </section>
 
       {/* RODAPÉ */}
-      <footer
-        className="py-10"
-        style={{ background: "var(--hero-gradient)" }}
-      >
-        <div className="container mx-auto px-4 sm:px-6 text-center text-foreground">
-          <p className="font-display text-lg font-bold">Fernanda Moura</p>
-          <p className="text-sm opacity-70 mt-1">Estrategista Executiva de Carreira</p>
-          <p className="text-xs opacity-50 mt-4">© 2026 O Próximo Passo</p>
+      <footer className="py-8 bg-secondary">
+        <div className="container mx-auto px-4 sm:px-6 text-center">
+          <p className="text-sm text-muted-foreground">© O Próximo Passo</p>
         </div>
       </footer>
 
