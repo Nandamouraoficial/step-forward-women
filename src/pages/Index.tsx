@@ -139,7 +139,7 @@ const Index = () => {
                 <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
                   "O problema nunca foi competência.
                   <br />Era posicionamento.
-                  <br />Quando isso ficou claro, tudo começou a mudar."
+                  <br /><br />Quando isso ficou claro, minha forma de me posicionar mudou — e o mercado começou a responder de forma diferente."
                 </p>
               </div>
               <div className="mt-6 pt-4 border-t border-border">
