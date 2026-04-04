@@ -120,11 +120,11 @@ const Index = () => {
       <section className="relative bg-background py-16 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-            <div className="flex-shrink-0 w-40 md:w-52 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
+            <div className="flex-shrink-0 w-32 md:w-44">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-full h-[180%] object-cover object-top"
+                className="w-full rounded-full shadow-xl object-cover"
                 loading="lazy"
               />
             </div>
