@@ -477,7 +477,19 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 12. INVESTIMENTO + CTA ═══════════ */}
+      {/* ═══════════ 15. PRÉ-INVESTIMENTO ═══════════ */}
+      <section className="relative bg-background py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+            Você pode continuar analisando.
+            <br />Ou pode decidir.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 16. INVESTIMENTO + CTA ═══════════ */}
       <section className="relative bg-background py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 text-balance">
