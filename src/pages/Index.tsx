@@ -253,8 +253,8 @@ const Index = () => {
 
           <div className="mt-12 text-center">
             <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-              Executivas não travam por falta de capacidade.
-              <br />Travam porque continuam operando sem uma decisão estruturada.
+              E quando essa decisão é estruturada, o que muda não é só a clareza.
+              <br />É o que passa a acontecer na sua carreira.
             </p>
           </div>
         </div>
