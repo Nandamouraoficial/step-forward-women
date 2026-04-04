@@ -137,8 +137,7 @@ const Index = () => {
                 <p className="font-bold text-foreground">Juliana Zobaran</p>
                 <p className="text-muted-foreground text-sm">Diretora para América Latina</p>
               </div>
-            </div>
-          </div>
+           </div>
         </div>
       </section>
 
