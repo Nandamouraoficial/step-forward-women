@@ -234,7 +234,7 @@ const Index = () => {
                   Ajustou seu posicionamento, ampliou sua presença e passou a comunicar seu valor com clareza.
                 </p>
                 <p>
-                  Resultado:
+                  A partir disso:
                 </p>
                 <p>
                   Foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas.
