@@ -169,11 +169,11 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
             {/* Foto */}
-            <div className="flex-shrink-0 mx-auto lg:mx-0">
+             <div className="flex-shrink-0 mx-auto lg:mx-0 w-64 md:w-80 aspect-[3/4] rounded-2xl shadow-xl overflow-hidden">
               <img
                 src={julianaPhoto}
                 alt="Juliana Zobaran — Diretora para América Latina"
-                className="w-64 md:w-80 rounded-2xl shadow-xl object-cover object-top aspect-[3/4]"
+                className="w-full h-[180%] object-cover object-top"
                 loading="lazy"
               />
             </div>
