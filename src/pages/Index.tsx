@@ -202,7 +202,19 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 5. CASE JULIANA (ENCURTADO) ═══════════ */}
+      {/* ═══════════ 5. TRANSIÇÃO ═══════════ */}
+      <section className="relative bg-background py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+            E quando essa decisão é estruturada, o que muda não é só a clareza.
+            <br />É o que passa a acontecer na sua carreira.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 6. CASE JULIANA ═══════════ */}
       <section className="relative bg-secondary py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
           <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
@@ -250,13 +262,50 @@ const Index = () => {
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="mt-12 text-center">
-            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-              E quando essa decisão é estruturada, o que muda não é só a clareza.
-              <br />É o que passa a acontecer na sua carreira.
+      <Divider />
+
+      {/* ═══════════ 7. FECHAMENTO DO CASE ═══════════ */}
+      <section className="relative bg-background py-12 md:py-16">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
+          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
+            Executivas não travam por falta de capacidade.
+            <br />Travam porque continuam operando sem uma decisão estruturada.
+          </p>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* ═══════════ 8. DEPOIMENTO CARLA ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <p className="text-center text-muted-foreground text-base sm:text-lg mb-8">
+            <span className="text-accent/40">✦</span>
+          </p>
+          <p className="text-center text-foreground font-bold text-lg md:text-xl mb-10 text-balance">
+            E quando a decisão sai do papel, o impacto aparece rápido.
+          </p>
+          <div className="max-w-2xl mx-auto">
+            <Quote className="w-8 h-8 text-accent/30 mb-4 mx-auto md:mx-0" />
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic text-center md:text-left">
+              "Eu sabia que precisava mudar, mas continuava no mesmo lugar — entregando bem e cada vez mais distante do próximo nível.
+              <br /><br />
+              Em poucas horas, consegui estruturar uma decisão que eu vinha adiando há meses.
+              <br /><br />
+              Saí com clareza, segurança e um plano concreto — e dei início à minha consultoria."
             </p>
+            <div className="mt-6 pt-4 border-t border-border text-center md:text-left">
+              <p className="font-bold text-foreground">Carla Negrão</p>
+              <p className="text-muted-foreground text-sm">Ex-executiva | Fundadora, CN Food Consulting</p>
+            </div>
           </div>
+          <p className="text-center text-foreground font-bold text-lg md:text-xl mt-10 text-balance">
+            Decisão não muda só clareza.
+            <br />Muda o que você faz com ela.
+          </p>
         </div>
       </section>
 
