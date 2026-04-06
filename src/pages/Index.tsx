@@ -449,6 +449,7 @@ const Index = () => {
                 <p className="font-bold text-foreground">
                   23 transições profissionais reais.
                 </p>
+                <p className="text-muted-foreground">10 empresas. 5 multinacionais.</p>
               </div>
             </div>
           </div>
