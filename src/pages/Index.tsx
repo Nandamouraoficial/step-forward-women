@@ -509,6 +509,8 @@ const Index = () => {
         </div>
       </section>
 
+      <CTABlock label="QUERO PARAR DE ADIAR" />
+
       <Divider />
 
       {/* ═══════════ 14. FECHAMENTO + CTA FINAL ═══════════ */}
