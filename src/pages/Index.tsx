@@ -439,9 +439,9 @@ const Index = () => {
                 <p>
                   26 anos dentro do sistema corporativo.
                 </p>
-                <div className="flex flex-wrap gap-2 my-4 max-w-md">
+                <div className="grid grid-cols-5 gap-2 my-4">
                   {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "MBRF", "Itaú", "Vigor", "Delboni Auriemo", "Amil", "Unilever"].map((company) => (
-                    <span key={company} className="bg-accent/10 border border-accent/20 text-foreground text-sm px-3 py-1 rounded-full">
+                    <span key={company} className="bg-accent/10 border border-accent/20 text-foreground text-sm px-3 py-1 rounded-full text-center whitespace-nowrap">
                       {company}
                     </span>
                   ))}
