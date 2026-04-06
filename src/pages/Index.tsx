@@ -117,7 +117,7 @@ const Index = () => {
                 <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
               </p>
 
-              <CTABlock microcopy="Em 6 horas. Com método." />
+              <CTABlock label="QUERO DECIDIR MEU PRÓXIMO PASSO" microcopy="Em 6 horas. Com método." />
             </div>
 
             {/* Foto — desktop: lateral direita; mobile: menor abaixo do CTA */}
