@@ -127,6 +127,7 @@ const Index = () => {
                   alt="Fernanda Coutinho"
                   className="w-full h-full object-cover object-top"
                   loading="eager"
+                  fetchPriority="high"
                 />
               </div>
             </div>
