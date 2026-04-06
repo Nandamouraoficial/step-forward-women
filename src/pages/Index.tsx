@@ -2,6 +2,7 @@ import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Quote } from "lucide-react";
 import julianaPhoto from "@/assets/juliana-zobaran.png";
+import fernandaHero from "@/assets/fernanda-hero.png";
 
 const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
 const SealBadge = lazy(() => import("@/components/SealBadge"));
