@@ -1,44 +1,40 @@
 
 
-## Reescrita da Primeira Dobra — Foco em Retenção
+## Ajustes Finais — LP "O Próximo Passo"
 
-### O que muda
+### Mudanças pontuais em `src/pages/Index.tsx`
 
-Reescrever **apenas a seção Hero** (linhas 90-130 de `src/pages/Index.tsx`). Nenhuma outra seção é alterada.
+**1. HERO — Ajuste de texto (linhas 104-110)**
+- Linha 105: trocar "Se você continua entregando bem, mas não está crescendo na mesma proporção, você já está em momento de decisão." por "Você continua entregando — mas não está crescendo na mesma proporção."
+- Adicionar novo parágrafo logo abaixo: "O problema não é falta de capacidade. É uma decisão que ainda não foi estruturada."
+- Manter o parágrafo do "O Próximo Passo" após esse novo bloco
 
-### Novo conteúdo do Hero
+**2. CTA — Padronizar todos os botões**
+- Linha 65: mudar label default de `"QUERO DECIDIR MEU PRÓXIMO PASSO"` para `"GARANTIR MINHA VAGA"`
+- Isso afeta automaticamente os CTAs das seções 6 (O Que É) e qualquer outro que use o default
 
-Estrutura em 3 blocos curtos (max 2 linhas cada), com hierarquia visual clara:
+**3. Transição antes do Case Juliana (linha 249-254)**
+- Trocar a frase de fechamento do bloco Consequência/transição para Case: "E quando essa decisão é estruturada, o que muda não é só a clareza. É o que passa a acontecer na sua carreira."
+- Inserir como novo bloco entre Consequência (seção 4) e Case Juliana (seção 5)
 
-1. **Tensão** (fonte maior, destaque): "Se você sente que está pronta para o próximo nível, mas não está avançando — o problema não é esforço."
-2. **Diagnóstico** (fonte média): "É uma decisão que ainda não foi estruturada."
-3. **Promessa** (destaque secundário): "Em 6 horas, você sai com clareza total sobre o seu próximo movimento — e um plano de 30 dias para executar."
-4. Info do evento + CTA
+**4. Case Juliana — "Resultado:" → "A partir disso:" (linha 232)**
+- Trocar `Resultado:` por `A partir disso:`
 
-### Ajustes técnicos para above-the-fold
+**5. Bloco Carla — Não existe na LP atual**
+- A LP não tem um bloco/depoimento da Carla. Este item será ignorado (não adicionar blocos novos, conforme regra da estrutura).
 
-- Reduzir padding top mobile: `pt-4` (era `pt-6`)
-- Reduzir `mb` entre parágrafos para `mb-1`
-- Aumentar fonte da primeira frase: `text-xl sm:text-3xl` (destaque principal)
-- Segunda frase com `text-lg sm:text-2xl` e cor accent
-- Terceira frase com `text-base sm:text-xl`
-- Remover os 4 parágrafos longos atuais (linhas 103-118) — substituir pelos 3 blocos curtos
-- Manter espaçamento generoso antes do botão para destaque
+**6. Investimento — Adicionar linha final (após linha 452)**
+- Após "Menos que uma sessão — com impacto direto no seu próximo movimento.", adicionar: "Sem depender de timing externo ou validação do mercado."
 
-### Hierarquia visual
+**7. Limpeza — Verificar repetições do nome "Juliana" no case**
+- No case (linhas 217-241), "Juliana" aparece na linha 219 ("Juliana já era diretora..."). Manter apenas a menção no bloco de assinatura (linha 243). Trocar linha 219 para remover o nome: "Já era diretora para América Latina, com mais de 20 anos..."
 
-```text
-[Frase 1 - grande, bold]          ← tensão
-[Frase 2 - média, accent]         ← diagnóstico
-[Frase 3 - normal]                ← promessa
-[info evento - small, muted]
-[===== BOTÃO VERDE =====]         ← above the fold
-```
+**8. Foto Juliana — Ajustar crop do busto pra cima**
+- Na seção Prova Imediata (linha 123-130): aplicar container com aspect-ratio e `h-[140%] object-cover object-top` para cortar do busto pra cima
+- Na seção Case Juliana (linha 204-211): mesmo tratamento
 
-### Performance
-
-As imagens já têm lazy-load e o Hero é texto puro — sem mudanças de performance necessárias. O LCP já está otimizado (Hero é texto + CSS gradient).
-
-### Arquivo editado
-- `src/pages/Index.tsx` — apenas a seção Hero (linhas 90-130)
+### O que NÃO muda
+- Toda a lógica (scroll tracking, CTA click, barra fixa mobile, CountdownTimer, SealBadge)
+- Ordem das seções (já está correta)
+- Rodapé (já está "© O Próximo Passo")
 
