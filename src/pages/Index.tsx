@@ -117,7 +117,7 @@ const Index = () => {
                 <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
               </p>
 
-              <CTABlock microcopy="Em 6 horas. Com método." />
+              <CTABlock label="QUERO DECIDIR MEU PRÓXIMO PASSO" microcopy="Em 6 horas. Com método." />
             </div>
 
             {/* Foto — desktop: lateral direita; mobile: menor abaixo do CTA */}
@@ -289,7 +289,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <CTABlock />
+          <CTABlock label="DECIDIR AGORA, NÃO AMANHÃ" />
         </div>
       </section>
 
@@ -509,6 +509,8 @@ const Index = () => {
         </div>
       </section>
 
+      <CTABlock label="QUERO PARAR DE ADIAR" />
+
       <Divider />
 
       {/* ═══════════ 14. FECHAMENTO + CTA FINAL ═══════════ */}
@@ -529,7 +531,7 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
-          <CTABlock label="GARANTIR MINHA VAGA" microcopy="Turma limitada — encerramento em 10/04" />
+          <CTABlock label="CHEGA DE ESPERAR" microcopy="Turma limitada — encerramento em 10/04" />
         </div>
       </section>
 
@@ -547,7 +549,7 @@ const Index = () => {
             size="lg"
             className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
-            GARANTIR MINHA VAGA
+            ESSE É MEU MOMENTO
           </Button>
         </a>
         <p className="text-xs text-muted-foreground mt-1 text-center">Turma limitada — encerramento em 10/04</p>
