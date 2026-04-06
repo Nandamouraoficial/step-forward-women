@@ -549,7 +549,7 @@ const Index = () => {
             size="lg"
             className="bg-cta-green hover:bg-cta-green/85 text-cta-green-foreground font-bold text-base w-full py-6 rounded-lg shadow-lg tracking-wide"
           >
-            GARANTIR MINHA VAGA
+            ESSE É MEU MOMENTO
           </Button>
         </a>
         <p className="text-xs text-muted-foreground mt-1 text-center">Turma limitada — encerramento em 10/04</p>
