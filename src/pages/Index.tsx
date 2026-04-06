@@ -531,7 +531,7 @@ const Index = () => {
             <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
-          <CTABlock label="GARANTIR MINHA VAGA" microcopy="Turma limitada — encerramento em 10/04" />
+          <CTABlock label="CHEGA DE ESPERAR" microcopy="Turma limitada — encerramento em 10/04" />
         </div>
       </section>
 
