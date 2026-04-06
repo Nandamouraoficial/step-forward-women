@@ -93,28 +93,39 @@ const Index = () => {
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
       >
-        <div className="relative container mx-auto px-4 sm:px-6 pt-10 md:pt-24 lg:pt-32 pb-10 md:pb-24">
+        <div className="relative container mx-auto px-4 sm:px-6 pt-6 md:pt-24 lg:pt-32 pb-6 md:pb-24">
           <div className="max-w-2xl mx-auto text-foreground text-center">
-            <h1 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
-              Você não está travada.
+            <h1 className="font-display text-lg sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-3">
+              Você já sabe que precisa mudar.
               <br />
-              Está adiando uma decisão.
+              Mas ainda não decidiu como.
             </h1>
 
-            <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              Você continua entregando — mas não está crescendo na mesma proporção.
+            <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-2 max-w-xl mx-auto opacity-90">
+              Você já percebeu que continuar fazendo mais do mesmo não vai te levar para o próximo nível.
             </p>
 
-            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              O problema não é falta de capacidade.
-              <br />É uma decisão que ainda não foi estruturada.
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-2 max-w-xl mx-auto opacity-90">
+              Mas ainda não estruturou qual é, de fato, o próximo movimento.
             </p>
 
-            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto">
-              <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-2 max-w-xl mx-auto opacity-90">
+              E está adiando uma decisão que já sabe que precisa tomar.
             </p>
 
-            <CTABlock microcopy="Em 6 horas. Com método." />
+            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-2 max-w-xl mx-auto">
+              Essa imersão existe para uma coisa:
+              <br /><strong className="text-accent">Te fazer sair com uma decisão clara sobre o seu próximo passo — em um único dia.</strong>
+            </p>
+
+            <p className="text-xs sm:text-sm text-muted-foreground mb-2">
+              11 de abril · 9h às 15h · Online ao vivo
+            </p>
+            <p className="text-xs sm:text-sm text-muted-foreground mb-4">
+              Grupo reduzido — até 15 executivas
+            </p>
+
+            <CTABlock microcopy="" label="QUERO DECIDIR MEU PRÓXIMO PASSO" />
           </div>
         </div>
       </section>
