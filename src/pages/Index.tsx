@@ -511,7 +511,7 @@ const Index = () => {
         </div>
       </section>
 
-      <CTABlock label="QUERO PARAR DE ADIAR" />
+      
 
       <Divider />
 
