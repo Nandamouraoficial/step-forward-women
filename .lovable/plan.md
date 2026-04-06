@@ -1,16 +1,20 @@
 
 
-## Adicionar CTA "QUERO PARAR DE ADIAR" após o Case Juliana
+## Atualizar seção de empresas e adicionar linha "10 empresas, 5 multinacionais"
 
-### Mudança
+### Mudanças
 
-Inserir um `<CTABlock label="QUERO PARAR DE ADIAR" />` após o fechamento da seção do Case Juliana (linha 158), antes do `<Divider />` na linha 160.
+1. **Expandir lista de empresas** (linha 443): adicionar Itaú, Vigor, Delboni Auriemo, Amil e Unilever ao array existente, ficando:
+   `["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "MBRF", "Itaú", "Vigor", "Delboni Auriemo", "Amil", "Unilever"]`
+
+2. **Adicionar texto abaixo de "23 transições"** (após linha 451): inserir novo parágrafo:
+   `<p className="text-muted-foreground">10 empresas. 5 multinacionais.</p>`
 
 ### Local
 
-`src/pages/Index.tsx`, entre as linhas 158-160 — após `</section>` do case Juliana e antes do `<Divider />` que antecede a seção Diagnóstico.
+`src/pages/Index.tsx`, linhas 443 e 451.
 
 ### O que NÃO muda
 
-Nenhuma outra seção, lógica ou CTA existente.
+Layout, estilos dos badges, demais seções.
 
