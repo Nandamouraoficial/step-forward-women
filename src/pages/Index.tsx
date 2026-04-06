@@ -120,8 +120,8 @@ const Index = () => {
               <CTABlock microcopy="Em 6 horas. Com método." />
             </div>
 
-            {/* Foto à direita */}
-            <div className="hidden lg:block flex-shrink-0 w-[320px] xl:w-[380px]">
+            {/* Foto — desktop: lateral direita; mobile: menor abaixo do CTA */}
+            <div className="flex-shrink-0 w-[180px] sm:w-[220px] lg:w-[320px] xl:w-[380px] mx-auto lg:mx-0">
               <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
                 <img
                   src={fernandaHero}
