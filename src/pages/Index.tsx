@@ -180,6 +180,7 @@ const Index = () => {
           <p className="text-center text-accent font-bold text-lg sm:text-xl">
             👉 você já está em momento de decisão.
           </p>
+          <CTABlock label="EU MEREÇO ESSE PRÓXIMO PASSO" />
         </div>
       </section>
 
@@ -359,6 +360,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
+          <CTABlock label="COMEÇAR MINHA VIRADA AGORA" />
         </div>
       </section>
 
