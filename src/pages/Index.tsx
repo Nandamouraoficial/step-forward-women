@@ -260,6 +260,8 @@ const Index = () => {
               src="/images/amigos-do-bem-icon.png"
               alt="ONG Amigos do Bem"
               className="w-14 h-14 object-contain shrink-0"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-muted-foreground text-sm text-left">
               Parte das vendas desta imersão é direcionada para a ONG{" "}
