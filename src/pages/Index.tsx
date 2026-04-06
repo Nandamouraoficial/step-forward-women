@@ -342,6 +342,24 @@ const Index = () => {
         </div>
       </section>
 
+      {/* ═══════════ DEPOIMENTO CARLA NEGRÃO ═══════════ */}
+      <section className="relative bg-secondary py-16 md:py-20">
+        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
+          <div className="bg-card rounded-2xl p-8 md:p-10 border border-border/40">
+            <span className="text-accent text-4xl font-serif leading-none block mb-4">"</span>
+            <blockquote className="text-foreground text-lg md:text-xl leading-relaxed mb-6 text-balance">
+              Eu sabia que precisava mudar, mas ficava paralisada tentando ter certeza antes de agir. 
+              Em uma sessão, entendi que clareza não vem antes da decisão — vem depois. 
+              Saí da consultoria e comecei minha própria operação em menos de 30 dias.
+            </blockquote>
+            <div>
+              <p className="font-bold text-foreground">Carla Negrão</p>
+              <p className="text-sm text-muted-foreground">Consultora independente</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Divider />
 
       {/* ═══════════ 9. PARA QUEM É ═══════════ */}
