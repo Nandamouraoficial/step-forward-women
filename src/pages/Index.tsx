@@ -196,6 +196,7 @@ const Index = () => {
             <li>nas oportunidades que não vêm</li>
             <li>na sensação de estar sempre ocupada — mas não avançando</li>
             <li>em decisões que você já sabe que precisa tomar</li>
+            <li>quando você adoece por estagnação e angústia</li>
           </ul>
           <div className="mt-10 max-w-2xl mx-auto">
             <p className="text-foreground font-bold text-lg md:text-xl text-balance">
