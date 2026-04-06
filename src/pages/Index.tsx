@@ -354,7 +354,7 @@ const Index = () => {
             </blockquote>
             <div>
               <p className="font-bold text-foreground">Carla Negrão</p>
-              <p className="text-sm text-muted-foreground">Consultora independente</p>
+              <p className="text-sm text-muted-foreground">Ex-executiva Nestlé · Proprietária da CN Consulting</p>
             </div>
           </div>
         </div>
