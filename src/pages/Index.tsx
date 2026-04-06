@@ -182,6 +182,7 @@ const Index = () => {
           </p>
           <CTABlock label="EU MEREÇO ESSE PRÓXIMO PASSO" />
         </div>
+      </section>
 
       <Divider />
 
