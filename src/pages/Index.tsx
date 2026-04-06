@@ -1,7 +1,6 @@
 import { useEffect, lazy, Suspense } from "react";
 import { Button } from "@/components/ui/button";
 import { Check, Shield, Quote } from "lucide-react";
-import julianaPhoto from "@/assets/juliana-zobaran.png";
 
 const CountdownTimer = lazy(() => import("@/components/CountdownTimer"));
 const SealBadge = lazy(() => import("@/components/SealBadge"));
@@ -77,7 +76,7 @@ const Index = () => {
   );
 
   const Divider = () => (
-    <div className="flex items-center justify-center py-6">
+    <div className="flex items-center justify-center py-4">
       <span className="block w-16 h-px bg-accent/30" />
       <span className="mx-3 text-accent/40 text-sm">✦</span>
       <span className="block w-16 h-px bg-accent/30" />
@@ -88,7 +87,7 @@ const Index = () => {
     <main className="min-h-screen bg-background text-foreground font-body">
       <Suspense fallback={null}><SealBadge /></Suspense>
 
-      {/* ═══════════ 1. HERO ═══════════ */}
+      {/* ═══════════ 1. HERO + CTA ═══════════ */}
       <section
         className="relative overflow-hidden"
         style={{ background: "var(--hero-gradient)" }}
@@ -132,38 +131,16 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 2. PROVA IMEDIATA ═══════════ */}
-      <section className="relative bg-background py-16 md:py-20">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <div className="flex flex-col items-center gap-6 max-w-2xl mx-auto text-center">
-              <div className="relative">
-                <Quote className="w-8 h-8 text-accent/30 mb-2" />
-                <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic">
-                  "O problema nunca foi competência.
-                  <br />Era posicionamento.
-                  <br /><br />Quando isso ficou claro, minha forma de me posicionar mudou — e o mercado começou a responder de forma diferente."
-                </p>
-              </div>
-              <div className="mt-6 pt-4 border-t border-border">
-                <p className="font-bold text-foreground">Juliana Zobaran</p>
-                <p className="text-muted-foreground text-sm">Diretora Executiva para América Latina</p>
-              </div>
-           </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 3. DIAGNÓSTICO ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
+      {/* ═══════════ 2. BLOCO DE DECISÃO ═══════════ */}
+      <section className="relative bg-secondary py-10 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
           <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-4 text-balance">
             O problema não é decidir errado.
           </h2>
-          <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-xl mx-auto">
+          <p className="text-lg sm:text-xl text-muted-foreground mb-6 max-w-xl mx-auto">
             É saber que precisa mudar — e continuar sem um plano concreto.
           </p>
-          <div className="space-y-3 max-w-xl mx-auto mb-8 text-left">
+          <div className="space-y-3 max-w-xl mx-auto mb-6 text-left">
             <p className="text-base sm:text-lg text-foreground leading-relaxed">
               Em carreiras seniores, o custo não aparece de uma vez.
             </p>
@@ -185,291 +162,28 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 4. CONSEQUÊNCIA ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-10 text-balance">
-            O custo não aparece hoje.
-          </h2>
-          <p className="text-lg md:text-xl text-muted-foreground mb-6">Aparece:</p>
-          <ul className="text-lg md:text-xl leading-relaxed text-muted-foreground space-y-4 text-left max-w-2xl mx-auto list-disc list-inside">
-            <li>nas oportunidades que não vêm</li>
-            <li>na sensação de estar sempre ocupada — mas não avançando</li>
-            <li>em decisões que você já sabe que precisa tomar</li>
-          </ul>
-          <div className="mt-10 max-w-2xl mx-auto">
-            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-              Carreiras seniores não travam de uma vez.
-              <br />Elas perdem timing.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 5. TRANSIÇÃO ═══════════ */}
-      <section className="relative bg-background py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-            E quando essa decisão é estruturada, o que muda não é só a clareza.
-            <br />É o que passa a acontecer na sua carreira.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 6. CASE JULIANA ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-5xl">
-          <div className="flex flex-col lg:flex-row items-start gap-10 lg:gap-14">
-            <div className="flex-shrink-0 mx-auto lg:mx-0 w-52 md:w-64 aspect-square rounded-full shadow-xl overflow-hidden">
-              <img
-                src={julianaPhoto}
-                alt="Juliana Zobaran — Diretora Executiva para América Latina"
-                className="w-full h-[140%] object-cover object-top"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex-1">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6 text-balance">
-                O problema não era capacidade.
-                <br />Era posicionamento.
-              </h2>
-              <div className="text-base sm:text-lg leading-relaxed text-muted-foreground space-y-4">
-                <p>
-                  Já era diretora para América Latina, com mais de 20 anos de carreira e impacto direto em resultado e estratégia.
-                </p>
-                <p>
-                  Dentro do seu ecossistema, era reconhecida.
-                  <br />Fora dele, o mercado quase não a via.
-                </p>
-                <p>
-                  A partir disso:
-                </p>
-                <p>
-                  Foi selecionada para o <strong className="text-foreground">SW50 do Santander</strong>, entre milhares de candidatas.
-                </p>
-                <p className="text-foreground font-bold">
-                  Não porque ficou mais competente.
-                  <br />Mas porque passou a ser percebida como sempre foi.
-                </p>
-              </div>
-              <div className="mt-6 pt-6 border-t border-border">
-                <p className="font-bold text-foreground">Juliana Zobaran</p>
-                <p className="text-muted-foreground text-sm sm:text-base">Diretora Executiva para América Latina</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 7. FECHAMENTO DO CASE ═══════════ */}
-      <section className="relative bg-background py-12 md:py-16">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-            Executivas não travam por falta de capacidade.
-            <br />Travam porque continuam operando sem uma decisão estruturada.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 8. DEPOIMENTO CARLA ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-20">
+      {/* ═══════════ 3. PROVA SOCIAL ═══════════ */}
+      <section className="relative bg-background py-10 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <p className="text-center text-muted-foreground text-base sm:text-lg mb-8">
-            <span className="text-accent/40">✦</span>
-          </p>
-          <p className="text-center text-foreground font-bold text-lg md:text-xl mb-10 text-balance">
-            E quando a decisão deixa de ser reflexão e vira ação, o impacto aparece rápido.
-          </p>
-          <div className="max-w-2xl mx-auto">
-            <Quote className="w-8 h-8 text-accent/30 mb-4 mx-auto md:mx-0" />
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed italic text-center md:text-left">
-              "Eu sabia que precisava mudar, mas continuava no mesmo lugar — entregando bem e cada vez mais distante do próximo nível.
-              <br /><br />
-              O que faltava não era clareza. Era decisão.
-              <br /><br />
-              Quando isso ficou estruturado, eu parei de adiar — e dei início à minha consultoria."
-            </p>
-            <div className="mt-6 pt-4 border-t border-border text-center md:text-left">
-              <p className="font-bold text-foreground">Carla Negrão</p>
-              <p className="text-muted-foreground text-sm">Ex-executiva | Fundadora, CN Food Consulting</p>
-            </div>
-          </div>
-          <p className="text-center text-foreground font-bold text-lg md:text-xl mt-10 text-balance">
-            Decisão não muda só clareza.
-            <br />Muda o que você faz com ela.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 6. O QUE É ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-            Não é um curso.
-            <br />É uma decisão estruturada.
-          </h2>
-          <p className="text-muted-foreground text-lg mb-10">Em 6 horas, você sai com:</p>
-          <ul className="space-y-4 max-w-xl mx-auto text-left mb-10">
-            {[
-              "uma decisão clara sobre seu próximo movimento",
-              "critérios objetivos para escolher o caminho certo",
-              "um plano de 30 dias para execução",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
-                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <CTABlock />
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 7. TRANSFORMAÇÃO (ANTES vs DEPOIS) ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-12 text-balance">
-            O que muda quando você decide
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-background/50 border border-border rounded-2xl p-8">
-              <h3 className="font-display text-xl font-bold text-muted-foreground mb-6">Antes</h3>
-              <ul className="space-y-3 text-muted-foreground text-base sm:text-lg">
-                <li>Você continua entregando, mas sem crescimento proporcional</li>
-                <li>Avalia caminhos, mas não escolhe</li>
-                <li>Sente que está pronta para mais, mas não avança</li>
-              </ul>
-            </div>
-            <div className="bg-accent/5 border border-accent/20 rounded-2xl p-8">
-              <h3 className="font-display text-xl font-bold text-accent mb-6">Depois</h3>
-              <ul className="space-y-3 text-foreground text-base sm:text-lg">
-                <li>Você sabe exatamente qual é o seu próximo movimento</li>
-                <li>Decide com critério e segurança</li>
-                <li>Elimina caminhos que não fazem sentido</li>
-                <li>Executa com direção</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 8. CONTRAPONTO ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mb-6">
-            O mercado não recompensa quem trabalha mais.
-            <br />Recompensa quem decide melhor.
-          </p>
-          <p className="text-foreground font-bold text-xl md:text-2xl text-balance">
-            Clareza não vem com mais informação.
-            <br />Vem com decisão.
-          </p>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 9. PARA QUEM É ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground text-center mb-10 text-balance">
-            Para você que:
-          </h2>
-          <ul className="space-y-4 max-w-xl mx-auto mb-10">
-            {[
-              "já construiu uma trajetória sólida",
-              "continua entregando resultado",
-              "mas sabe que o próximo passo não pode ser improvisado",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
-                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 10. ENTREGA FINAL ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 max-w-3xl">
-          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground text-center mb-10 text-balance">
-            Ao final da imersão, você sai com:
-          </h2>
-          <ul className="space-y-4 max-w-xl mx-auto mb-8">
-            {[
-              "Decisão estruturada",
-              "Clareza do que está travando sua carreira",
-              "Plano de 30 dias",
-              "Eliminação de caminhos errados",
-            ].map((item) => (
-              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
-                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
-          <div className="text-center">
-            <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-              Você não sai com mais conteúdo.
-              <br />Sai com uma decisão tomada.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* ═══════════ 11. AUTORIDADE ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6">
-          <div className="flex flex-col lg:flex-row items-center gap-12 max-w-5xl mx-auto">
-            <div className="flex-shrink-0">
-              <img
-                src="/images/sobre-poltrona.png"
-                alt="Fernanda Moura — Estrategista Executiva"
-                className="w-72 md:w-80 rounded-2xl shadow-xl object-cover"
-                loading="lazy"
-              />
-            </div>
-            <div className="flex-1 text-center lg:text-left">
-              <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-1">
-                Fernanda Moura
-              </h2>
-              <p className="text-accent font-bold mb-6">
-                Estrategista Executiva de Carreira
+          <div className="space-y-8 max-w-2xl mx-auto">
+            {/* Carla */}
+            <div className="text-center">
+              <Quote className="w-6 h-6 text-accent/30 mx-auto mb-2" />
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed italic mb-3">
+                "Saí da paralisia da executiva bem-sucedida à beira do burnout e abri minha consultoria."
               </p>
-              <div className="text-lg sm:text-xl leading-relaxed text-muted-foreground space-y-4">
-                <p>
-                  26 anos dentro do sistema corporativo.
-                </p>
-                <div className="flex flex-wrap gap-2 my-4">
-                  {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "BRF"].map((company) => (
-                    <span key={company} className="bg-accent/10 border border-accent/20 text-foreground text-sm px-3 py-1 rounded-full">
-                      {company}
-                    </span>
-                  ))}
-                </div>
-                <p className="font-bold text-foreground">
-                  23 transições profissionais reais.
-                </p>
-              </div>
+              <p className="font-bold text-foreground text-sm">Carla Negrão</p>
+              <p className="text-muted-foreground text-xs">Ex-executiva de multinacional | Fundadora, CN Food Consulting</p>
+            </div>
+
+            {/* Juliana */}
+            <div className="text-center">
+              <Quote className="w-6 h-6 text-accent/30 mx-auto mb-2" />
+              <p className="text-base sm:text-lg text-muted-foreground leading-relaxed italic mb-3">
+                "Ganhei estrutura, posicionamento e passei a atrair as oportunidades certas."
+              </p>
+              <p className="font-bold text-foreground text-sm">Juliana Zobaran</p>
+              <p className="text-muted-foreground text-xs">Diretora Executiva para América Latina</p>
             </div>
           </div>
         </div>
@@ -477,28 +191,41 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 15. PRÉ-INVESTIMENTO ═══════════ */}
-      <section className="relative bg-background py-12 md:py-16">
+      {/* ═══════════ 4. O QUE VOCÊ LEVA ═══════════ */}
+      <section className="relative bg-secondary py-10 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <p className="text-foreground font-bold text-lg md:text-xl text-balance">
-            Você pode continuar analisando.
-            <br />Ou pode decidir.
-          </p>
+          <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-balance">
+            Ao final da imersão, você leva:
+          </h2>
+          <ul className="space-y-4 max-w-xl mx-auto text-left">
+            {[
+              "decisão clara sobre o próximo movimento",
+              "diagnóstico do que está travando sua carreira",
+              "caminhos possíveis com análise estratégica",
+              "plano de 30 dias para sair da intenção e ir para ação",
+              "clareza sobre o que parar de fazer",
+            ].map((item) => (
+              <li key={item} className="flex items-start gap-3 text-base sm:text-lg text-foreground">
+                <Check className="w-5 h-5 text-accent mt-1 shrink-0" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
       <Divider />
 
-      {/* ═══════════ 16. INVESTIMENTO + CTA ═══════════ */}
-      <section className="relative bg-background py-16 md:py-24">
+      {/* ═══════════ 5. INVESTIMENTO + CTA ═══════════ */}
+      <section className="relative bg-background py-12 md:py-20">
         <div className="container mx-auto px-4 sm:px-6 max-w-3xl text-center">
-          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-8 text-balance">
+          <h2 className="font-display text-2xl md:text-4xl font-bold text-foreground mb-6 text-balance">
             Investimento
           </h2>
 
-          <div className="bg-secondary rounded-xl p-6 mb-8 max-w-xl mx-auto text-left">
+          <div className="bg-secondary rounded-xl p-6 mb-6 max-w-xl mx-auto text-left">
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed text-balance">
-              Uma sessão individual pode custar entre{" "}
+              Uma sessão individual com uma ex-diretora executiva pode custar entre{" "}
               <strong className="text-foreground">R$ 3.000 e R$ 10.000</strong>.
             </p>
             <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mt-4 text-balance">
@@ -506,17 +233,16 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="bg-secondary rounded-2xl py-10 px-8 mb-8 inline-block">
+          <div className="bg-secondary rounded-2xl py-8 px-8 mb-6 inline-block">
             <p className="font-body text-primary text-2xl md:text-3xl font-semibold">
               12x de R$ 139,90
             </p>
             <p className="text-muted-foreground text-base mt-2">ou R$ 1.497 à vista</p>
           </div>
 
-          <div className="max-w-xl mx-auto mb-8">
+          <div className="max-w-xl mx-auto mb-6">
             <p className="text-foreground font-bold text-lg text-balance">
               Menos que uma sessão — com impacto direto no seu próximo movimento.
-              <br />Sem depender de timing externo ou validação do mercado.
             </p>
           </div>
 
@@ -545,8 +271,8 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 13. GARANTIA ═══════════ */}
-      <section className="relative bg-secondary py-16 md:py-20">
+      {/* ═══════════ 6. GARANTIA ═══════════ */}
+      <section className="relative bg-secondary py-10 md:py-16">
         <div className="container mx-auto px-4 sm:px-6 max-w-xl text-center">
           <div className="bg-accent/5 border border-accent/20 rounded-xl p-8 flex flex-col items-center gap-4">
             <Shield className="w-10 h-10 text-accent" />
@@ -565,7 +291,7 @@ const Index = () => {
 
       <Divider />
 
-      {/* ═══════════ 14. FECHAMENTO + CTA FINAL ═══════════ */}
+      {/* ═══════════ 7. FECHAMENTO + CTA ═══════════ */}
       <section className="relative overflow-hidden pt-40 sm:pt-48 md:pt-64 pb-12">
         <img
           src="/images/final-equipe.png"
@@ -575,15 +301,15 @@ const Index = () => {
         />
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
-          <p className="text-lg md:text-xl text-muted-foreground mb-6 text-balance">
+          <p className="text-lg md:text-xl text-muted-foreground mb-4 text-balance">
             Se você já percebeu que continuar sem direção tem custo,
             <br />essa é a sala para decidir com método.
           </p>
-          <div className="flex flex-col items-center gap-2 mb-10">
+          <div className="flex flex-col items-center gap-2 mb-8">
             <span className="text-foreground font-bold text-base sm:text-lg">Não para pensar.</span>
             <span className="text-foreground font-bold text-base sm:text-lg">Para decidir.</span>
           </div>
-          <CTABlock label="GARANTIR MINHA VAGA" microcopy="Turma limitada — encerramento em 10/04" />
+          <CTABlock label="QUERO DECIDIR MEU PRÓXIMO PASSO" />
         </div>
       </section>
 
