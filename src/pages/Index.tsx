@@ -95,27 +95,42 @@ const Index = () => {
         style={{ background: "var(--hero-gradient)" }}
       >
         <div className="relative container mx-auto px-4 sm:px-6 pt-10 md:pt-24 lg:pt-32 pb-10 md:pb-24">
-          <div className="max-w-2xl mx-auto text-foreground text-center">
-            <h1 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
-              Você não está travada.
-              <br />
-              Está adiando uma decisão.
-            </h1>
+          <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12 max-w-5xl mx-auto text-foreground">
+            {/* Texto à esquerda */}
+            <div className="text-center lg:text-left flex-1">
+              <h1 className="font-display text-xl sm:text-3xl md:text-4xl lg:text-[2.75rem] font-black leading-tight mb-4">
+                Você não está travada.
+                <br />
+                Está adiando uma decisão.
+              </h1>
 
-            <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              Você continua entregando — mas não está crescendo na mesma proporção.
-            </p>
+              <p className="text-sm sm:text-lg md:text-xl font-light leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 opacity-90">
+                Você continua entregando — mas não está crescendo na mesma proporção.
+              </p>
 
-            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-4 max-w-xl mx-auto opacity-90">
-              O problema não é falta de capacidade.
-              <br />É uma decisão que ainda não foi estruturada.
-            </p>
+              <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-4 max-w-xl mx-auto lg:mx-0 opacity-90">
+                O problema não é falta de capacidade.
+                <br />É uma decisão que ainda não foi estruturada.
+              </p>
 
-            <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto">
-              <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
-            </p>
+              <p className="text-sm sm:text-lg md:text-xl leading-relaxed mb-6 max-w-xl mx-auto lg:mx-0">
+                <strong className="text-accent">O Próximo Passo</strong> é onde você estrutura isso com método — antes que o custo apareça.
+              </p>
 
-            <CTABlock microcopy="Em 6 horas. Com método." />
+              <CTABlock microcopy="Em 6 horas. Com método." />
+            </div>
+
+            {/* Foto à direita */}
+            <div className="hidden lg:block flex-shrink-0 w-[320px] xl:w-[380px]">
+              <div className="rounded-2xl overflow-hidden shadow-2xl aspect-[3/4]">
+                <img
+                  src={fernandaHero}
+                  alt="Fernanda Coutinho"
+                  className="w-full h-full object-cover object-top"
+                  loading="eager"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>
