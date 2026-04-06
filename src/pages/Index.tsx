@@ -440,7 +440,7 @@ const Index = () => {
                   26 anos dentro do sistema corporativo.
                 </p>
                 <div className="flex flex-wrap gap-2 my-4">
-                  {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "MBRF"].map((company) => (
+                  {["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "MBRF", "Itaú", "Vigor", "Delboni Auriemo", "Amil", "Unilever"].map((company) => (
                     <span key={company} className="bg-accent/10 border border-accent/20 text-foreground text-sm px-3 py-1 rounded-full">
                       {company}
                     </span>
@@ -449,6 +449,7 @@ const Index = () => {
                 <p className="font-bold text-foreground">
                   23 transições profissionais reais.
                 </p>
+                <p className="text-muted-foreground">10 empresas. 5 multinacionais.</p>
               </div>
             </div>
           </div>
