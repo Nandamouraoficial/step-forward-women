@@ -300,6 +300,7 @@ const Index = () => {
           alt="Fernanda Moura com equipe"
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
         />
         <div className="absolute inset-0 bg-background/80" />
         <div className="relative container mx-auto px-4 sm:px-6 max-w-3xl text-center text-foreground flex flex-col justify-end min-h-[320px] sm:min-h-[400px]">
