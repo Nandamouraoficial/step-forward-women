@@ -289,7 +289,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
-          <CTABlock />
+          <CTABlock label="DECIDIR AGORA, NÃO AMANHÃ" />
         </div>
       </section>
 
