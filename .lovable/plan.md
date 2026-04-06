@@ -1,20 +1,50 @@
 
 
-## Atualizar seção de empresas e adicionar linha "10 empresas, 5 multinacionais"
+## Reestruturar Hero + Otimizações Técnicas de Performance
 
-### Mudanças
+### Parte 1: Nova Hero (4 blocos enxutos + CTA único)
 
-1. **Expandir lista de empresas** (linha 443): adicionar Itaú, Vigor, Delboni Auriemo, Amil e Unilever ao array existente, ficando:
-   `["Coca-Cola", "Cargill", "Kraft Heinz", "Kimberly-Clark", "MBRF", "Itaú", "Vigor", "Delboni Auriemo", "Amil", "Unilever"]`
+Reescrever a seção Hero (linhas 92-136) em `src/pages/Index.tsx` com estrutura mais limpa:
 
-2. **Adicionar texto abaixo de "23 transições"** (após linha 451): inserir novo parágrafo:
-   `<p className="text-muted-foreground">10 empresas. 5 multinacionais.</p>`
+**Bloco 1 (hook)**
+> Você não está travada.
+> Você está atrasando uma decisão que já está custando crescimento.
 
-### Local
+**Bloco 2 (contexto)**
+> Você continua entregando — mas não está avançando na mesma proporção.
 
-`src/pages/Index.tsx`, linhas 443 e 451.
+**Bloco 3 (promessa)**
+> Em 6 horas, você estrutura essa decisão com clareza e um plano executável.
+
+**Bloco 4 (detalhes rápidos)** — linha compacta com ícones ou separadores:
+> 11 de abril · 9h às 15h · Online · Até 15 executivas
+
+**CTA único**: QUERO DECIDIR MEU PRÓXIMO PASSO (sem microcopy "Em 6 horas. Com método." pois a promessa já diz isso)
+
+A foto da Fernanda permanece ao lado (desktop) / abaixo (mobile).
+
+---
+
+### Parte 2: Otimizações Técnicas
+
+1. **Comprimir imagens da hero** — converter `fernanda-hero.png` (1.4MB) e `juliana-zobaran.png` (1.2MB) para WebP com qualidade 80, reduzindo ~70% do tamanho. Atualizar imports.
+
+2. **Lazy load abaixo da dobra** — a foto da Juliana (seção 5) e a imagem `sobre-poltrona.png` já têm `loading="lazy"`. Garantir que `juliana-zobaran.png` do case também use a versão WebP comprimida.
+
+3. **Priorizar render de texto** — adicionar `fetchpriority="high"` à imagem da hero para não bloquear o LCP textual. Garantir que as fontes (Lato, Playfair Display) usem `font-display: swap` (já configurado via Google Fonts URL).
+
+4. **Remover scripts não críticos** — o defer de 1500ms para LinkedIn/Meta já está implementado. Mover o Microsoft Clarity para carregamento com `setTimeout` similar (1500ms) em vez de carregar imediatamente no `<head>`.
+
+---
+
+### Arquivos modificados
+
+| Arquivo | Mudança |
+|---------|---------|
+| `src/pages/Index.tsx` | Reestruturar Hero (linhas 92-136) |
+| `src/assets/` | Adicionar versões WebP das imagens |
+| `index.html` | Defer do Clarity para 1500ms |
 
 ### O que NÃO muda
-
-Layout, estilos dos badges, demais seções.
+Demais seções, CTAs, lógica de tracking, layout geral.
 
