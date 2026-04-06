@@ -359,6 +359,7 @@ const Index = () => {
               </li>
             ))}
           </ul>
+          <CTABlock label="COMEÇAR MINHA VIRADA AGORA" />
         </div>
       </section>
 
