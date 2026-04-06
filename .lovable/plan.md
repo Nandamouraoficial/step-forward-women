@@ -1,43 +1,44 @@
 
 
-## Otimização de LCP — Plano
+## Reescrita da Primeira Dobra — Foco em Retenção
 
-### Análise atual
+### O que muda
 
-A página tem apenas **2 imagens**:
-1. `/images/amigos-do-bem-icon.png` — seção 5 (Investimento), abaixo da dobra
-2. `/images/final-equipe.png` — seção 7 (Fechamento), bem abaixo da dobra
+Reescrever **apenas a seção Hero** (linhas 90-130 de `src/pages/Index.tsx`). Nenhuma outra seção é alterada.
 
-O Hero é puro texto + CSS gradient — sem imagem. O LCP element provavelmente é o `<h1>` ou o maior bloco de texto do Hero, que depende do carregamento do JS bundle (React SPA).
+### Novo conteúdo do Hero
 
-Há também 8 imagens em `public/images/` que não são usadas na página atual (sobras de versões anteriores).
+Estrutura em 3 blocos curtos (max 2 linhas cada), com hierarquia visual clara:
 
-### Plano de otimização
+1. **Tensão** (fonte maior, destaque): "Se você sente que está pronta para o próximo nível, mas não está avançando — o problema não é esforço."
+2. **Diagnóstico** (fonte média): "É uma decisão que ainda não foi estruturada."
+3. **Promessa** (destaque secundário): "Em 6 horas, você sai com clareza total sobre o seu próximo movimento — e um plano de 30 dias para executar."
+4. Info do evento + CTA
 
-**1. Adicionar `loading="lazy"` na imagem do Amigos do Bem** (linha 260)
-- Já está abaixo da dobra, não precisa carregar eagerly
+### Ajustes técnicos para above-the-fold
 
-**2. Confirmar `loading="lazy"` na imagem final-equipe** (já tem, linha 300 — ok)
+- Reduzir padding top mobile: `pt-4` (era `pt-6`)
+- Reduzir `mb` entre parágrafos para `mb-1`
+- Aumentar fonte da primeira frase: `text-xl sm:text-3xl` (destaque principal)
+- Segunda frase com `text-lg sm:text-2xl` e cor accent
+- Terceira frase com `text-base sm:text-xl`
+- Remover os 4 parágrafos longos atuais (linhas 103-118) — substituir pelos 3 blocos curtos
+- Manter espaçamento generoso antes do botão para destaque
 
-**3. Adicionar `fetchpriority="high"` e preload do CSS no `<head>`**
-- O LCP nesta página é texto, então o gargalo é o tempo de parse do JS bundle
-- Adicionar `<link rel="modulepreload">` para o entry point não é possível em dev, mas em produção o Vite já faz isso
+### Hierarquia visual
 
-**4. Adiar scripts de tracking para não competir com LCP**
-- LinkedIn e Meta Pixel já estão com `setTimeout(..., 1500)` — bom
-- Clarity está inline e síncrono no `<head>` mas carrega script async — aceitável
+```text
+[Frase 1 - grande, bold]          ← tensão
+[Frase 2 - média, accent]         ← diagnóstico
+[Frase 3 - normal]                ← promessa
+[info evento - small, muted]
+[===== BOTÃO VERDE =====]         ← above the fold
+```
 
-**5. Remover imagens não usadas de `public/images/`**
-- `amigos-do-bem.png`, `foto_terno.jpeg`, `hero-terno-branco.png`, `og-preview-v2.png`, `og-preview.png`, `sobre-poltrona.png` — 6 arquivos que não são referenciados em nenhum lugar do código atual
-- Reduz o deploy size (não afeta LCP diretamente, mas limpa assets desnecessários)
+### Performance
 
-**6. Adicionar `decoding="async"` nas duas imagens**
-- Evita bloquear a thread de renderização para decodificar imagens
+As imagens já têm lazy-load e o Hero é texto puro — sem mudanças de performance necessárias. O LCP já está otimizado (Hero é texto + CSS gradient).
 
-**7. Injetar font-display: swap nas fontes customizadas** (se houver)
-- Verificar se já está configurado no CSS
-
-### Arquivos editados
-- `src/pages/Index.tsx` — adicionar `loading="lazy"` e `decoding="async"` na imagem do Amigos do Bem
-- Remover 6 imagens não usadas de `public/images/`
+### Arquivo editado
+- `src/pages/Index.tsx` — apenas a seção Hero (linhas 90-130)
 
