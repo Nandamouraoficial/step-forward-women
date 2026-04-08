@@ -59,6 +59,11 @@ const Index = () => {
           (window as any).lintrk('track', { conversion_id: 26913521 });
         }
       } catch (_) {}
+      try {
+        if (typeof (window as any).clarity === 'function') {
+          (window as any).clarity('event', 'cta_click');
+        }
+      } catch (_) {}
     };
     setTimeout(fire, 0);
   };
